@@ -18,12 +18,8 @@
 
 (setq display-time-24hr-format 1)
 
-;; You are strongly encouraged to enable something like `ido-mode' to alter
-;; the default behavior of 'C-x b', or you will take great pains to switch
-;; to or back from a floating frame (remember 'C-x 5 o' if you refuse this
-;; proposal however).
-;; You may also want to call `exwm-config-ido' later (see below).
-(ido-mode 1)
+;; You may want to call `exwm-config-ido' later (see below).
+;(ido-mode 1)
 
 ;; Emacs server is not required to run EXWM but it has some interesting uses
 ;; (see next section).
@@ -178,7 +174,7 @@
 
 	([?\s-z] . (lambda ()
 		     (interactive)
-		     (start-process "" nil "/usr/bin/brave-nightly")))
+		     (start-process "" nil "/usr/bin/google-chrome-stable")))
 
 	([?\s-x] . (lambda ()
 		     (interactive)

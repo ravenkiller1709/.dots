@@ -16,8 +16,9 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/kim/.dotfiles/emacs/"
+ "/home/kim/.dots/emacs/"
  "/home/kim/.config/emacs/"
+ "/home/kim/.dotfiles/emacs/"
  "/home/kim/.config/alacritty/"
  "/home/kim/.config/emacs/exwm/"
  "/home/kim/.local/src/dmenu/"
@@ -50,13 +51,15 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/kim/.dots/emacs/" (25187 52430 308967 616000) "auto-save-list/" ".#desktop.el" "hallo.theme.el~" "exwm/" "desktop.el" ".last-package-update-day" "hallo.theme.el-bak" "themes/" "desktop.el-bak" "transient/" "eshell/" ".authinfo" "elpa/" "ido.last~" "tutorial/" "battery.el" "ido.last" "init.el~" ".mbsyncrc~" "tramp" "network-security.data" ".#ido.last" "init.el" ".#init.el" "history" ".mbsyncrc" "../" "./")
+
+ ("/home/kim/.config/emacs/" (25187 43000 668738 538000) "auto-save-list/" "hallo.theme.el~" "exwm/" "desktop.el" ".last-package-update-day" "hallo.theme.el-bak" "themes/" "desktop.el-bak" "transient/" "eshell/" ".authinfo" "elpa/" "ido.last~" "tutorial/" "battery.el" "ido.last" "init.el~" ".mbsyncrc~" "tramp" "network-security.data" ".#ido.last" "init.el" "history" ".mbsyncrc" "../" "./")
+
+ ("/home/kim/.config/" (25187 40888 731268 350000) "gnome-session/" "ncmpcpp/" "pulse/" "goa-1.0/" "user-dirs.dirs" "ibus/" "fish/" "gtk-3.0/" "update-notifier/" "nautilus/" "mpd/" ".gsd-keyboard.settings-ported" "evolution/" "dunst/" "htop/" "google-chrome/" "gnome-initial-setup-done" "dconf/" "user-dirs.locale" "systemd/" "mimeapps.list" "emacs/" "../" "./")
+
+ ("/home/kim/" (25187 40888 731268 350000) ".mbsyncrc" ".dots/" ".fehbg" "Musik/" ".bash_history" ".xprofile" ".gnupg/" ".bashrc" ".baggrunde/" ".authinfo" ".pki/" ".local/" ".profile" ".psensor/" ".lyrics/" ".scripts/" "Billeder/" "Videoklip/" ".cache/" ".authinfo.gpg~" ".ssh/" "Offentligt/" ".config/" "Dokumenter/" ".authinfo.gpg" "snap/" ".dbus/" ".bash_logout" "Skrivebord/" ".sudo_as_admin_successful" "Hentet/" "Skabeloner/" "Mail/" "../" "./")
+
  ("/home/kim/.dotfiles/emacs/" (25185 42370 524792 936000) "transient/" "history" "ido.last" "ido.last~" "init.el" "elpa/" "url/" "tutorial/" "tramp" "themes/" "network-security.data" "init.el~" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" ".authinfo" "../" "./")
-
- ("/home/kim/.config/emacs/" (25183 39031 166993 864000) "transient/" "history" "ido.last" "ido.last~" "init.el" "elpa/" "url/" "tutorial/" "tramp" "themes/" "network-security.data" "init.el~" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" ".authinfo" "../" "./")
-
- ("/home/kim/.config/" (25183 431 588214 182000) "systemd/" "mimeapps.list" "BraveSoftware/" "yay/" "emacs/" "gnome-session/" "newsboat/" "mpd/" "fish/" "calibre/" "dunst/" "alacritty/" "dleyna-renderer-service.conf" "nautilus/" "gnome-boxes/" "gtk-3.0/" "user-dirs.dirs" ".gsd-keyboard.settings-ported" "goa-1.0/" "pulse/" "evolution/" "dconf/" "ibus/" "user-dirs.locale" "../" "./")
-
- ("/home/kim/" (25183 38523 80350 960000) "vterm" ".authinfo.gpg" ".authinfo.gpg~" ".pki/" ".fehbg" ".gnupg/" ".Xresources" ".xprofile" ".mbsyncrc" "Mail/" ".scripts/" ".baggrunde/" ".dotfiles/" "Videoklip/" "Billeder/" "Musik/" "Dokumenter/" "Offentligt/" "Skabeloner/" "Hentet/" "Skrivebord/" ".local/" ".cache/" ".bash_history" ".config/" ".bashrc" ".bash_profile" ".bash_logout" "../" "./")
 
  ("/home/kim/.config/alacritty/" (25182 59243 271398 476000) "#alacritty.yml#" "alacritty.yml" "../" "./")
 

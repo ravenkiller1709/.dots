@@ -1,4 +1,4 @@
-;;; vertico-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; vertico-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -6,8 +6,9 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "vertico" "vertico.el" (0 0 0 0))
-;;; Generated autoloads from vertico.el
+;;;### (autoloads nil "vertico" "../../../../.config/emacs/elpa/vertico-0.22/vertico.el"
+;;;;;;  "01d78b9f328f92e35cd17fc0b68cfc37")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico.el
 
 (defvar vertico-mode nil "\
 Non-nil if Vertico mode is enabled.
@@ -22,29 +23,26 @@ or call the function `vertico-mode'.")
 (autoload 'vertico-mode "vertico" "\
 VERTical Interactive COmpletion.
 
-This is a minor mode.  If called interactively, toggle the
-`Vertico mode' mode.  If the prefix argument is positive, enable
-the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='vertico-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Vertico mode if ARG is positive,
+and disable it if ARG is zero or negative.  If called from Lisp,
+also enable the mode if ARG is omitted or nil, and toggle it if
+ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "vertico" "../../../../.config/emacs/elpa/vertico-0.22/vertico.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico.el
 
-(register-definition-prefixes "vertico" '("vertico-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vertico" '("vertico-")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil "vertico-buffer" "vertico-buffer.el" (0 0 0
-;;;;;;  0))
-;;; Generated autoloads from vertico-buffer.el
+;;;### (autoloads nil "vertico-buffer" "../../../../.config/emacs/elpa/vertico-0.22/vertico-buffer.el"
+;;;;;;  "45764719745ee2ca38b26f7e11042377")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-buffer.el
 
 (defvar vertico-buffer-mode nil "\
 Non-nil if Vertico-Buffer mode is enabled.
@@ -59,29 +57,27 @@ or call the function `vertico-buffer-mode'.")
 (autoload 'vertico-buffer-mode "vertico-buffer" "\
 Display Vertico in a buffer instead of the minibuffer.
 
-This is a minor mode.  If called interactively, toggle the
-`Vertico-Buffer mode' mode.  If the prefix argument is positive,
-enable the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='vertico-buffer-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Vertico-Buffer mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "vertico-buffer"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-buffer.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-buffer.el
 
-(register-definition-prefixes "vertico-buffer" '("vertico-buffer-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vertico-buffer" '("vertico-buffer-")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil "vertico-directory" "vertico-directory.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from vertico-directory.el
+;;;### (autoloads nil "vertico-directory" "../../../../.config/emacs/elpa/vertico-0.22/vertico-directory.el"
+;;;;;;  "92dcfec56a9bd989cbca9a53b3d7ce2f")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-directory.el
 
 (autoload 'vertico-directory-enter "vertico-directory" "\
 Enter directory or exit completion with current candidate." t nil)
@@ -103,13 +99,21 @@ Delete N directories or words before point.
 
 (autoload 'vertico-directory-tidy "vertico-directory" "\
 Tidy shadowed file name, see `rfn-eshadow-overlay'." nil nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "vertico-directory"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-directory.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-directory.el
 
-(register-definition-prefixes "vertico-directory" '("vertico-directory--completing-file-p"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vertico-directory" '("vertico-directory--completing-file-p")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil "vertico-flat" "vertico-flat.el" (0 0 0 0))
-;;; Generated autoloads from vertico-flat.el
+;;;### (autoloads nil "vertico-flat" "../../../../.config/emacs/elpa/vertico-0.22/vertico-flat.el"
+;;;;;;  "ab49cb2d8f02afe20304b96d592ff178")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-flat.el
 
 (defvar vertico-flat-mode nil "\
 Non-nil if Vertico-Flat mode is enabled.
@@ -124,28 +128,27 @@ or call the function `vertico-flat-mode'.")
 (autoload 'vertico-flat-mode "vertico-flat" "\
 Flat, horizontal display for Vertico.
 
-This is a minor mode.  If called interactively, toggle the
-`Vertico-Flat mode' mode.  If the prefix argument is positive,
-enable the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='vertico-flat-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Vertico-Flat mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "vertico-flat"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-flat.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-flat.el
 
-(register-definition-prefixes "vertico-flat" '("vertico-flat-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vertico-flat" '("vertico-flat-")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil "vertico-grid" "vertico-grid.el" (0 0 0 0))
-;;; Generated autoloads from vertico-grid.el
+;;;### (autoloads nil "vertico-grid" "../../../../.config/emacs/elpa/vertico-0.22/vertico-grid.el"
+;;;;;;  "66aabac9fc25bc458e4f71bcd948acac")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-grid.el
 
 (defvar vertico-grid-mode nil "\
 Non-nil if Vertico-Grid mode is enabled.
@@ -160,29 +163,27 @@ or call the function `vertico-grid-mode'.")
 (autoload 'vertico-grid-mode "vertico-grid" "\
 Grid display for Vertico.
 
-This is a minor mode.  If called interactively, toggle the
-`Vertico-Grid mode' mode.  If the prefix argument is positive,
-enable the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='vertico-grid-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Vertico-Grid mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "vertico-grid"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-grid.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-grid.el
 
-(register-definition-prefixes "vertico-grid" '("vertico-grid-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vertico-grid" '("vertico-grid-")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil "vertico-indexed" "vertico-indexed.el" (0 0
-;;;;;;  0 0))
-;;; Generated autoloads from vertico-indexed.el
+;;;### (autoloads nil "vertico-indexed" "../../../../.config/emacs/elpa/vertico-0.22/vertico-indexed.el"
+;;;;;;  "9772aa675e76563e7f4a3dd9a8206b20")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-indexed.el
 
 (defvar vertico-indexed-mode nil "\
 Non-nil if Vertico-Indexed mode is enabled.
@@ -197,28 +198,27 @@ or call the function `vertico-indexed-mode'.")
 (autoload 'vertico-indexed-mode "vertico-indexed" "\
 Prefix candidates with indices.
 
-This is a minor mode.  If called interactively, toggle the
-`Vertico-Indexed mode' mode.  If the prefix argument is positive,
-enable the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='vertico-indexed-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Vertico-Indexed mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "vertico-indexed"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-indexed.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-indexed.el
 
-(register-definition-prefixes "vertico-indexed" '("vertico-indexed--"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vertico-indexed" '("vertico-indexed--")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil "vertico-mouse" "vertico-mouse.el" (0 0 0 0))
-;;; Generated autoloads from vertico-mouse.el
+;;;### (autoloads nil "vertico-mouse" "../../../../.config/emacs/elpa/vertico-0.22/vertico-mouse.el"
+;;;;;;  "8789ae07d9794d8170e2b8f6dd6b2289")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-mouse.el
 
 (defvar vertico-mouse-mode nil "\
 Non-nil if Vertico-Mouse mode is enabled.
@@ -233,29 +233,27 @@ or call the function `vertico-mouse-mode'.")
 (autoload 'vertico-mouse-mode "vertico-mouse" "\
 Mouse support for Vertico.
 
-This is a minor mode.  If called interactively, toggle the
-`Vertico-Mouse mode' mode.  If the prefix argument is positive,
-enable the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='vertico-mouse-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Vertico-Mouse mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "vertico-mouse"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-mouse.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-mouse.el
 
-(register-definition-prefixes "vertico-mouse" '("vertico-mouse--"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vertico-mouse" '("vertico-mouse--")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil "vertico-multiform" "vertico-multiform.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from vertico-multiform.el
+;;;### (autoloads nil "vertico-multiform" "../../../../.config/emacs/elpa/vertico-0.22/vertico-multiform.el"
+;;;;;;  "813dc12b645af3de55dabf83d64796eb")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-multiform.el
 
 (defvar vertico-multiform-mode nil "\
 Non-nil if Vertico-Multiform mode is enabled.
@@ -270,29 +268,27 @@ or call the function `vertico-multiform-mode'.")
 (autoload 'vertico-multiform-mode "vertico-multiform" "\
 Configure Vertico in various forms per command.
 
-This is a minor mode.  If called interactively, toggle the
-`Vertico-Multiform mode' mode.  If the prefix argument is
-positive, enable the mode, and if it is zero or negative, disable
-the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='vertico-multiform-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Vertico-Multiform mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "vertico-multiform"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-multiform.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-multiform.el
 
-(register-definition-prefixes "vertico-multiform" '("vertico-multiform-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vertico-multiform" '("vertico-multiform-")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil "vertico-quick" "vertico-quick.el" (0 0 0 0))
-;;; Generated autoloads from vertico-quick.el
+;;;### (autoloads nil "vertico-quick" "../../../../.config/emacs/elpa/vertico-0.22/vertico-quick.el"
+;;;;;;  "507cc03956ee292231640bd72be586a7")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-quick.el
 
 (autoload 'vertico-quick-jump "vertico-quick" "\
 Jump to candidate using quick keys." t nil)
@@ -302,14 +298,21 @@ Exit with candidate using quick keys." t nil)
 
 (autoload 'vertico-quick-insert "vertico-quick" "\
 Insert candidate using quick keys." t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "vertico-quick"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-quick.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-quick.el
 
-(register-definition-prefixes "vertico-quick" '("vertico-quick"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vertico-quick" '("vertico-quick")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil "vertico-repeat" "vertico-repeat.el" (0 0 0
-;;;;;;  0))
-;;; Generated autoloads from vertico-repeat.el
+;;;### (autoloads nil "vertico-repeat" "../../../../.config/emacs/elpa/vertico-0.22/vertico-repeat.el"
+;;;;;;  "d503a706e16418a8c804e04e39606f7d")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-repeat.el
 
 (autoload 'vertico-repeat-save "vertico-repeat" "\
 Save Vertico session for `vertico-repeat'.
@@ -328,14 +331,21 @@ Repeat last Vertico session.
 If prefix ARG is non-nil, offer completion menu to select from session history.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "vertico-repeat"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-repeat.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-repeat.el
 
-(register-definition-prefixes "vertico-repeat" '("vertico-repeat-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vertico-repeat" '("vertico-repeat-")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil "vertico-reverse" "vertico-reverse.el" (0 0
-;;;;;;  0 0))
-;;; Generated autoloads from vertico-reverse.el
+;;;### (autoloads nil "vertico-reverse" "../../../../.config/emacs/elpa/vertico-0.22/vertico-reverse.el"
+;;;;;;  "b6e0c367cc1e2cadd4148bbe6e3db799")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-reverse.el
 
 (defvar vertico-reverse-mode nil "\
 Non-nil if Vertico-Reverse mode is enabled.
@@ -350,29 +360,27 @@ or call the function `vertico-reverse-mode'.")
 (autoload 'vertico-reverse-mode "vertico-reverse" "\
 Reverse the Vertico display.
 
-This is a minor mode.  If called interactively, toggle the
-`Vertico-Reverse mode' mode.  If the prefix argument is positive,
-enable the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='vertico-reverse-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Vertico-Reverse mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "vertico-reverse"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-reverse.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-reverse.el
 
-(register-definition-prefixes "vertico-reverse" '("vertico-reverse-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vertico-reverse" '("vertico-reverse-")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil "vertico-unobtrusive" "vertico-unobtrusive.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from vertico-unobtrusive.el
+;;;### (autoloads nil "vertico-unobtrusive" "../../../../.config/emacs/elpa/vertico-0.22/vertico-unobtrusive.el"
+;;;;;;  "12984da08b9e3b3a80bbe9eb13295359")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-unobtrusive.el
 
 (defvar vertico-unobtrusive-mode nil "\
 Non-nil if Vertico-Unobtrusive mode is enabled.
@@ -387,28 +395,39 @@ or call the function `vertico-unobtrusive-mode'.")
 (autoload 'vertico-unobtrusive-mode "vertico-unobtrusive" "\
 Unobtrusive display for Vertico.
 
-This is a minor mode.  If called interactively, toggle the
-`Vertico-Unobtrusive mode' mode.  If the prefix argument is
-positive, enable the mode, and if it is zero or negative, disable
-the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='vertico-unobtrusive-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Vertico-Unobtrusive mode if ARG
+is positive, and disable it if ARG is zero or negative.  If
+called from Lisp, also enable the mode if ARG is omitted or nil,
+and toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "vertico-unobtrusive"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-unobtrusive.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/vertico-0.22/vertico-unobtrusive.el
 
-(register-definition-prefixes "vertico-unobtrusive" '("vertico-unobtrusive--orig-count"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "vertico-unobtrusive" '("vertico-unobtrusive--orig-count")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil nil ("vertico-pkg.el") (0 0 0 0))
+;;;### (autoloads nil nil ("../../../../.config/emacs/elpa/vertico-0.22/vertico-autoloads.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-buffer.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-directory.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-flat.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-grid.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-indexed.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-mouse.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-multiform.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-pkg.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-quick.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-repeat.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-reverse.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico-unobtrusive.el"
+;;;;;;  "../../../../.config/emacs/elpa/vertico-0.22/vertico.el")
+;;;;;;  (0 0 0 0))
 
 ;;;***
 

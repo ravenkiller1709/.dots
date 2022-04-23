@@ -47,7 +47,7 @@
 ;; Set the default font
 (set-face-attribute 'default nil
                     :family "Source Code Pro"
-                    :height 110
+                    :height 160
                     :weight 'normal
                     :width 'normal)
 
@@ -83,8 +83,34 @@
   (auto-package-update-at-time "09:00"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;; Tabbar
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;(use-package tabbar
+;;  :ensure t
+;;  :config
+;;  (tabbar-mode 1))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;; Ido mode and Buffers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; You are strongly encouraged to enable something like `ido-mode' to alter
+;; the default behavior of 'C-x b', or you will take great pains to switch
+;; to or back from a floating frame (remember 'C-x 5 o' if you refuse this
+;; proposal however).
+
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+
+(defalias 'list-buffers 'ibuffer)
+
+;;(defalias 'list-buffers 'ibuffer-other-window)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; Let's get encrypted
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 
 (setenv "GPG_AGENT_INFO" nil)  ;; use emacs pinentry
     (setq auth-source-debug t)
@@ -92,8 +118,8 @@
     (setq epg-gpg-program "gpg2")  ;; not necessary
     (require 'epa-file)
     (epa-file-enable)
-    (setq epa-pinentry-mode 'loopback)
-    (setq epg-pinentry-mode 'loopback)
+(setq epa-pinentry-mode 'loopback)
+(setq epg-pinentry-mode 'loopback)
 
     (require 'org-crypt)
     (org-crypt-use-before-save-magic)
@@ -120,6 +146,29 @@
 (use-package which-key
   :ensure t
   :config (which-key-mode))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;; Erc Chat
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq erc-server "irc.libera.chat"
+      erc-nick "ravenkiller1709"
+      erc-user-full-name "Kim Kruse"
+      erc-track-shorten-start 8
+      erc-autojoin-channels-alist '(("irc.libera.chat" "#systemcrafters" "#emacs"))
+      erc-kill-buffer-on-part t
+      erc-auto-query 'bury)
+
+(setq erc-fill-column 120
+      erc-fill-function 'erc-fill-static
+      erc-fill-static-center 20)
+
+(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE" "AWAY")
+      erc-hide-list '("JOIN" "NICK" "PART" "QUIT" "MODE" "AWAY"))
+      ;; erc-track-exclude-server-buffer t)
+
+(setq erc-track-visibility nil) ; Only use the selected frame for visibility
 
 
 
@@ -207,7 +256,7 @@
   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
   (setq completion-styles '(orderless)
         completion-category-defaults nil
-        completion-category-overrides '((file (styles partial-completion)))))
+        COMPLETION-CATEGORY-OVERRIDES '((FILE (styles partial-completion)))))
 
 ;; Persist history over Emacs restarts. Vertico sorts by history position.
 (use-package savehist
@@ -513,7 +562,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(dracula-theme darcula-theme vterm exwm dired-hide-dotfiles dired-open all-the-icons-dired dired-single eshell-git-prompt visual-fill-column org-bullets hydra orderless vertico doom-modeline doom-themes magit auto-package-update use-package)))
+   '(try dracula-theme darcula-theme vterm exwm dired-hide-dotfiles dired-open all-the-icons-dired dired-single eshell-git-prompt visual-fill-column org-bullets hydra orderless vertico doom-modeline doom-themes magit auto-package-update use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

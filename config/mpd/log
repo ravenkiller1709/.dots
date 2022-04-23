@@ -40319,3 +40319,5 @@ Apr 07 15:16 : player: played "Billie Eilish - WHEN WE ALL FALL ASLEEP, WHERE DO
 Apr 07 15:18 : exception: Failed to open /home/kim/.config/mpd/playlists: No such file or directory
 Apr 07 15:23 : player: played "David Bowie - Where Are We Now (CDS)/01.Where Are We Now.mp3"
 Apr 12 19:45 : player: played "David Bowie - Where Are We Now (CDS)/01.Where Are We Now.mp3"
+Apr 23 08:42 : exception: Failed to open /home/kim/.config/mpd/playlists: No such file or directory
+Apr 23 09:17 : player: played "Taylor Swift - Evermore/01.Willow.mp3"

@@ -14,7 +14,7 @@ export EDITOR='nvim'
 export TERMINAL='st'
 export BROWSER='firefox'
 export MANPAGER='nvim +Man!'
-export PATH=$HOME/.local/bin:$PATH
+# export PATH=$HOME/.local/bin:$PATH
 export TERM='xterm-256color'
 
 #########################################################

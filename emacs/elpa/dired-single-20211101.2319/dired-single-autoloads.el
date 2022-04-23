@@ -1,4 +1,4 @@
-;;; dired-single-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; dired-single-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -6,8 +6,9 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "dired-single" "dired-single.el" (0 0 0 0))
-;;; Generated autoloads from dired-single.el
+;;;### (autoloads nil "dired-single" "../../../../.config/emacs/elpa/dired-single-20211101.2319/dired-single.el"
+;;;;;;  "4f65bd72d4287829ea0907cccae632ec")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/dired-single-20211101.2319/dired-single.el
 
 (autoload 'dired-single-buffer "dired-single" "\
 Visit selected directory in current buffer.
@@ -59,8 +60,21 @@ Will also seek to uniquify the 'real' buffer name." t nil)
 Like `dired-up-directory' but with `dired-single-buffer'.
 
 \(fn &optional OTHER-WINDOW)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "dired-single"
+;;;;;;  "../../../../.config/emacs/elpa/dired-single-20211101.2319/dired-single.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/dired-single-20211101.2319/dired-single.el
 
-(register-definition-prefixes "dired-single" '("dired-single-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dired-single" '("dired-single-")))
+
+;;;***
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.config/emacs/elpa/dired-single-20211101.2319/dired-single-autoloads.el"
+;;;;;;  "../../../../.config/emacs/elpa/dired-single-20211101.2319/dired-single.el")
+;;;;;;  (0 0 0 0))
 
 ;;;***
 
