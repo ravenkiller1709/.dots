@@ -92,6 +92,39 @@
 ;;  (tabbar-mode 1))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;; Ivy,Swiper,Avy
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(use-package ivy
+  :ensure t
+  :diminish (ivy-mode)
+  :bind (("C-x b" . ivy-switch-buffer))
+  :config
+  (ivy-mode 1)
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-display-style 'fancy)
+  (setq enable-recursive-minibuffers t))
+
+  (use-package swiper
+    :ensure try
+    :bind (("C-s" . swiper)
+	   ("C-r" . swiper)
+	   ("C-c C-r" . ivy-resume)
+	   ("M-x" . counsel-M-x)
+	   ("C-x C-f" . counsel-find-file))
+    :config
+    (progn
+      (ivy-mode 1)
+      (setq ivy-use-virtual-buffers t)
+      (setq ivy-display-style 'fancy)
+      (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
+      ))
+
+(use-package avy
+  :ensure t
+  :bind ("M-s" . avy-goto-char))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; Ido mode and Buffers
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; You are strongly encouraged to enable something like `ido-mode' to alter
@@ -99,13 +132,28 @@
 ;; to or back from a floating frame (remember 'C-x 5 o' if you refuse this
 ;; proposal however).
 
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(ido-mode 1)
+;;(setq ido-enable-flex-matching t)
+;;(setq ido-everywhere t)
+;;(ido-mode 1)
 
 (defalias 'list-buffers 'ibuffer)
 
 ;;(defalias 'list-buffers 'ibuffer-other-window)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;; Window movements with ace window
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+(use-package ace-window
+  :ensure t
+  :init
+  (progn
+    (global-set-key [remap other-window] 'ace-window)
+    (custom-set-faces
+     '(aw-leading-char-face
+       ((t (:inherit ace-jumb-face-foreground :height 3.0)))))
+    ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; Let's get encrypted
@@ -190,13 +238,13 @@
 ;;;; Enable custom neotree theme
 ;; (doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
 
-(use-package dracula-theme
-  :config
-  (load-theme 'dracula t)
-  :ensure t)
+;;(use-package dracula-theme
+;;  :config
+;;  (load-theme 'dracula t)
+;;  :ensure t)
 
-;;(add-to-list 'custom-theme-load-path "~/.dotfiles/emacs/themes/") ;; for themes loaded locally
-;;(load-theme 'ubuntu-theme t)
+(add-to-list 'custom-theme-load-path "~/.dots/emacs/themes/") ;; for themes loaded locally
+(load-theme 'darkburn t)
 
 (use-package doom-modeline
   :ensure t
@@ -215,6 +263,13 @@
 
 
 (display-battery-mode 1)
+
+;; Turn on `display-time-mode' if you don't use an external bar.
+(setq display-time-default-load-average nil)
+
+(display-time-mode t)
+
+(setq display-time-24hr-format 1)
 
 ;;(display-time-mode nil)
 ;;(setq display-time-24hr-format nil)
@@ -556,16 +611,18 @@
         ("/Hotmail/Inbox"    . ?d)
         ("/Gmail/Inbox"     . ?t))))
 
+(lorem-ipsum-use-default-bindings)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(dracula-theme darcula-theme vterm exwm dired-hide-dotfiles dired-open all-the-icons-dired dired-single eshell-git-prompt visual-fill-column org-bullets hydra orderless vertico doom-modeline doom-themes magit auto-package-update use-package)))
+   '(counsel swiper lorem-ipsum ace-window try dracula-theme darcula-theme vterm exwm dired-hide-dotfiles dired-open all-the-icons-dired dired-single eshell-git-prompt visual-fill-column org-bullets hydra orderless vertico doom-modeline doom-themes magit auto-package-update use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(aw-leading-char-face ((t (:inherit ace-jumb-face-foreground :height 3.0)))))

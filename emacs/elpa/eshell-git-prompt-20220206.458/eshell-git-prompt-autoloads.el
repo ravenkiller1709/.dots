@@ -1,4 +1,4 @@
-;;; eshell-git-prompt-autoloads.el --- automatically extracted autoloads
+;;; eshell-git-prompt-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -6,9 +6,9 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "eshell-git-prompt" "../../../../.config/emacs/elpa/eshell-git-prompt-20220206.458/eshell-git-prompt.el"
-;;;;;;  "6983a6cc6947ab62660ee26bc29c0061")
-;;; Generated autoloads from ../../../../.config/emacs/elpa/eshell-git-prompt-20220206.458/eshell-git-prompt.el
+;;;### (autoloads nil "eshell-git-prompt" "eshell-git-prompt.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from eshell-git-prompt.el
 
 (autoload 'eshell-git-prompt-use-theme "eshell-git-prompt" "\
 Pick up a Eshell prompt theme from `eshell-git-prompt-themes' to use.
@@ -19,21 +19,8 @@ Pick up a Eshell prompt theme from `eshell-git-prompt-themes' to use.
 List all available themes and pick one from Eshell.
 
 \(fn &optional THEME)" nil nil)
-
-;;;### (autoloads "actual autoloads are elsewhere" "eshell-git-prompt"
-;;;;;;  "../../../../.config/emacs/elpa/eshell-git-prompt-20220206.458/eshell-git-prompt.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from ../../../../.config/emacs/elpa/eshell-git-prompt-20220206.458/eshell-git-prompt.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "eshell-git-prompt" '("eshell-git-prompt-" "with-face")))
-
-;;;***
-
-;;;***
-
-;;;### (autoloads nil nil ("../../../../.config/emacs/elpa/eshell-git-prompt-20220206.458/eshell-git-prompt-autoloads.el"
-;;;;;;  "../../../../.config/emacs/elpa/eshell-git-prompt-20220206.458/eshell-git-prompt.el")
-;;;;;;  (0 0 0 0))
+(register-definition-prefixes "eshell-git-prompt" '("eshell-git-prompt-" "with-face"))
 
 ;;;***
 

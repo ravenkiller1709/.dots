@@ -1,4 +1,4 @@
-;;; dash-autoloads.el --- automatically extracted autoloads
+;;; dash-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -6,17 +6,25 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "dash" "../../../../.config/emacs/elpa/dash-20220417.2250/dash.el"
-;;;;;;  "df391dec4862f569ed9440f31e41175e")
-;;; Generated autoloads from ../../../../.config/emacs/elpa/dash-20220417.2250/dash.el
+;;;### (autoloads nil "dash" "dash.el" (0 0 0 0))
+;;; Generated autoloads from dash.el
 
 (autoload 'dash-fontify-mode "dash" "\
 Toggle fontification of Dash special variables.
 
-If called interactively, enable Dash-Fontify mode if ARG is
-positive, and disable it if ARG is zero or negative.  If called
-from Lisp, also enable the mode if ARG is omitted or nil, and
-toggle it if ARG is `toggle'; disable the mode otherwise.
+This is a minor mode.  If called interactively, toggle the
+`Dash-Fontify mode' mode.  If the prefix argument is positive,
+enable the mode, and if it is zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `dash-fontify-mode'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
 
 Dash-Fontify mode is a buffer-local minor mode intended for Emacs
 Lisp buffers.  Enabling it causes the special variables bound in
@@ -45,11 +53,15 @@ or call the function `global-dash-fontify-mode'.")
 (autoload 'global-dash-fontify-mode "dash" "\
 Toggle Dash-Fontify mode in all buffers.
 With prefix ARG, enable Global Dash-Fontify mode if ARG is positive;
-otherwise, disable it.  If called from Lisp, enable the mode if
-ARG is omitted or nil.
+otherwise, disable it.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.
+Enable the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
 
 Dash-Fontify mode is enabled in all buffers where
 `dash--turn-on-fontify-mode' would do it.
+
 See `dash-fontify-mode' for more information on Dash-Fontify mode.
 
 \(fn &optional ARG)" t nil)
@@ -57,21 +69,12 @@ See `dash-fontify-mode' for more information on Dash-Fontify mode.
 (autoload 'dash-register-info-lookup "dash" "\
 Register the Dash Info manual with `info-lookup-symbol'.
 This allows Dash symbols to be looked up with \\[info-lookup-symbol]." t nil)
-
-;;;### (autoloads "actual autoloads are elsewhere" "dash" "../../../../.config/emacs/elpa/dash-20220417.2250/dash.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from ../../../../.config/emacs/elpa/dash-20220417.2250/dash.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dash" '("!cdr" "!cons" "--" "->" "-a" "-butlast" "-c" "-d" "-e" "-f" "-gr" "-i" "-juxt" "-keep" "-l" "-m" "-no" "-o" "-p" "-r" "-s" "-t" "-u" "-value-to-list" "-when-let" "-zip" "dash-")))
-
-;;;***
+(register-definition-prefixes "dash" '("!cdr" "!cons" "--" "->" "-a" "-butlast" "-c" "-d" "-e" "-f" "-gr" "-i" "-juxt" "-keep" "-l" "-m" "-no" "-o" "-p" "-r" "-s" "-t" "-u" "-value-to-list" "-when-let" "-zip" "dash-"))
 
 ;;;***
 
-;;;### (autoloads nil nil ("../../../../.config/emacs/elpa/dash-20220417.2250/dash-autoloads.el"
-;;;;;;  "../../../../.config/emacs/elpa/dash-20220417.2250/dash-pkg.el"
-;;;;;;  "../../../../.config/emacs/elpa/dash-20220417.2250/dash.el")
-;;;;;;  (0 0 0 0))
+;;;### (autoloads nil nil ("dash-pkg.el") (0 0 0 0))
 
 ;;;***
 

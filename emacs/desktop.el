@@ -11,12 +11,6 @@
 ;; Also shrink fringes to 1 pixel.
 (fringe-mode 1)
 
-;; Turn on `display-time-mode' if you don't use an external bar.
-(setq display-time-default-load-average nil)
-
-(display-time-mode t)
-
-(setq display-time-24hr-format 1)
 
 ;; You may want to call `exwm-config-ido' later (see below).
 ;(ido-mode 1)
