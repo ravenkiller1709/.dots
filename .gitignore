@@ -1,0 +1,5 @@
+emacs/elpa/*
+emacs/history
+emacs/auto-save-list/*
+transient/*
+emacs/#*
