@@ -12,19 +12,19 @@
  ("/doas::/etc/" . "X11/")
  ("/doas::/" . "etc/")
  ("/home/" . "kim/")
- ("/home/kim/.config/emacs/" . "exwm/")
+ ("/home/kim/.config/emacs/" . "auto-save-list/")
  ("/home/kim/.config/" . "emacs/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/kim/.config/"
+ "/home/kim/.dots/emacs/"
  "/home/kim/.config/emacs/"
+ "/home/kim/.config/"
  "/home/kim/.dots/emacs/themes/"
  "/sudo::/usr/share/xsessions/"
  "/sudo:"
  "/home/kim/"
- "/home/kim/.dots/emacs/"
  "/home/kim/.dotfiles/emacs/"
  "/home/kim/.config/alacritty/"
  "/home/kim/.config/emacs/exwm/"
@@ -43,6 +43,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "myinit.org"
  "init.el"
  "darkburn-theme.el"
  "EXWM.desktop"
@@ -52,20 +53,21 @@
  "desktop.el"
  "alacritty.yml"
  "start-exwm.sh"
- "config.h"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/kim/.config/emacs/" (25188 16424 643377 60000) ".#ido.last" "init.el" "init.el~" "ido.last" "ido.last~" "transient/" "#.last-package-update-day#" "history" "auto-save-list/" "elpa/" "tutorial/" "tramp" "themes/" "network-security.data" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" ".authinfo" "../" "./")
+ ("/home/kim/.config/emacs/auto-save-list/" (25189 40177 366665 194000) ".saves-17879-Arch~" ".saves-51025-Arch~" "../" "./")
+
+ ("/home/kim/.config/emacs/" (25189 40866 786632 890000) "myinit.org" "myinit.org~" "init.el" "myinit.el" "ido.last" "ido.last~" "samples/" "#init.el#~" "ac-comphist.dat" "init.el~" "recentf" "transient/" "#.last-package-update-day#" "history" "auto-save-list/" "elpa/" "tutorial/" "tramp" "themes/" "network-security.data" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" ".authinfo" "../" "./")
+
+ ("/home/kim/.dots/emacs/" (25188 58889 346645 229000) ".#init.el" "ido.last" "ido.last~" "ac-comphist.dat" "myinit.org" "myinit.org~" "init.el" "init.el~" "recentf" "transient/" "#.last-package-update-day#" "history" "auto-save-list/" "elpa/" "tutorial/" "tramp" "themes/" "network-security.data" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" ".authinfo" "../" "./")
+
+ ("/home/kim/" (25188 48824 273213 827000) ".ssh/" ".gitconfig" ".pki/" ".fehbg" ".mozilla/" ".authinfo.gpg" ".gnupg/" ".xprofile" ".scripts/" ".mbsyncrc" ".baggrunde/" "Mail/" ".local/" ".dots/" ".bash_history" ".viminfo" ".cache/" ".config/" "Videoklip/" "Billeder/" "Musik/" "Dokumenter/" "Offentligt/" "Skabeloner/" "Hentet/" "Skrivebord/" ".bashrc" ".bash_profile" ".bash_logout" "../" "./")
 
  ("/home/kim/.dots/emacs/themes/" (25188 4008 860017 299000) "darkburn-theme.el" "ubuntu-theme.el" "../" "./")
 
- ("/home/kim/.dots/emacs/" (25188 4133 450020 63000) "#init.el#" ".#init.el" "ido.last" "ido.last~" "transient/" "#.last-package-update-day#" "history" "auto-save-list/" "init.el" "elpa/" "tutorial/" "tramp" "themes/" "network-security.data" "init.el~" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" ".authinfo" "../" "./")
-
  ("/home/kim/.config/" (25188 2082 8995 360000) "BraveSoftware/" "gnome-session/" "gnome-control-center/" "dleyna-renderer-service.conf" "nautilus/" "gnome-boxes/" ".gsd-keyboard.settings-ported" "gtk-3.0/" "goa-1.0/" "evolution/" "pulse/" "dconf/" "ibus/" "yay/" "newsboat/" "mpd/" "fish/" "calibre/" "dunst/" "alacritty/" "emacs/" "user-dirs.locale" "user-dirs.dirs" "../" "./")
-
- ("/home/kim/" (25188 2083 168995 386000) ".pki/" ".fehbg" ".mozilla/" ".authinfo.gpg" ".gnupg/" ".xprofile" ".scripts/" ".mbsyncrc" ".baggrunde/" "Mail/" ".local/" ".dots/" ".bash_history" ".viminfo" ".cache/" ".config/" "Videoklip/" "Billeder/" "Musik/" "Dokumenter/" "Offentligt/" "Skabeloner/" "Hentet/" "Skrivebord/" ".bashrc" ".bash_profile" ".bash_logout" "../" "./")
 
  ("/home/kim/.gnupg/" (25187 65402 102279 634000) "random_seed" "openpgp-revocs.d/" "trustdb.gpg" "pubring.kbx" "pubring.kbx~" "private-keys-v1.d/" "../" "./")
 
