@@ -48,6 +48,9 @@
 
 '(initial-frame-alist '((fullscreen . maximized)))
 
+(use-package counsel
+  :ensure t)
+
 (use-package ivy
   :ensure t
   :diminish (ivy-mode)
@@ -514,7 +517,10 @@
         ("/Hotmail/Inbox"    . ?d)
         ("/Gmail/Inbox"     . ?t))))
 
-(lorem-ipsum-use-default-bindings)
+(use-package lorem-ipsum
+  :ensure t
+  :init
+  (lorem-ipsum-use-default-bindings))
 
 (use-package ox-reveal
 :ensure ox-reveal)

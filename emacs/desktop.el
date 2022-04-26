@@ -164,7 +164,7 @@
 	;; Bind "s-b" to launch firefox
 	([?\s-b] . (lambda ()
 		     (interactive)
-		     (start-process "" nil "/usr/bin/firefox")))
+		     (start-process "" nil "/usr/bin/brave-nightly")))
 
 	([?\s-z] . (lambda ()
 		     (interactive)

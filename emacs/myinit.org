@@ -77,34 +77,38 @@ try packages without installing first
 * Ivy,Swiper,Avy
 
 #+BEGIN_SRC emacs-lisp
-(use-package ivy
-  :ensure t
-  :diminish (ivy-mode)
-  :bind (("C-x b" . ivy-switch-buffer))
-  :config
-  (ivy-mode 1)
-  (setq ivy-use-virtual-buffers t)
-  (setq ivy-display-style 'fancy)
-  (setq enable-recursive-minibuffers t)
-)
-  (use-package swiper
-    :ensure try
-    :bind (("C-s" . swiper)
-	   ("C-r" . swiper)
-	   ("C-c C-r" . ivy-resume)
-	   ("M-x" . counsel-M-x)
-	   ("C-x C-f" . counsel-find-file))
-    :config
-    (progn
-      (ivy-mode 1)
-      (setq ivy-use-virtual-buffers t)
-      (setq ivy-display-style 'fancy)
-      (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
-      ))
 
-(use-package avy
-  :ensure t
-  :bind ("M-s" . avy-goto-char))
+  (use-package counsel
+    :ensure t)
+  
+  (use-package ivy
+    :ensure t
+    :diminish (ivy-mode)
+    :bind (("C-x b" . ivy-switch-buffer))
+    :config
+    (ivy-mode 1)
+    (setq ivy-use-virtual-buffers t)
+    (setq ivy-display-style 'fancy)
+    (setq enable-recursive-minibuffers t)
+  )
+    (use-package swiper
+      :ensure try
+      :bind (("C-s" . swiper)
+	     ("C-r" . swiper)
+	     ("C-c C-r" . ivy-resume)
+	     ("M-x" . counsel-M-x)
+	     ("C-x C-f" . counsel-find-file))
+      :config
+      (progn
+	(ivy-mode 1)
+	(setq ivy-use-virtual-buffers t)
+	(setq ivy-display-style 'fancy)
+	(define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
+	))
+
+  (use-package avy
+    :ensure t
+    :bind ("M-s" . avy-goto-char))
 #+END_SRC
 
 * Auto-complete
@@ -268,6 +272,72 @@ To make the information go somewhere visible
 ;;(display-time-mode nil)
 ;;(setq display-time-24hr-format nil)
 #+END_SRC
+
+* Tab bar tabs
+create a config for working with tabbar
+#+begin_src emacs-lisp
+;; Inherit the face of `doom-modeline-panel` for better appearance
+(set-face-attribute 'tab-bar-tab nil :inherit 'doom-modeline-panel :foreground nil :background nil)
+
+(defun my/tab-bar-format (tab i)
+  (propertize
+   (format
+    (concat
+      (if (eq (car tab) 'current-tab)
+          "🔥 " "")
+      "%s")
+    (alist-get 'name tab))
+   'face (list (append
+                  '(:foreground "#FFFFFF")
+                  (if (eq (car tab) 'current-tab)
+                      '(:box t)
+                      '())))))
+
+;; Replace the default tab bar function
+(setq tab-bar-tab-name-format-function #'my/tab-bar-format)
+
+(defun my/tab-bar-tab-name-function ()
+  (let ((project (project-current)))
+    (if project
+        (project-root project)
+        (tab-bar-tab-name-current))))
+
+(setq tab-bar-tab-name-function #'my/tab-bar-tab-name-function)
+
+;; Only show the tab bar if there are 2 or more tabs
+(setq tab-bar-show 1)
+
+(defun my/tab-bar-string () "Emacs 28")
+
+;; Customize the tab bar format to add the global mode line string
+(setq tab-bar-format '(tab-bar-format-tabs tab-bar-separator tab-bar-format-align-right tab-bar-format-global))
+
+(add-to-list 'global-mode-string "Emacs 28 ")
+
+;; Make sure mode line text in the tab bar can be read
+(set-face-attribute 'tab-bar nil :foreground "#FFFFFF")
+
+(defun my/project-create-tab ()
+  (interactive)
+  (tab-bar-new-tab)
+  (magit-status))
+
+(setq project-switch-commands #'my/project-create-tab)
+
+(defun my/switch-to-tab-buffer ()
+  (interactive)
+  (if (project-current)
+      (call-interactively #'project-switch-to-buffer)
+    (call-interactively #'switch-to-buffer)))
+
+(global-set-key (kbd "C-x b") #'my/switch-to-tab-buffer)
+
+;; Turn on tab bar mode after startup
+(tab-bar-mode 1)
+
+;; Save the desktop session
+(desktop-save-mode 1)
+#+end_src
 
 * Vertico
 
@@ -607,7 +677,10 @@ This should be uncommented if on BSD and remember to download package coreutils 
 * Latin text load with C-c l p
 
 #+BEGIN_SRC emacs-lisp
-(lorem-ipsum-use-default-bindings)
+  (use-package lorem-ipsum
+    :ensure t
+    :init
+    (lorem-ipsum-use-default-bindings))
 #+END_SRC
 * Reveal.js
 Enabling presentation mode
@@ -641,5 +714,16 @@ Enabling presentation mode
     :ensure t
     :init
       (yas-global-mode 1))
+
+#+end_src
+
+* Undo tree
+#+begin_src emacs-lisp
+    (use-package undo-tree
+      :ensure t
+      :init
+      (global-undo-tree-mode))
+  
+  (global-set-key (kbd "C-z") 'undo)
 
 #+end_src
