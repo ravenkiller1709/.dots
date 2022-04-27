@@ -727,3 +727,34 @@ Enabling presentation mode
   (global-set-key (kbd "C-z") 'undo)
 
 #+end_src
+
+* Misc packages
+#+begin_src emacs-lisp
+    ;;highlighting the line of the cursor
+    (global-hl-line-mode t)
+
+    (use-package beacon
+      :ensure t
+      :config
+      (beacon-mode 1)
+      (setq beacon-color "#666600")
+      )
+
+  ;; good for deleting white space
+    (use-package hungry-delete
+      :ensure t
+      :config
+      (hungry-delete-mode))
+
+  ;; tabs in better
+    (use-package aggressive-indent
+      :ensure t
+      :config
+      (global-aggressive-indent-mode 1))
+
+  ;;highlighting chunks
+  (use-package expand-region
+    :ensure t
+    :config
+    (global-set-key (kbd "C-=") 'er/expand-region))
+#+end_src

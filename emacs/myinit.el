@@ -202,6 +202,68 @@
 ;;(display-time-mode nil)
 ;;(setq display-time-24hr-format nil)
 
+;; Inherit the face of `doom-modeline-panel` for better appearance
+(set-face-attribute 'tab-bar-tab nil :inherit 'doom-modeline-panel :foreground nil :background nil)
+
+(defun my/tab-bar-format (tab i)
+  (propertize
+   (format
+    (concat
+      (if (eq (car tab) 'current-tab)
+          "🔥 " "")
+      "%s")
+    (alist-get 'name tab))
+   'face (list (append
+                  '(:foreground "#FFFFFF")
+                  (if (eq (car tab) 'current-tab)
+                      '(:box t)
+                      '())))))
+
+;; Replace the default tab bar function
+(setq tab-bar-tab-name-format-function #'my/tab-bar-format)
+
+(defun my/tab-bar-tab-name-function ()
+  (let ((project (project-current)))
+    (if project
+        (project-root project)
+        (tab-bar-tab-name-current))))
+
+(setq tab-bar-tab-name-function #'my/tab-bar-tab-name-function)
+
+;; Only show the tab bar if there are 2 or more tabs
+(setq tab-bar-show 1)
+
+(defun my/tab-bar-string () "Emacs 28")
+
+;; Customize the tab bar format to add the global mode line string
+(setq tab-bar-format '(tab-bar-format-tabs tab-bar-separator tab-bar-format-align-right tab-bar-format-global))
+
+(add-to-list 'global-mode-string "Emacs 28 ")
+
+;; Make sure mode line text in the tab bar can be read
+(set-face-attribute 'tab-bar nil :foreground "#FFFFFF")
+
+(defun my/project-create-tab ()
+  (interactive)
+  (tab-bar-new-tab)
+  (magit-status))
+
+(setq project-switch-commands #'my/project-create-tab)
+
+(defun my/switch-to-tab-buffer ()
+  (interactive)
+  (if (project-current)
+      (call-interactively #'project-switch-to-buffer)
+    (call-interactively #'switch-to-buffer)))
+
+(global-set-key (kbd "C-x b") #'my/switch-to-tab-buffer)
+
+;; Turn on tab bar mode after startup
+(tab-bar-mode 1)
+
+;; Save the desktop session
+(desktop-save-mode 1)
+
 ;; Enable vertico
 (use-package vertico
   :ensure t
@@ -543,3 +605,38 @@
   :ensure t
   :init
     (yas-global-mode 1))
+
+(use-package undo-tree
+    :ensure t
+    :init
+    (global-undo-tree-mode))
+
+(global-set-key (kbd "C-z") 'undo)
+
+;;highlighting the line of the cursor
+  (global-hl-line-mode t)
+
+  (use-package beacon
+    :ensure t
+    :config
+    (beacon-mode 1)
+    (setq beacon-color "#666600")
+    )
+
+;; good for deleting white space
+  (use-package hungry-delete
+    :ensure t
+    :config
+    (hungry-delete-mode))
+
+;; tabs in better
+  (use-package aggressive-indent
+    :ensure t
+    :config
+    (global-aggressive-indent-mode 1))
+
+;;highlighting chunks
+(use-package expand-region
+  :ensure t
+  :config
+  (global-set-key (kbd "C-=") 'er/expand-region))

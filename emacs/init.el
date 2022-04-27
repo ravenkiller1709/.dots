@@ -36,7 +36,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(undo-tree yasnippet jedi flycheck zenburn-theme color-theme ox-reveal which-key vterm visual-fill-column vertico use-package try org-bullets orderless magit lorem-ipsum hydra exwm eshell-git-prompt dracula-theme doom-modeline dired-single dired-open counsel auto-package-update auto-complete all-the-icons-dired ace-window)))
+   '(expand-region aggressive-indent hungry-delete beacon undo-tree yasnippet jedi flycheck zenburn-theme color-theme ox-reveal which-key vterm visual-fill-column vertico use-package try org-bullets orderless magit lorem-ipsum hydra exwm eshell-git-prompt dracula-theme doom-modeline dired-single dired-open counsel auto-package-update auto-complete all-the-icons-dired ace-window)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
