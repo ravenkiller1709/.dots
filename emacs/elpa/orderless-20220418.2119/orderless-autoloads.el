@@ -1,4 +1,4 @@
-;;; orderless-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; orderless-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -6,8 +6,9 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "orderless" "orderless.el" (0 0 0 0))
-;;; Generated autoloads from orderless.el
+;;;### (autoloads nil "orderless" "../../../../.config/emacs/elpa/orderless-20220418.2119/orderless.el"
+;;;;;;  "3ef9a33b42a895b49e55dc60deee0c0d")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/orderless-20220418.2119/orderless.el
 
 (autoload 'orderless-filter "orderless" "\
 Split STRING into components and find entries TABLE matching all.
@@ -42,12 +43,21 @@ This function is for integration of orderless with ivy, use it as
 a value in `ivy-re-builders-alist'.
 
 \(fn STR)" nil nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "orderless" "../../../../.config/emacs/elpa/orderless-20220418.2119/orderless.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/orderless-20220418.2119/orderless.el
 
-(register-definition-prefixes "orderless" '("orderless-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "orderless" '("orderless-")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil nil ("orderless-pkg.el") (0 0 0 0))
+;;;### (autoloads nil nil ("../../../../.config/emacs/elpa/orderless-20220418.2119/orderless-autoloads.el"
+;;;;;;  "../../../../.config/emacs/elpa/orderless-20220418.2119/orderless-pkg.el"
+;;;;;;  "../../../../.config/emacs/elpa/orderless-20220418.2119/orderless.el")
+;;;;;;  (0 0 0 0))
 
 ;;;***
 

@@ -164,7 +164,7 @@
 	;; Bind "s-b" to launch firefox
 	([?\s-b] . (lambda ()
 		     (interactive)
-		     (start-process "" nil "/usr/bin/brave-nightly")))
+		     (start-process "" nil "/usr/bin/firefox")))
 
 	([?\s-z] . (lambda ()
 		     (interactive)
@@ -231,12 +231,12 @@
 
 (defun louder ()
   (interactive)
-  (start-process-shell-command "amixer set Master 5%+" nil "amixer set Master 5%+"))
+  (start-process-shell-command "amixer set Master 5%+" nil "amixer set Master 2%+"))
 (exwm-input-set-key (kbd "<XF86AudioRaiseVolume>") 'louder)
 
 (defun lower ()
   (interactive)
-  (start-process-shell-command "amixer set Master 5%-" nil "amixer set Master 5%-"))
+  (start-process-shell-command "amixer set Master 5%-" nil "amixer set Master 2%-"))
 (exwm-input-set-key (kbd "<XF86AudioLowerVolume>") 'lower)
 
 (defun mute ()

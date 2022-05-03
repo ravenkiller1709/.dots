@@ -3,7 +3,7 @@
     (all-the-icons "2.2.0")
     (shrink-path "0.2.0")
     (dash "2.11.0"))
-  :commit "7d8eb7c44087a62d8dd6e8ba1afc26facd914fbc" :authors
+  :commit "85bdd9ed8674710f6b9815e9a1c41ad4b5a45ace" :authors
   '(("Vincent Zhang" . "seagle0128@gmail.com"))
   :maintainer
   '("Vincent Zhang" . "seagle0128@gmail.com")

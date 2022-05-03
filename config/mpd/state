@@ -2,7 +2,7 @@ sw_volume: 100
 audio_device_state:1:mpd-alsa
 audio_device_state:1:toggle_visualizer
 state: stop
-current: 2
+current: 0
 random: 0
 repeat: 0
 single: 1
@@ -11,42 +11,30 @@ crossfade: 5
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Prefab Sprout - Crimson_Red/01.The Best Jewel Thief In The World.mp3
-1:David Bowie - Hours/01.Thursday's Child.mp3
-2:David Bowie - 1. Outside (The Nathan Adler Diaries_ A Hyper Cycle) (Version 2)/10.Strangers When We Meet (Radio Edit).mp3
-3:ASWV.mp3
-4:COUF.mp3
-5:ABKJ.mp3
-6:The Weeknd - Dawn FM/01.Dawn Fm.mp3
-7:The Weeknd - Dawn FM/02.Gasoline.mp3
-8:The Weeknd - Dawn FM/03.How Do I Make You Love Me.mp3
-9:The Weeknd - Dawn FM/04.Take My Breath.mp3
-10:The Weeknd - Dawn FM/05.Sacrifice.mp3
-11:The Weeknd - Dawn FM/06.A Tale By Quincy.mp3
-12:The Weeknd - Dawn FM/07.Out Of Time.mp3
-13:The Weeknd - Dawn FM/08.Here We Go... Again (With Tyler, The Creator).mp3
-14:The Weeknd - Dawn FM/09.Best Friends.mp3
-15:The Weeknd - Dawn FM/10.Is There Someone Else.mp3
-16:The Weeknd - Dawn FM/11.Starry Eyes.mp3
-17:The Weeknd - Dawn FM/12.Every Angel Is Terrifying.mp3
-18:The Weeknd - Dawn FM/13.Don't Break My Heart.mp3
-19:The Weeknd - Dawn FM/14.I Heard You're Married (With Lil Wayne).mp3
-20:The Weeknd - Dawn FM/15.Less Than Zero.mp3
-21:The Weeknd - Dawn FM/16.Phantom Regret By Jim.mp3
-22:The Weeknd - Dawn FM(1)/01.Dawn Fm.mp3
-23:The Weeknd - Dawn FM(1)/02.Gasoline.mp3
-24:The Weeknd - Dawn FM(1)/03.How Do I Make You Love Me.mp3
-25:The Weeknd - Dawn FM(1)/04.Take My Breath.mp3
-26:The Weeknd - Dawn FM(1)/05.Sacrifice.mp3
-27:The Weeknd - Dawn FM(1)/06.A Tale By Quincy.mp3
-28:The Weeknd - Dawn FM(1)/07.Out Of Time.mp3
-29:The Weeknd - Dawn FM(1)/08.Here We Go... Again (With Tyler, The Creator).mp3
-30:The Weeknd - Dawn FM(1)/09.Best Friends.mp3
-31:The Weeknd - Dawn FM(1)/10.Is There Someone Else.mp3
-32:The Weeknd - Dawn FM(1)/11.Starry Eyes.mp3
-33:The Weeknd - Dawn FM(1)/12.Every Angel Is Terrifying.mp3
-34:The Weeknd - Dawn FM(1)/13.Don't Break My Heart.mp3
-35:The Weeknd - Dawn FM(1)/14.I Heard You're Married (With Lil Wayne).mp3
-36:The Weeknd - Dawn FM(1)/15.Less Than Zero.mp3
-37:The Weeknd - Dawn FM(1)/16.Phantom Regret By Jim.mp3
+0:Bruce Springsteen/Darkness On the Edge of Town/05 Racing In the Street.mp3
+1:Bruce Springsteen - Letter To You/01.One Minute You're Here.mp3
+2:Bruce Springsteen - Letter To You/02.Letter To You.mp3
+3:Bruce Springsteen - Letter To You/03.Burnin' Train.mp3
+4:Bruce Springsteen - Letter To You/04.Janey Needs A Shooter.mp3
+5:Bruce Springsteen - Letter To You/05.Last Man Standing.mp3
+6:Bruce Springsteen - Letter To You/06.The Power Of Prayer.mp3
+7:Bruce Springsteen - Letter To You/07.House Of A Thousand Guitars.mp3
+8:Bruce Springsteen - Letter To You/08.Rainmaker.mp3
+9:Bruce Springsteen - Letter To You/09.If I Was The Priest.mp3
+10:Bruce Springsteen - Letter To You/10.Ghosts.mp3
+11:Bruce Springsteen - Letter To You/11.Song For Orphans.mp3
+12:Bruce Springsteen - Letter To You/12.I'll See You In My Dreams.mp3
+13:Bruce Springsteen - Western Stars/01.Hitch Hikin'.mp3
+14:Bruce Springsteen - Western Stars/02.The Wayfarer.mp3
+15:Bruce Springsteen - Western Stars/03.Tucson Train.mp3
+16:Bruce Springsteen - Western Stars/04.Western Stars.mp3
+17:Bruce Springsteen - Western Stars/05.Sleepy Joe's Cafe.mp3
+18:Bruce Springsteen - Western Stars/06.Drive Fast (The Stuntman).mp3
+19:Bruce Springsteen - Western Stars/07.Chasin' Wild Horses.mp3
+20:Bruce Springsteen - Western Stars/08.Sundown.mp3
+21:Bruce Springsteen - Western Stars/09.Somewhere North Of Nashville.mp3
+22:Bruce Springsteen - Western Stars/10.Stones.mp3
+23:Bruce Springsteen - Western Stars/11.There Goes My Miracle.mp3
+24:Bruce Springsteen - Western Stars/12.Hello Sunshine.mp3
+25:Bruce Springsteen - Western Stars/13.Moonlight Motel.mp3
 playlist_end

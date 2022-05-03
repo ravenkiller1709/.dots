@@ -1,4 +1,4 @@
-;;; f-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; f-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -6,10 +6,17 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "f" "f.el" (0 0 0 0))
-;;; Generated autoloads from f.el
+;;;### (autoloads "actual autoloads are elsewhere" "f" "../../../../.config/emacs/elpa/f-20220405.1534/f.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/f-20220405.1534/f.el
 
-(register-definition-prefixes "f" '("f-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "f" '("f-")))
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.config/emacs/elpa/f-20220405.1534/f-autoloads.el"
+;;;;;;  "../../../../.config/emacs/elpa/f-20220405.1534/f.el") (0
+;;;;;;  0 0 0))
 
 ;;;***
 

@@ -1,4 +1,4 @@
-;;; doom-modeline-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
+;;; doom-modeline-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
 
@@ -6,8 +6,9 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "doom-modeline" "doom-modeline.el" (0 0 0 0))
-;;; Generated autoloads from doom-modeline.el
+;;;### (autoloads nil "doom-modeline" "../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline.el"
+;;;;;;  "e2312eebdc786e8a6f80b1aba6641675")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline.el
 
 (autoload 'doom-modeline-init "doom-modeline" "\
 Initialize doom mode-line." nil nil)
@@ -72,57 +73,70 @@ or call the function `doom-modeline-mode'.")
 (autoload 'doom-modeline-mode "doom-modeline" "\
 Toggle doom-modeline on or off.
 
-This is a minor mode.  If called interactively, toggle the
-`Doom-Modeline mode' mode.  If the prefix argument is positive,
-enable the mode, and if it is zero or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-To check whether the minor mode is enabled in the current buffer,
-evaluate `(default-value \\='doom-modeline-mode)'.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Doom-Modeline mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "doom-modeline"
+;;;;;;  "../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline.el
 
-(register-definition-prefixes "doom-modeline" '("doom-modeline-mode-map"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-modeline" '("doom-modeline-mode-map")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil "doom-modeline-core" "doom-modeline-core.el"
+;;;### (autoloads "actual autoloads are elsewhere" "doom-modeline-core"
+;;;;;;  "../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-core.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from doom-modeline-core.el
+;;; Generated autoloads from ../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-core.el
 
-(register-definition-prefixes "doom-modeline-core" '("doom-modeline"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-modeline-core" '("doom-modeline")))
 
 ;;;***
 
-;;;### (autoloads nil "doom-modeline-env" "doom-modeline-env.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from doom-modeline-env.el
+;;;### (autoloads nil "doom-modeline-env" "../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-env.el"
+;;;;;;  "9b442575617512b0bf1f5ec8b60cac3c")
+;;; Generated autoloads from ../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-env.el
  (autoload 'doom-modeline-env-setup-python "doom-modeline-env")
  (autoload 'doom-modeline-env-setup-ruby "doom-modeline-env")
  (autoload 'doom-modeline-env-setup-perl "doom-modeline-env")
  (autoload 'doom-modeline-env-setup-go "doom-modeline-env")
  (autoload 'doom-modeline-env-setup-elixir "doom-modeline-env")
  (autoload 'doom-modeline-env-setup-rust "doom-modeline-env")
-
-(register-definition-prefixes "doom-modeline-env" '("doom-modeline-"))
-
-;;;***
 
-;;;### (autoloads nil "doom-modeline-segments" "doom-modeline-segments.el"
+;;;### (autoloads "actual autoloads are elsewhere" "doom-modeline-env"
+;;;;;;  "../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-env.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from doom-modeline-segments.el
+;;; Generated autoloads from ../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-env.el
 
-(register-definition-prefixes "doom-modeline-segments" '("doom-modeline-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-modeline-env" '("doom-modeline-")))
+
+;;;***
 
 ;;;***
 
-;;;### (autoloads nil nil ("doom-modeline-pkg.el") (0 0 0 0))
+;;;### (autoloads "actual autoloads are elsewhere" "doom-modeline-segments"
+;;;;;;  "../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-segments.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-segments.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-modeline-segments" '("doom-modeline-")))
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-autoloads.el"
+;;;;;;  "../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-core.el"
+;;;;;;  "../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-env.el"
+;;;;;;  "../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-pkg.el"
+;;;;;;  "../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline-segments.el"
+;;;;;;  "../../../../.config/emacs/elpa/doom-modeline-20220412.853/doom-modeline.el")
+;;;;;;  (0 0 0 0))
 
 ;;;***
 

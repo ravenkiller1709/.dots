@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <22/04/26 07:56:52 /home/kim/.config/emacs/tramp>
+;; -*- emacs-lisp -*- <22/05/01 21:53:11 /home/kim/.config/emacs/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; Run `M-x tramp-cleanup-all-connections' instead.
 
@@ -53,4 +53,24 @@
   ("bzr" "\\bzr")
   ("git" "\\git")
   ("hg" nil)
-  ("~root" "/root")))
+  ("~root" "/root"))
+ ((tramp-file-name "sudo" "root" nil "fedora" nil nil nil)
+  ("uname" "Linux 5.17.0-0.rc7.116.fc36.x86_64")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/usr/bin" "/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("pipe-buf" 4096)
+  ("remote-shell" "/bin/sh")
+  ("file-exists" "test -e")
+  ("case-insensitive" nil)
+  ("readlink" "\\readlink")
+  ("stat" "env QUOTING_STYLE=locale \\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 0)
+  ("gid-string" "root")
+  ("ls" "/usr/bin/ls --color=never")
+  ("ls--quoting-style=literal --show-control-chars" "--quoting-style=literal --show-control-chars")
+  ("ls--dired" "--dired")
+  ("df-blocksize" 1)
+  ("df" "\\df --block-size=1 --output=size,used,avail")))
