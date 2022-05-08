@@ -10,10 +10,10 @@ if status is-interactive
     alias lst='exa -lahFT --color=always --icons --sort=size --group-directories-first'
 
 set PATH $PATH:$HOME/.scripts:$HOME/.local/bin:/usr/bin:/usr/local/bin:/usr/sbin:/sbin
-export EDITOR='nvim'
+export EDITOR='emacs'
 export TERMINAL='st'
 export BROWSER='firefox'
-export MANPAGER='nvim +Man!'
+export MANPAGER='emacs +Man!'
 # export PATH=$HOME/.local/bin:$PATH
 export TERM='xterm-256color'
 
@@ -32,9 +32,9 @@ set PROMPT '%F{blue}%1~%f %F{magenta} %f '
 #ALIAS
 ####################################################
 alias dok='cd ~/Dokumenter'
-alias nm=neomutt
+alias nm=mu4e
 alias r=ranger
-alias v=nvim
+alias v=emacs
 alias cdv='cd ~/.config/nvim && nvim init.vim'
 alias ls='exa -la'
 #alias c='cd ~/.config/i3/ && nvim config'
@@ -68,7 +68,7 @@ alias build='sudo make clean install'
     alias x=exit
     alias ez='cd ~/.config/fish/ && nvim config.fish'
     alias sz='source ~/.config/fish/config.fish'
-    alias nm=neomutt
+    alias nm=mu4e
     
     /usr/bin/colorscript -r
 end

@@ -57,13 +57,13 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/kim/" (25198 56209 800044 940000) ".lesshst" "Dropbox/" ".dropbox/" ".dropbox-dist/" ".lyrics/" ".authinfo.gpg" ".authinfo.gpg~" "..mbsyncrc.~undo-tree~" ".dbus/" "..authinfo.gpg.~undo-tree~" ".bash_history" ".xprofile" ".scripts/" ".mbsyncrc" ".baggrunde/" ".dots/" ".gnupg/" "Mail/" "Videoklip/" "Billeder/" "Musik/" "Dokumenter/" "Offentligt/" "Skabeloner/" "Hentet/" "Skrivebord/" ".local/" ".config/" ".cache/" ".bashrc" ".bash_profile" ".bash_logout" ".mozilla/" "../" "./")
+
  ("/home/kim/.config/emacs/auto-save-list/" (25189 40177 366665 194000) ".saves-17879-Arch~" ".saves-51025-Arch~" "../" "./")
 
  ("/home/kim/.config/emacs/" (25189 40866 786632 890000) "myinit.org" "myinit.org~" "init.el" "myinit.el" "ido.last" "ido.last~" "samples/" "#init.el#~" "ac-comphist.dat" "init.el~" "recentf" "transient/" "#.last-package-update-day#" "history" "auto-save-list/" "elpa/" "tutorial/" "tramp" "themes/" "network-security.data" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" ".authinfo" "../" "./")
 
  ("/home/kim/.dots/emacs/" (25188 58889 346645 229000) ".#init.el" "ido.last" "ido.last~" "ac-comphist.dat" "myinit.org" "myinit.org~" "init.el" "init.el~" "recentf" "transient/" "#.last-package-update-day#" "history" "auto-save-list/" "elpa/" "tutorial/" "tramp" "themes/" "network-security.data" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" ".authinfo" "../" "./")
-
- ("/home/kim/" (25188 48824 273213 827000) ".ssh/" ".gitconfig" ".pki/" ".fehbg" ".mozilla/" ".authinfo.gpg" ".gnupg/" ".xprofile" ".scripts/" ".mbsyncrc" ".baggrunde/" "Mail/" ".local/" ".dots/" ".bash_history" ".viminfo" ".cache/" ".config/" "Videoklip/" "Billeder/" "Musik/" "Dokumenter/" "Offentligt/" "Skabeloner/" "Hentet/" "Skrivebord/" ".bashrc" ".bash_profile" ".bash_logout" "../" "./")
 
  ("/home/kim/.dots/emacs/themes/" (25188 4008 860017 299000) "darkburn-theme.el" "ubuntu-theme.el" "../" "./")
 
