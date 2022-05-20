@@ -2,7 +2,7 @@
   (interactive)
   ;; NOTE: You will need to update this to a valid background path!
   (start-process-shell-command
-      "feh" nil  "feh --bg-scale ~/.baggrunde/0003.jpg"))
+   "feh" nil  "feh --bg-scale /usr/share/backgrounds/f36/default/f36-02-night.png"))
 
 ;; Disable menu-bar, tool-bar and scroll-bar to increase the usable space.
 (menu-bar-mode -1)
@@ -62,8 +62,9 @@
   (pcase exwm-class-name
     ("Firefox" (exwm-workspace-move-window 2))
     ("Sol" (exwm-workspace-move-window 3))
-    ("mpv" (exwm-floating-toggle-floating)
-           (exwm-layout-toggle-mode-line))))
+    ("steam" (exwm-floating-toggle-floating))
+    ("mpv" (exwm-floating-toggle-floating))
+    (exwm-layout-toggle-mode-line)))
 
 ;; All buffers created in EXWM mode are named "*EXWM*". You may want to
 ;; change it in `exwm-update-class-hook' and `exwm-update-title-hook', which
@@ -71,7 +72,7 @@
 ;; some advice on this topic:
 ;; + Always use `exwm-workspace-rename-buffer` to avoid naming conflict.
 ;; + For applications with multiple windows (e.g. GIMP), the class names of
-;    all windows are probably the same.  Using window titles for them makes
+					;    all windows are probably the same.  Using window titles for them makes
 ;;   more sense.
 ;; In the following example, we use class names for all windows except for
 ;; Java applications and GIMP.

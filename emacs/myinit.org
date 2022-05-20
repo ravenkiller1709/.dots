@@ -214,16 +214,16 @@ proposal however).
 * DOOM THEMES
 
 #+BEGIN_SRC emacs-lisp
-  ;;(use-package doom-themes
-  ;;  :ensure t
-  ;;  :config
-  ;;  ;; Global settings (defaults)
-  ;;  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-  ;;        doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  ;;  (load-theme 'doom-solarized-dark t)1)
-  ;;
-  ;;;; Enable flashing mode-line on errors
-  ;; (doom-themes-visual-bell-config)
+  (use-package doom-themes
+    :ensure t
+    :config
+    ;; Global settings (defaults)
+    (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+          doom-themes-enable-italic t) ; if nil, italics is universally disabled
+    (load-theme 'spacemacs-light t)1)
+  
+  ;; Enable flashing mode-line on errors
+   (doom-themes-visual-bell-config)
   ;;
   ;;;; Enable custom neotree theme
   ;; (doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
@@ -238,8 +238,8 @@ proposal however).
   ;;  :config (load-theme 'dracula t))
 
   ;;(load-theme 'leuven t)
-  (add-to-list 'custom-theme-load-path "~/.dots/emacs/themes/") ;; for themes loaded locally
-  (load-theme 'bubbleberry t)
+  ;;(add-to-list 'custom-theme-load-path "~/.dots/emacs/themes/") ;; for themes loaded locally
+  ;;(load-theme 'bubbleberry t)
 #+END_SRC
 
 * Doom Modeline
@@ -569,7 +569,7 @@ This should be uncommented if on BSD and remember to download package coreutils 
 
 	 ;; Hotmail account
          (make-mu4e-context
-          :name "Work"
+          :name "Hotmail"
           :match-func
             (lambda (msg)
               (when msg

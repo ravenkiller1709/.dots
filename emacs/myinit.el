@@ -149,16 +149,16 @@
 
 (setq erc-track-visibility nil) ; Only use the selected frame for visibility
 
-;;(use-package doom-themes
-;;  :ensure t
-;;  :config
-;;  ;; Global settings (defaults)
-;;  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-;;        doom-themes-enable-italic t) ; if nil, italics is universally disabled
-;;  (load-theme 'doom-solarized-dark t)1)
-;;
-;;;; Enable flashing mode-line on errors
-;; (doom-themes-visual-bell-config)
+(use-package doom-themes
+  :ensure t
+  :config
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (load-theme 'spacemacs-light t)1)
+
+;; Enable flashing mode-line on errors
+ (doom-themes-visual-bell-config)
 ;;
 ;;;; Enable custom neotree theme
 ;; (doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
@@ -173,8 +173,8 @@
 ;;  :config (load-theme 'dracula t))
 
 ;;(load-theme 'leuven t)
-(add-to-list 'custom-theme-load-path "~/.dots/emacs/themes/") ;; for themes loaded locally
-(load-theme 'bubbleberry t)
+;;(add-to-list 'custom-theme-load-path "~/.dots/emacs/themes/") ;; for themes loaded locally
+;;(load-theme 'bubbleberry t)
 
 (use-package doom-modeline
   :ensure t
@@ -479,7 +479,7 @@
 
 	 ;; Hotmail account
          (make-mu4e-context
-          :name "Work"
+          :name "Hotmail"
           :match-func
             (lambda (msg)
               (when msg
