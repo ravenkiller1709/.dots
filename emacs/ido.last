@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/kim/Dokumenter/Projekter/" . "my-org-site/")
  ("/sudo::/usr/share/" . "xsessions/")
  ("/sudo::/usr/" . "share/")
  ("/home/kim/.local/src/" . "dmenu/")
@@ -18,6 +19,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/kim/Dokumenter/Projekter/my-org-site/"
  "/home/kim/"
  "/../home/kim/.config/emacs/"
  "/home/kim/.dots/emacs/"
@@ -58,7 +60,11 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/kim/" (25223 37498 829784 29000) ".steampid" ".steampath" ".steam/" "Faktura_20220143.pdf" "S45C-6e22051910200.pdf" ".fehbg" ".dbus/" ".bash_history" ".authinfo.gpg" "..authinfo.gpg.~undo-tree~" ".gnupg/" "Mail/" ".mbsyncrc" ".scripts/" ".baggrunde/" ".dots/" "Videoklip/" "Billeder/" "Musik/" "Dokumenter/" "Offentligt/" "Skabeloner/" "Hentet/" "Skrivebord/" ".local/" ".config/" ".cache/" ".bashrc" ".bash_profile" ".bash_logout" ".mozilla/" "../" "./")
+ ("/home/kim/Dokumenter/Projekter/my-org-site/" (25232 40912 939591 305000) "public/" "Emacs.org" "content/" "build-site.el" "build-site.el~" "build.sh" ".build.sh.~undo-tree~" ".build-site.el.~undo-tree~" "../" "./")
+
+ ("/home/kim/Dokumenter/Projekter/" (25232 39215 715950 771000) "my-org-site/" "../" "./")
+
+ ("/home/kim/" (25231 60593 298033 614000) ".ssh/" ".var/" ".fehbg" ".dbus/" ".bash_history" ".authinfo" ".ZipArchive/" ".authinfo.gpg" "..authinfo.gpg.~undo-tree~" "Mail/" ".mbsyncrc" ".scripts/" ".baggrunde/" ".gnupg/" ".dots/" "Videoklip/" "Billeder/" "Musik/" "Dokumenter/" "Offentligt/" "Skabeloner/" "Hentet/" "Skrivebord/" ".local/" ".config/" ".cache/" ".bashrc" ".bash_profile" ".bash_logout" ".mozilla/" "../" "./")
 
  ("/../home/kim/.config/emacs/" (25223 32856 265446 652000) "myinit.el" "ido.last" "ido.last~" "recentf" ".desktop.el.~undo-tree~" ".myinit.org.~undo-tree~" "session.10661192c96829159b165302815657085700000020240079" "history" "init.el" ".init.el.~undo-tree~" "snippets/" "ac-comphist.dat" "transient/" "auto-save-list/" "elpa/" "tutorial/" "tramp" "themes/" "samples/" "projects" "network-security.data" "myinit.org" "init.el~" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "eshell/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" "../" "./")
 

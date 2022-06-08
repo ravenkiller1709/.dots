@@ -1,8 +1,8 @@
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 
-(defvar efs/frame-transparency '(90 . 90))
-(set-frame-parameter (selected-frame) 'alpha '(90 90))
-(add-to-list 'default-frame-alist '(alpha 90 90))
+(defvar efs/frame-transparency '(100 . 100))
+(set-frame-parameter (selected-frame) 'alpha '(100 100))
+(add-to-list 'default-frame-alist '(alpha 100 100))
 
 ;; The default is 800 kilobytes.  Measured in bytes.
 (setq gc-cons-threshold (* 50 1000 1000))
@@ -155,7 +155,7 @@
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  (load-theme 'spacemacs-light t)1)
+  (load-theme 'doom-nord t)1)
 
 ;; Enable flashing mode-line on errors
  (doom-themes-visual-bell-config)
