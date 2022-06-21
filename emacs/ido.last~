@@ -19,8 +19,8 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/kim/Dokumenter/Projekter/my-org-site/"
  "/home/kim/"
+ "/home/kim/Dokumenter/Projekter/my-org-site/"
  "/../home/kim/.config/emacs/"
  "/home/kim/.dots/emacs/"
  "/home/kim/.config/emacs/"
@@ -60,19 +60,21 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/kim/" (25252 15966 773329 14000) ".lyrics/" "....mbsyncrc.~undo-tree~.~undo-tree~.~undo-tree~" ".authinfo.gpg" ".authinfo.gpg~" ".thunderbird/" ".ssh/" "...mbsyncrc.~undo-tree~.~undo-tree~" ".password-store/" ".mozilla/" "..mbsyncrc.~undo-tree~" ".passwordtilemacs.~undo-tree~" "..authinfo.gpg.~undo-tree~" "passwordtilemacs" "mnt/" "Mail/" ".gnupg/" ".mbsyncrc" ".scripts/" ".xprofile" ".baggrunde/" ".dots/" ".local/" ".bash_history" ".viminfo" ".cache/" ".config/" "Videoklip/" "Billeder/" "Musik/" "Dokumenter/" "Offentligt/" "Skabeloner/" "Hentet/" "Skrivebord/" ".bashrc" ".bash_profile" ".bash_logout" "../" "./")
+
+ ("/home/kim/.dots/" (25252 14307 463296 675000) "..mbsyncrc.~undo-tree~" "src/" "fonts/" "emacs/" "dots/" "config/" "bin/" "base-uefi.sh" "base-mbr.sh" ".xprofile" ".scripts/" ".mbsyncrc" ".gitignore" ".baggrunde/" ".git/" "../" "./")
+
+ ("/home/kim/.dots/emacs/" (25254 1559 636648 467000) "myinit.el" "ido.last" "ido.last~" "session.10defbc3386493113c165492278620721600000510310073" "recentf" ".myinit.org.~undo-tree~" "ac-comphist.dat" "transient/" "history" "auto-save-list/" "init.el" ".init.el.~undo-tree~" "snippets/" "elpa/" "tutorial/" "tramp" "themes/" "samples/" "projects" "network-security.data" "myinit.org" "init.el~" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "eshell/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" "../" "./")
+
  ("/home/kim/Dokumenter/Projekter/my-org-site/" (25232 40912 939591 305000) "public/" "Emacs.org" "content/" "build-site.el" "build-site.el~" "build.sh" ".build.sh.~undo-tree~" ".build-site.el.~undo-tree~" "../" "./")
 
  ("/home/kim/Dokumenter/Projekter/" (25232 39215 715950 771000) "my-org-site/" "../" "./")
-
- ("/home/kim/" (25231 60593 298033 614000) ".ssh/" ".var/" ".fehbg" ".dbus/" ".bash_history" ".authinfo" ".ZipArchive/" ".authinfo.gpg" "..authinfo.gpg.~undo-tree~" "Mail/" ".mbsyncrc" ".scripts/" ".baggrunde/" ".gnupg/" ".dots/" "Videoklip/" "Billeder/" "Musik/" "Dokumenter/" "Offentligt/" "Skabeloner/" "Hentet/" "Skrivebord/" ".local/" ".config/" ".cache/" ".bashrc" ".bash_profile" ".bash_logout" ".mozilla/" "../" "./")
 
  ("/../home/kim/.config/emacs/" (25223 32856 265446 652000) "myinit.el" "ido.last" "ido.last~" "recentf" ".desktop.el.~undo-tree~" ".myinit.org.~undo-tree~" "session.10661192c96829159b165302815657085700000020240079" "history" "init.el" ".init.el.~undo-tree~" "snippets/" "ac-comphist.dat" "transient/" "auto-save-list/" "elpa/" "tutorial/" "tramp" "themes/" "samples/" "projects" "network-security.data" "myinit.org" "init.el~" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "eshell/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" "../" "./")
 
  ("/home/kim/.config/emacs/auto-save-list/" (25189 40177 366665 194000) ".saves-17879-Arch~" ".saves-51025-Arch~" "../" "./")
 
  ("/home/kim/.config/emacs/" (25189 40866 786632 890000) "myinit.org" "myinit.org~" "init.el" "myinit.el" "ido.last" "ido.last~" "samples/" "#init.el#~" "ac-comphist.dat" "init.el~" "recentf" "transient/" "#.last-package-update-day#" "history" "auto-save-list/" "elpa/" "tutorial/" "tramp" "themes/" "network-security.data" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" ".authinfo" "../" "./")
-
- ("/home/kim/.dots/emacs/" (25188 58889 346645 229000) ".#init.el" "ido.last" "ido.last~" "ac-comphist.dat" "myinit.org" "myinit.org~" "init.el" "init.el~" "recentf" "transient/" "#.last-package-update-day#" "history" "auto-save-list/" "elpa/" "tutorial/" "tramp" "themes/" "network-security.data" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" ".authinfo" "../" "./")
 
  ("/home/kim/.dots/emacs/themes/" (25188 4008 860017 299000) "darkburn-theme.el" "ubuntu-theme.el" "../" "./")
 
@@ -89,8 +91,6 @@
  ("/home/kim/.config/alacritty/" (25187 59144 473751 47000) "alacritty.yml" "../" "./")
 
  ("/home/" (25187 59534 964678 686000) "kim/" "../" "./")
-
- ("/home/kim/.dots/" (25187 59156 653570 382000) "src/" "fonts/" "emacs/" "dots/" "config/" "bin/" "base-uefi.sh" "base-mbr.sh" ".xprofile" ".scripts/" ".mbsyncrc" ".baggrunde/" ".git/" "../" "./")
 
  ("/home/kim/.dotfiles/emacs/" (25185 42370 524792 936000) "transient/" "history" "ido.last" "ido.last~" "init.el" "elpa/" "url/" "tutorial/" "tramp" "themes/" "network-security.data" "init.el~" "hallo.theme.el~" "hallo.theme.el-bak" "exwm/" "desktop.el-bak" "desktop.el" "battery.el" ".mbsyncrc~" ".mbsyncrc" ".last-package-update-day" ".authinfo" "../" "./")
 

@@ -461,38 +461,38 @@
   (setq mu4e-contexts
         (list
          ;; Work account
-         (make-mu4e-context
-          :name "Work"
-          :match-func
-            (lambda (msg)
-              (when msg
-                (string-prefix-p "/Gmail" (mu4e-message-field msg :maildir))))
-          :vars '((user-mail-address . "mail4kruse@gmail.com")
-                  (user-full-name    . "Kim Kruse")
-		  (smtpmail-smtp-server  . "smtp.gmail.com")
-                  (smtpmail-smtp-service . 465)
-                  (smtpmail-stream-type  . ssl)
-                  (mu4e-drafts-folder  . "/Gmail/Drafts")
-                  (mu4e-sent-folder  . "/Gmail/Sent Mail")
-                  (mu4e-refile-folder  . "/Gmail/[Gmail]/Alle mails")
-                  (mu4e-trash-folder  . "/Gmail/[Gmail]/Trash")))
+;;         (make-mu4e-context
+;;          :name "Work"
+;;          :match-func
+;;            (lambda (msg)
+;;              (when msg
+;;                (string-prefix-p "/Gmail" (mu4e-message-field msg :maildir))))
+;;          :vars '((user-mail-address . "mail4kruse@gmail.com")
+;;                  (user-full-name    . "Kim Kruse";;)
+;;		  (smtpmail-smtp-server  . "smtp.gma;;il.com")
+;;                  (smtpmail-smtp-service . 46;;5)
+;;                  (smtpmail-stream-type  . ss;;l)
+;;                  (mu4e-drafts-folder  . "/Gmail/Drafts")
+;;                  (mu4e-sent-folder  . "/Gmail/Sent Mail")
+;;                  (mu4e-refile-folder  . "/Gmail/[Gmail]/Alle mails")
+;;                  (mu4e-trash-folder  . "/Gmail/[Gmail]/Trash")))
 
 	 ;; Hotmail account
-         (make-mu4e-context
-          :name "Hotmail"
-          :match-func
-            (lambda (msg)
-              (when msg
-                (string-prefix-p "/Hotmail" (mu4e-message-field msg :maildir))))
-          :vars '((user-mail-address . "kimkruse@hotmail.com")
-                  (user-full-name    . "Kim Kruse")
-		  (smtpmail-smtp-server  . "smtp-mail.outlook.com")
-                  (smtpmail-smtp-service . 587)
-                  (smtpmail-stream-type  . starttls)
-                  (mu4e-drafts-folder  . "/Hotmail/Drafts")
-                  (mu4e-sent-folder  . "/Hotmail/Sent Mail")
-                  (mu4e-refile-folder  . "/Hotmail/Alle mails")
-                  (mu4e-trash-folder  . "/Hotmail/Trash")))
+;;         (make-mu4e-context
+;;          :name "Hotmail"
+;;          :match-func
+;;            (lambda (msg)
+;;              (when msg
+;;                (string-prefix-p "/Hotmail" (mu4e-message-field msg :maildir))))
+;;          :vars '((user-mail-address . "kimkruse@hotmail.com")
+;;                  (user-full-name    . "Kim Kruse")
+;;		  (smtpmail-smtp-server  . "smtp-mail.outlook.com")
+;;                  (smtpmail-smtp-service . 58;;7)
+;;                  (smtpmail-stream-type  . st;;arttls)
+;;                  (mu4e-drafts-folder  . "/Ho;;tmail/Drafts")
+;;                  (mu4e-sent-folder  . "/Hotm;;ail/Sent Mail")
+;;                  (mu4e-refile-folder  . "/Ho;;tmail/Alle mails")
+;;                  (mu4e-trash-folder  . "/Hot;;mail/Trash")))
 
          ;; Personal account
          (make-mu4e-context
@@ -514,8 +514,8 @@
   (setq mu4e-maildir-shortcuts
       '(("/kimkruse/Inbox"             . ?i)
         ("/kimkruse/Sent" . ?s)
-        ("/Hotmail/Inbox"    . ?d)
-        ("/Gmail/Inbox"     . ?t))))
+        ("/kimkruse/Trash"    . ?d)
+        ("/kimkruse/Archive"     . ?t))))
 
 (use-package lorem-ipsum
   :ensure t
@@ -543,13 +543,6 @@
   :ensure t
   :init
     (yas-global-mode 1))
-
-(use-package undo-tree
-    :ensure t
-    :init
-    (global-undo-tree-mode))
-
-(global-set-key (kbd "C-z") 'undo)
 
 ;;highlighting the line of the cursor
   (global-hl-line-mode t)
