@@ -22,4 +22,29 @@ Create Both
 SyncState *
 MaxMessages 0
 ExpireUnread no
+
+IMAPStore kkruse@nepgroup.com-remote
+Host outlook.office365.com
+Port 993
+User kkruse@nepgroup.com
+PassCmd "emacsclient -e \"(efs/lookup-password :host \\\"outlook.office365.com\\\" :user \\\"kkruse@nepgroup.com\\\")\" | cut -d '\"' -f2"
+#PassCmd "pass kim@kimkruse.xyz"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore kkruse@nepgroup.com-local
+Subfolders Verbatim
+Path /home/kim/Mail/nepgroup/
+Inbox /home/kim/Mail/nepgroup/INBOX
+
+Channel kkruse@nepgroup.com
+Expunge Both
+Far :kkruse@nepgroup.com-remote:
+Near :kkruse@nepgroup.com-local:
+Patterns * !"/nepgroup/Indbakke"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
 # End profile

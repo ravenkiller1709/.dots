@@ -489,7 +489,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(28 1 1 2)
+	 [(28 1 1 3)
 	  ((emacs
 	    (24 3))
 	   (nadvice
@@ -500,7 +500,7 @@
 	   (:maintainer "Compat Development" . "~pkal/compat-devel@lists.sr.ht")
 	   (:authors
 	    ("Philip Kaludercic" . "philipk@posteo.net"))
-	   (:commit . "b75491b95ead07ca2cd02c128037c08882b046b4"))])
+	   (:commit . "2c3233c0e09ef34176787b6e3da4319751ad91e7"))])
  (consult .
 	  [(0 18)
 	   ((emacs
@@ -524,7 +524,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 25)
+	[(0 26)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -532,7 +532,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "8b9d37413639a1c92f0c74f1230bddbe45e79c59"))])
+	  (:commit . "c07b8c168765c350ef4693d1d8cd26be43894872"))])
  (coterm .
 	 [(1 5)
 	  ((emacs
@@ -604,7 +604,7 @@
 		(:authors
 		 ("Theodor Thornhill" . "theo@thornhill.no")))])
  (csv-mode .
-	   [(1 20)
+	   [(1 21)
 	    ((emacs
 	      (27 1))
 	     (cl-lib
@@ -615,7 +615,7 @@
 	     (:authors
 	      ("\"Francis J. Wright\"" . "F.J.Wright@qmul.ac.uk"))
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
-	     (:commit . "51580d5bf7095eff429029cd8d4b79214faf6b48"))])
+	     (:commit . "d10d68c382e17960fc9aaef072fd18a23ea92a86"))])
  (cursory .
 	  [(0 1 4)
 	   ((emacs
@@ -907,7 +907,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20220605)
+      [(20220626)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -916,7 +916,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "afc2a0cfe4fe462e74e5c6fe17282f46bf3dbdec"))])
+	(:commit . "3ef1f6af7e9d07c0ad2e330ae161061e57fd2a87"))])
  (eglot .
 	[(1 8)
 	 ((emacs
@@ -2132,7 +2132,7 @@
 	      ("Ian Dunn" . "dunni@gnu.org"))
 	     (:keywords "convenience" "text" "org"))])
  (org-modern .
-	     [(0 3)
+	     [(0 4)
 	      ((emacs
 		(27 1)))
 	      "Modern looks for Org" tar
@@ -2140,7 +2140,7 @@
 	       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "64fa67a3e4cc7af4084bb879bd8a0e5380333bcf"))])
+	       (:commit . "5de3da1ff55b4567e9df3b234c09427aed2cbcd7"))])
  (org-real .
 	   [(1 0 5)
 	    ((emacs
@@ -2386,7 +2386,7 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "86a7c429c6878287c068106b318889824cad3210"))])
  (pyim .
-       [(4 2 1)
+       [(5 1 0)
 	((emacs
 	  (25 1))
 	 (async
@@ -2400,7 +2400,7 @@
 	 (:authors
 	  ("Ye Wenbin" . "wenbinye@163.com")
 	  ("Feng Shu" . "tumashu@163.com"))
-	 (:commit . "6b4cea1b541f5efd18067d4cafa1ca4b059a0c63"))])
+	 (:commit . "5617d8f87c45e6e19af7654ac9e62cc90854776f"))])
  (pyim-basedict .
 		[(0 5 4)
 		 nil "The default pinyin dict of pyim" tar
@@ -2578,7 +2578,7 @@
 		      (:authors
 		       ("Rocky Bernstein" . "rocky@gnu.org")))])
  (rec-mode .
-	   [(1 8 4)
+	   [(1 9 0)
 	    ((emacs
 	      (25)))
 	    "Major mode for viewing/editing rec files" tar
@@ -2586,7 +2586,7 @@
 	     (:maintainer "Antoine Kalmbach" . "ane@iki.fi")
 	     (:authors
 	      ("Jose E. Marchesi" . "jemarch@gnu.org"))
-	     (:commit . "a8e7c19a548eb91762316c84870bdebb4490f2c7"))])
+	     (:commit . "09f828e9f54f32b56a805e4192588643d95c2f44"))])
  (register-list .
 		[(0 1)
 		 nil "Interactively list/edit registers" single
@@ -3316,7 +3316,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "86f08fb377e2b8f2df0614c48783bdce347f3758"))])
  (vertico .
-	  [(0 24)
+	  [(0 25)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar
@@ -3324,7 +3324,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "e5935b5bbfc0d820c54ed1ad52e36e8c48248fd7"))])
+	    (:commit . "c511f874fa0f39e4691ab145b233bbe5b23e4fa2"))])
  (vertico-posframe .
 		   [(0 5 4)
 		    ((emacs
