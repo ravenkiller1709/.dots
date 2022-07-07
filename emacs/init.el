@@ -28,6 +28,31 @@
   :config
   (auto-package-update-maybe)
   (auto-package-update-at-time "09:00"))
+(defvar efs/frame-transparency '(100 . 100))
+(set-frame-parameter (selected-frame) 'alpha '(100 100))
+(add-to-list 'default-frame-alist '(alpha 100 100))
+
+;; The default is 800 kilobytes.  Measured in bytes.
+(setq gc-cons-threshold (* 50 1000 1000))
+
+(defun efs/display-startup-time ()
+  (message "Emacs loaded in %s with %d garbage collections."
+           (format "%.2f seconds"
+                   (float-time
+                    (time-subtract after-init-time before-init-time)))
+           gcs-done))
+
+(add-hook 'emacs-startup-hook #'efs/display-startup-time)
+
+(setq inhibit-startup-message t)
+
+(tool-bar-mode -1)
+
+(scroll-bar-mode -1)
+
+(menu-bar-mode -1)
+
+(set-fringe-mode 10)
 
 (org-babel-load-file (expand-file-name "~/.dots/emacs/myinit.org"))
 (custom-set-variables
