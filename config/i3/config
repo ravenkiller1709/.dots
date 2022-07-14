@@ -22,7 +22,7 @@ font pango:monospace 11
 # No titlebar
 for_window [class="^.*"] border pixel 1
 
-gaps inner 20 
+gaps inner 20
 gaps outer 10
 
 

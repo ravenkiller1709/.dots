@@ -28,9 +28,9 @@
   :config
   (auto-package-update-maybe)
   (auto-package-update-at-time "09:00"))
-(defvar efs/frame-transparency '(100 . 100))
-(set-frame-parameter (selected-frame) 'alpha '(100 100))
-(add-to-list 'default-frame-alist '(alpha 100 100))
+(defvar efs/frame-transparency '(80 . 80))
+(set-frame-parameter (selected-frame) 'alpha '(80 80))
+(add-to-list 'default-frame-alist '(alpha 80 80))
 
 ;; The default is 800 kilobytes.  Measured in bytes.
 (setq gc-cons-threshold (* 50 1000 1000))
@@ -61,7 +61,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(image+ image-dired+ simple-httpd spacemacs-theme expand-region aggressive-indent hungry-delete beacon undo-tree yasnippet jedi flycheck zenburn-theme color-theme ox-reveal which-key vterm visual-fill-column vertico use-package try org-bullets orderless magit lorem-ipsum hydra exwm eshell-git-prompt dracula-theme doom-modeline dired-single dired-open counsel auto-package-update auto-complete all-the-icons-dired ace-window)))
+   '(perspective-exwm image+ image-dired+ simple-httpd spacemacs-theme expand-region aggressive-indent hungry-delete beacon undo-tree yasnippet jedi flycheck zenburn-theme color-theme ox-reveal which-key vterm visual-fill-column vertico use-package try org-bullets orderless magit lorem-ipsum hydra exwm eshell-git-prompt dracula-theme doom-modeline dired-single dired-open counsel auto-package-update auto-complete all-the-icons-dired ace-window)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

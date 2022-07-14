@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <22/07/02 10:49:54 /home/kim/.config/emacs/tramp>
+;; -*- emacs-lisp -*- <22/07/11 21:11:41 /home/kim/.config/emacs/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; Run `M-x tramp-cleanup-all-connections' instead.
 
@@ -29,7 +29,7 @@
   ("hg" nil))
  ((tramp-file-name "sudo" "root" nil "Arch" nil nil nil)
   ("null-device" "/dev/null")
-  ("uname" "Linux 5.18.5-arch1-1")
+  ("uname" "Linux 5.18.10-arch1-1")
   ("locale" "LC_ALL=C.UTF-8")
   ("test" "test")
   ("remote-path"
@@ -50,9 +50,11 @@
   ("gid-integer" 0)
   ("ln" "\\ln")
   ("case-insensitive" nil)
-  ("bzr" "\\bzr")
+  ("bzr" nil)
   ("git" "\\git")
   ("hg" nil)
+  ("touch-t" t)
+  ("touch" "\\touch")
   ("~root" "/root"))
  ((tramp-file-name "sudo" "root" nil "fedora" nil nil nil)
   ("uname" "Linux 5.17.5-300.fc36.x86_64")

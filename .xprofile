@@ -1,9 +1,10 @@
 #!/bin/sh
 xset +fp /home/kim/.local/share/fonts &
 xset fp rehash &
-picom &
+picom --blur-background 80 &
 setxkbmap dk &
 dropbox &
+feh --bg-scale ~/.baggrunde/graf.jpg &
 xsetroot -cursor_name left_ptr &
 /usr/lib/polkit-1/polkit-agent-helper-1 &
 xrdb -load ~/.Xresources &
