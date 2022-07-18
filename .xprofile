@@ -1,7 +1,8 @@
 #!/bin/sh
 xset +fp /home/kim/.local/share/fonts &
 xset fp rehash &
-picom --blur-background 80 &
+xrdb -load ~/.Xresources &
+picom &
 setxkbmap dk &
 dropbox &
 feh --bg-scale ~/.baggrunde/graf.jpg &

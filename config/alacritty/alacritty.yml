@@ -181,7 +181,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 13.0
+  size: 8.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -222,7 +222,7 @@ schemes:
   ### Doom One ###
   DoomOne: &DoomOne
     primary:
-      background: '#282c34'
+      background: '#263238'
       foreground: '#bbc2cf'
     cursor:
       text: CellBackground
