@@ -82,36 +82,36 @@
       nil)))
 
 (use-package counsel
-  :ensure t)
+    :ensure t)
 
-(use-package ivy
-  :ensure t
-  :diminish (ivy-mode)
-  :bind (("C-x b" . ivy-switch-buffer))
-  :config
-  (ivy-mode 1)
-  (setq ivy-use-virtual-buffers t)
-  (setq ivy-display-style 'fancy)
-  (setq enable-recursive-minibuffers t)
-)
-  (use-package swiper
-    :ensure try
-    :bind (("C-s" . swiper)
-	   ("C-r" . swiper)
-	   ("C-c C-r" . ivy-resume)
-	   ("M-x" . counsel-M-x)
-	   ("C-x C-f" . counsel-find-file))
+  (use-package ivy
+    :ensure t
+    :diminish (ivy-mode)
+    :bind (("C-x b" . ivy-switch-buffer))
     :config
-    (progn
-      (ivy-mode 1)
-      (setq ivy-use-virtual-buffers t)
-      (setq ivy-display-style 'fancy)
-      (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
-      ))
+    (ivy-mode 1)
+    (setq ivy-use-virtual-buffers t)
+    (setq ivy-display-style 'fancy)
+    (setq enable-recursive-minibuffers t)
+  )
+    (use-package swiper
+      :ensure try
+      :bind (("C-s" . swiper)
+	     ("C-r" . swiper)
+	     ("C-c C-r" . ivy-resume)
+	     ("M-x" . counsel-M-x)
+	     ("C-x C-f" . counsel-find-file))
+      :config
+      (progn
+	(ivy-mode 1)
+	(setq ivy-use-virtual-buffers t)
+	(setq ivy-display-style 'fancy)
+	(define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
+	))
 
-(use-package avy
-  :ensure t
-  :bind ("M-s" . avy-goto-char))
+  (use-package avy
+    :ensure t
+    :bind ("M-s" . avy-goto-char))
 
 (use-package mu4e
   :ensure nil

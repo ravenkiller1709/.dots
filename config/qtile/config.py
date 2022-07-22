@@ -144,7 +144,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="TerminessTTF NerdFont",
+    font="RobotoMono NerdFont",
     fontsize=16,
     padding=3,
 )
@@ -160,10 +160,10 @@ screens = [
                 widget.GroupBox(
                     active='c5c8c6',
                     inactive='c5c8c6',
-                    background='373b41',
+                    background='232c31',
                     highlight_method='line',
-                    block_highlight_text_color='373b41',
-                    highlight_color='cc6666',
+                    block_highlight_text_color='b5d8f6',
+                    highlight_color='b02f30',
                     padding=6,
                     margin_x=6,
                 ),
@@ -178,46 +178,53 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
+                widget.CheckUpdates(
+                    custom_command='checkupdates',
+                    execute='st -e ~/.local/bin/statusbar/popupgrade',
+                ),
                 widget.Mpd2(
-                    foreground='c5c8c6',
-                    background='373b41',
-                    idle_message='\uF001',
+                    foreground='95aec7',
+                    background='232c31',
+                    idle_message='\uF001 ',
                 ),
                 widget.Sep(
                     linewidth=5,
                     foreground='373b41',
-                    background='373b41',
+                    background='232c31',
                 ),
                 widget.Battery(
                     battery=1,
                     discharge_char='\uf241',
                     charge_char='\uf1E6',
                     format='{char} {percent: 2.0%}',
-                    foreground='c5c8c6',
-                    background='373b41',
+                    foreground='b5d8f6',
+                    background='232c31',
+                    low_foreground='cc6666',
                     update_interval=30,
                 ),
                 widget.Battery(
                     battery=0,
-                    format='{percent:2.0%}',
-                    foreground='c5c8c6',
-                    background='373b41',
+                    format='{percent: 2.0%}',
+                    foreground='484d79',
+                    background='232c31',
+                    low_foreground='cc6666',
+                    #notify_below='Low Battery - Charge Now!',
                     update_interval=30,
                 ),
                 widget.Sep(
                     linewidth=5,
-                    foreground='373b41',
-                    background='373b41',
+                    foreground='232c31',
+                    background='232c31',
                 ),
-                widget.Sep(
-                    linewidth=5,
-                    foreground='373b41',
-                    background='373b41',
+                widget.NetGraph(
+                    graph_color='a03b1e',
+                    border_color='c5c8c6',
+                    fill_color='a03b1e',
                 ),
-                widget.Net(
-                    interface='wlp4s0',
-                    foreground='c5c8c6',
-                    background='373b41',
+                widget.CPUGraph(
+                    graph_color='237986',
+                    border_color='c5c8c6',
+                    fill_color='237986',
                 ),
                 widget.Spacer(
                     length=3
@@ -225,7 +232,7 @@ screens = [
                 widget.Systray(),
                 widget.Clock(
                     format=" \uF073  %a %H:%M %p",
-                    foreground='cc6666',
+                    foreground='c59820',
                 ),
                 widget.OpenWeather(
                     location='Vordingborg,Denmark',
@@ -245,12 +252,12 @@ screens = [
                     foreground='f0c674',
                 ),
             ],
-            background="#2e3440",
+            background="#232c31",
             foreground="#ffffff",
             foreground_inactive="#ffffff",
             margin=0,
             border_width=5,
-            border_color='#2e3440',
+            border_color='#232c31',
             opacity=1,
             size=24,
             # border_width=[2, 0, 2, 0],  # Draw top and bott#m borders
