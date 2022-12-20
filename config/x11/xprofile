@@ -15,7 +15,7 @@ dropbox &
 transmission-daemon &
 /usr/lib/polkit-1/polkit-agent-helper-1 &
 redshift -l 55.49:12.6 &
-wal -R
+$HOME/.local/bin/setbg ~/.dots/.baggrunde/ &
 
 for program in $autostart; do
 	pidof -s "$program" || "$program" &
