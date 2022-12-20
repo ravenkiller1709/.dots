@@ -1,0 +1,546 @@
+;;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+background = #000000
+background-alt = #272935
+cyan = #b294bb
+yellow = #f0c674
+green = #8c9440
+darkgreen = #5E8D87
+red = #cc6666
+blue = #5f819d
+grey = #707880
+white = #c5c8c6
+
+[bar/bar1]
+width = 100%
+height = 18pt
+radius = 6
+
+; dpi = 96
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3pt
+
+border-size = 0pt
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin = 2
+
+separator = | 
+separator-foreground = ${colors.darkgreen}
+
+font-1 = LiterationMono NerdFont:size=13
+font-0 = Source Han Sans JP:pixelsize=13;2
+modules-left = ewmh
+modules-center = xwindow
+modules-right = mpd mail battery1 battery2 cpu pulseaudio
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+enable-ipc = true
+
+; tray-position = right
+
+; wm-restack = generic
+; wm-restack = bspwm
+; wm-restack = i3
+
+; override-redirect = true
+
+[bar/bar2]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 35
+;offset-x = 1%
+;offset-y = 1%
+radius = 6.0
+fixed-center = false
+bottom = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-4 = fixed:pixelsize=12;1
+font-5 = unifont:fontformat=truetype:size=10:antialias=false;0
+font-2 = Weather Icons:size=12;1
+font-1 = Font Awesome 5 Free:pixelsize=12;2 
+font-0 = Source Han Sans JP Bold:pixelsize=12;2
+font-3 = Font Awesome 5 Brands:pixelsize=12;2
+
+modules-left = xbacklight
+modules-center = mpd
+modules-right = openweathermap-fullfeatured date
+
+tray-position = right
+tray-padding = 2
+;tray-background = #0063ff
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+[module/xworkspaces]
+type = internal/xworkspaces
+
+label-active = %name%
+label-active-background = ${colors.background-alt}
+label-active-underline= ${colors.primary}
+label-active-padding = 1
+
+label-occupied = %name%
+label-occupied-padding = 1
+
+label-urgent = %name%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-empty = 
+label-empty-foreground = ${colors.disabled}
+label-empty-padding = 1
+
+[module/ewmh]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = false
+reverse-scroll = false
+
+;extra icons to choose from
+;http://fontawesome.io/cheatsheet/
+;       v     
+
+icon-0 = 1;乗
+icon-1 = 2;乳
+icon-2 = 3;乖
+icon-3 = 4;云
+icon-4 = 5;亂
+icon-5 = 6;䡄
+icon-6 = 7;䠖
+icon-7 = 8;㿉
+icon-8 = 9;㾮
+icon-9 = 10;㬜
+icon-default = 亝
+format = <label-state>
+label-monitor = %name%
+;label-active-underline = ${colors.grey}
+
+label-active = [ %icon% ]
+label-active-foreground =${colors.darkgreen}
+
+
+label-active-background = ${colors.background}
+label-active-padding = 3
+label-active-font = 5
+
+label-occupied = %icon% 
+label-occupied-foreground = ${colors.white}
+label-occupied-background = ${colors.background}
+label-occupied-padding = 3
+;label-occupied-font = 5
+label-occupied-underline = ${colors.darkgreen}
+
+label-urgent = %icon%
+label-urgent-foreground = ${colors.white}
+label-urgent-background = ${colors.background}
+label-urgent-padding = 3
+;label-urgent-underline = #de935f
+
+label-empty = %icon% 
+label-empty-foreground = ${colors.white}
+label-empty-background = ${colors.background}
+label-empty-padding = 3
+format-foreground = ${colors.white}
+format-background = ${colors.background}
+;label-empty-underline = #de935f
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:60:...%
+label-padding = 1
+format-prefix = 
+format-prefix-padding = 3
+format-prefix-foreground = ${colors.darkgreen}
+format-prefix-background = ${colors.background}
+;format-prefix-underline = ${colors.green}
+;label-underline = ${colors.green}
+label-foregrund = ${colors.white}
+label-background = ${colors.background}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#F0C674}%mountpoint%%{F-} %percentage_used%%
+
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.disabled}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+click-right = "alacritty -e alsamixer"
+format-volume-prefix = ""
+format-volume-prefix-padding = 3
+format-volume-prefix-foreground = ${colors.darkgreen}
+format-volume-prefix-background = ${colors.background}
+;format-volume-prefix-underline = ${colors.cyan}
+
+format-volume = <label-volume>
+
+label-volume = %percentage%%
+;label-volume-underline = ${colors.cyan}
+label-volume-foreground = ${colors.white}
+label-muted = muted
+label-muted-foreground = ${colors.white}
+label-volume-padding = 1
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+label-layout = %layout%
+label-layout-foreground = ${colors.primary}
+
+label-indicator-padding = 1
+label-indicator-margin = 1
+label-indicator-foreground = ${colors.background}
+label-indicator-background = ${colors.secondary}
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar>
+label = BL
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = ${colors.darkgreen}
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = ${colors.darkgreen}
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.white}
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
+[module/openweathermap-fullfeatured]
+type = custom/script
+exec = ~/.scripts/openweathermap-fullfeatured.sh
+interval = 600
+label-font = 3
+label-foreground = ${colors.darkgreen}
+click-left = st -e less -Srf /home/kim/.local/share/weatherreport
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-padding = 1
+format-prefix-foreground = #282a2e
+format-prefix-background = #b5bd68
+format-prefix-underline = #b5bd68
+label = %percentage_used:2%% hukommelse
+label-underline = #b5bd68
+label-padding = 1
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-padding = 3
+format-prefix-foreground = ${colors.darkgreen}
+format-prefix-background = ${colors.background}
+;format-prefix-underline = #f0c674
+label = %percentage:2 %%
+;label-underline = #f0c674
+label-padding = 0
+
+[network-base]
+type = internal/network
+interval = 5
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
+
+[module/wlan]
+inherit = network-base
+interface-type = wireless
+label-connected =   %{F#F0C674}%ifname%%{F-} %essid%
+label-connected-foreground = ${colors.darkgreen}
+label-connected-background = ${colors.background}
+;label-connected-underline = ${colors.red}
+[module/eth]
+inherit = network-base
+interface-type = wired
+label-connected = %{F#F0C674}%ifname%%{F-} %local_ip%
+
+[module/mail]
+type = custom/script
+exec = /home/kim/.local/bin/mailcheck
+format-prefix = ""
+format-prefix-foreground = ${colors.darkgreen}
+;format-underline = ${colors.darkgreen}
+tail = true
+interval = 180
+;format-background = ${colors.white}
+format-prefix-padding = 2
+click-left = "emacsclient -c --eval '(mu4e)'"
+
+[module/date]
+type = internal/date
+interval = 1
+
+date-alt = %H:%M
+date = %d/%m %H:%M:%S
+format-prefix = 
+format-prefix-background = ${colors.background} 
+format-prefix-foreground = ${colors.darkgreen}
+;format-prefix-underline = ${colors.red}
+format-prefix-padding = 0
+label = %date%
+;label-underline = ${colors.red}
+label-foreground = ${colors.white}
+label-padding = 2
+
+
+[module/battery1]
+type                                = internal/battery
+battery                             = BAT0
+adapter                             = ADP1
+full-at                             = 98
+label-discharging-foreground        = ${colors.foreground}
+label-discharging-background        = ${colors.background}
+label-discharging-padding	    = 3
+label-charging-background           = ${colors.background}
+label-charging-foreground           = ${colors.foreground}
+label-charging-padding		    = 3
+label-full-background               = ${colors.background}
+label-full-foreground               = ${colors.foreground}
+label-full-padding		    = 3
+format-charging                     = <animation-charging> <label-charging>
+format-full-background              = ${colors.background}
+format-full-prefix-padding	    = 1
+format-discharging                  = <animation-discharging> <label-discharging>
+format-full-prefix                  = "  "
+format-full-prefix-foreground       = ${colors.darkgreen}
+format-full-prefix-background       = ${colors.background}
+format-full-prefix-font             = 5
+
+ramp-capacity-0                     = "  " 
+ramp-capacity-1                     = "  "
+ramp-capacity-2                     = "  "
+ramp-capacity-3                     = "  "
+ramp-capacity-4                     = "  "
+ramp-capacity-foreground            = ${colors.darkgreen}
+ramp-capacity-font                  = 5
+animation-charging-0                = "  "  
+animation-charging-1                = "  "
+animation-charging-2                = "  "
+animation-charging-3                = "  "
+animation-charging-4                = "  "
+animation-charging-font             = 5
+animation-charging-foreground       = ${colors.darkgreen}
+animation-charging-background       = ${colors.background}
+animation-charging-framerate        = 750
+animation-discharging-4             = "  " 
+animation-discharging-3             = "  "
+animation-discharging-2             = "  "
+animation-discharging-1             = "  "
+animation-discharging-0             = "  "
+animation-discharging-foreground    = ${colors.darkgreen}
+animation-discharging-background    = ${colors.background}
+animation-discharging-font          = 5
+animation-discharging-framerate     = 750
+
+[module/battery2]
+type                                = internal/battery
+battery                             = BAT1
+adapter                             = ADP1
+full-at                             = 98
+label-discharging-foreground        = ${colors.foreground}
+label-discharging-background        = ${colors.background}
+label-discharging-padding	    = 3
+label-charging-background           = ${colors.background}
+label-charging-foreground           = ${colors.foreground}
+label-charging-padding		    = 3
+label-full-background               = ${colors.background}
+label-full-foreground               = ${colors.foreground}
+label-full-padding		    = 3
+format-charging                     = <animation-charging> <label-charging>
+
+format-full-background              = ${colors.background}
+format-full-prefix-padding	    = 1
+format-discharging                  = <animation-discharging> <label-discharging>
+format-full-prefix                  = "  "
+format-full-prefix-foreground       = ${colors.darkgreen}
+format-full-prefix-background       = ${colors.background}
+format-full-prefix-font             = 5
+
+ramp-capacity-0                     = "  " 
+ramp-capacity-1                     = "  "
+ramp-capacity-2                     = "  "
+ramp-capacity-3                     = "  "
+ramp-capacity-4                     = "  "
+ramp-capacity-foreground            = ${colors.darkgreen}
+ramp-capacity-font                  = 5
+animation-charging-0                = "  "  
+animation-charging-1                = "  "
+animation-charging-2                = "  "
+animation-charging-3                = "  "
+animation-charging-4                = "  "
+animation-charging-font             = 5
+animation-charging-foreground       = ${colors.darkgreen}
+animation-charging-background       = ${colors.background}
+animation-charging-framerate        = 750
+animation-discharging-4             = "  " 
+animation-discharging-3             = "  "
+animation-discharging-2             = "  "
+animation-discharging-1             = "  "
+animation-discharging-0             = "  "
+animation-discharging-foreground    = ${colors.darkgreen}
+animation-discharging-background    = ${colors.background}
+animation-discharging-font          = 5
+animation-discharging-framerate     = 750
+
+[module/mpd]
+type = internal/mpd
+
+; Host where mpd is running (either ip or domain name)
+; Can also be the full path to a unix socket where mpd is running.
+host = 127.0.0.1
+port = 6600
+;password = mysecretpassword
+
+; Seconds to sleep between progressbar/song timer sync
+; Default: 1
+interval = 2
+
+; Available tags:
+;   <label-song> (default)
+;   <label-time>
+;   <bar-progress>
+;   <toggle> - gets replaced with <icon-(pause|play)>
+;   <toggle-stop> - gets replaced with <icon-(stop|play)>
+;   <icon-random>
+;   <icon-repeat>
+;   <icon-repeatone> (deprecated)
+;   <icon-single> - Toggle playing only a single song. Replaces <icon-repeatone>
+;   <icon-consume>
+;   <icon-prev>
+;   <icon-stop>
+;   <icon-play>
+;   <icon-pause>
+;   <icon-next>
+;   <icon-seekb>
+;   <icon-seekf>
+format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+;format-playing = ${self.format-online}
+;format-paused = ${self.format-online}
+;format-stopped = ${self.format-online}
+format-online-foreground = ${colors.darkgreen}
+; Available tags:
+;   <label-offline>
+; Default: ""
+;format-offline = <label-offline>
+
+; Available tokens:
+;   %artist%
+;   %album-artist%
+;   %album%
+;   %date%
+;   %title%
+; Default: %artist% - %title%
+label-song = 𝄞 %artist% - %title%
+
+; Available tokens:
+;   %elapsed%
+;   %total%
+; Default: %elapsed% / %total%
+;label-time = %elapsed% / %total%
+
+; Available tokens:
+;   None
+label-offline = 🎜 mpd is offline
+
+; Only applies if <icon-X> is used
+icon-play = ⏵
+icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+icon-single = 🔂
+icon-consume = ✀
+
+; Used to display the state of random/repeat/repeatone/single
+; Only applies if <icon-[random|repeat|repeatone|single]> is used
+toggle-on-foreground = #ff
+toggle-off-foreground = #55
+
+; Only applies if <bar-progress> is used
+bar-progress-width = 45
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+
+
+[settings]
+screenchange-reload = true
+pseudo-transparency = true
+
+; vim:ft=dosini

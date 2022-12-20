@@ -1,0 +1,558 @@
+;;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+background = #272935
+background-alt = #272935
+cyan = #b294bb
+yellow = #f0c674
+green = #8c9440
+darkgreen = #5E8D87
+red = #cc6666
+blue = #5f819d
+grey = #707880
+white = #c5c8c6
+
+[bar/mainbar-herbst]
+width = 100%
+height = 18pt
+radius = 6
+
+dpi = 72
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3pt
+
+border-size = 0pt
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin = 2
+
+separator = 
+separator-foreground = ${colors.green}
+
+font-0 = LiterationMono NerdFont:size=13
+modules-left = ewmh
+modules-center = xwindow
+modules-right = mail battery1 battery2 pulseaudio
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+enable-ipc = true
+
+; tray-position = right
+
+; wm-restack = generic
+; wm-restack = bspwm
+; wm-restack = i3
+
+; override-redirect = true
+
+[module/xworkspaces]
+type = internal/xworkspaces
+
+label-active = %name%
+label-active-background = ${colors.background-alt}
+label-active-underline= ${colors.primary}
+label-active-padding = 1
+
+label-occupied = %name%
+label-occupied-padding = 1
+
+label-urgent = %name%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-empty = 
+label-empty-foreground = ${colors.disabled}
+label-empty-padding = 1
+
+[module/ewmh]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = false
+reverse-scroll = false
+
+;extra icons to choose from
+;http://fontawesome.io/cheatsheet/
+;       v     
+
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+icon-5 = 6;
+icon-6 = 7;
+icon-7 = 8;
+;icon-8 = 9;
+;icon-9 = 10;
+icon-default = 
+format = <label-state>
+label-monitor = %name%
+label-active-underline = ${colors.grey}
+
+label-active = %icon%
+label-active-foreground = ${colors.background}
+
+
+label-active-background = ${colors.grey}
+label-active-padding = 2
+label-active-font = 5
+
+label-occupied = %icon% 
+label-occupied-foreground = ${colors.white}
+label-occupied-background = ${colors.background}
+label-occupied-padding = 2
+;label-occupied-font = 5
+label-occupied-underline = ${colors.grey}
+
+label-urgent = %icon%
+label-urgent-foreground = ${colors.background}
+label-urgent-background = ${colors.grey}
+label-urgent-padding = 2
+label-urgent-underline = #de935f
+
+label-empty = %icon% 
+label-empty-foreground = ${colors.white}
+label-empty-background = ${colors.background}
+label-empty-padding = 2
+format-foreground = ${colors.white}
+format-background = ${colors.background}
+label-empty-underline = ${colors.grey}
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:60:...%
+label-padding = 1
+format-prefix = 
+format-prefix-padding = 2
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.green}
+format-prefix-underline = ${colors.green}
+label-underline = ${colors.green}
+label-foregrund = ${colors.white}
+label-background = ${colors.background}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#F0C674}%mountpoint%%{F-} %percentage_used%%
+
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.disabled}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+click-right = "alacritty -e alsamixer"
+format-volume-prefix = ""
+format-volume-prefix-padding = 2
+format-volume-prefix-foreground = ${colors.background}
+format-volume-prefix-background = ${colors.cyan}
+format-volume-prefix-underline = ${colors.cyan}
+
+format-volume = <label-volume>
+
+label-volume = %percentage%% lydstyrke
+label-volume-underline = ${colors.cyan}
+label-volume-foreground = ${colors.white}
+label-muted = muted
+label-muted-foreground = ${colors.white}
+label-volume-padding = 1
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+label-layout = %layout%
+label-layout-foreground = ${colors.primary}
+
+label-indicator-padding = 1
+label-indicator-margin = 1
+label-indicator-foreground = ${colors.background}
+label-indicator-background = ${colors.secondary}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-padding = 1
+format-prefix-foreground = #282a2e
+format-prefix-background = #b5bd68
+format-prefix-underline = #b5bd68
+label = %percentage_used:2%% hukommelse
+label-underline = #b5bd68
+label-padding = 1
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-padding = 1
+format-prefix-foreground = #282a2e
+format-prefix-background = #f0c674
+format-prefix-underline = #f0c674
+label = %percentage:2 %% CPU
+label-underline = #f0c674
+label-padding = 2
+
+[network-base]
+type = internal/network
+interval = 5
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
+
+[module/wlan]
+inherit = network-base
+interface-type = wireless
+label-connected =   %{F#F0C674}%ifname%%{F-} %essid%
+label-connected-foreground = ${colors.background}
+label-connected-background = ${colors.red}
+label-connected-underline = ${colors.red}
+[module/eth]
+inherit = network-base
+interface-type = wired
+label-connected = %{F#F0C674}%ifname%%{F-} %local_ip%
+
+[module/mail]
+type = custom/script
+exec = /home/kim/.local/bin/mailcheck
+format-prefix = "  "
+format-prefix-background = ${colors.red}
+format-underline = ${colors.red}
+tail = true
+interval = 180
+;format-background = ${colors.white}
+format-prefix-padding = 1
+click-left = "emacsclient -c --eval '(mu4e)'"
+
+[MODULE/date]
+type = internal/date
+interval = 1
+
+date-alt = %H:%M
+date = %Y-%m-%d %H:%M:%S
+format-prefix = 
+format-prefix-background = ${colors.red} 
+format-prefix-foreground = ${colors.background}
+format-prefix-underline = ${colors.red}
+format-prefix-padding = 2
+label = %date%
+label-underline = ${colors.red}
+label-foreground = ${colors.white}
+label-padding = 2
+
+[module/battery1]
+type = internal/battery
+; This is useful in case the battery never reports 100% charge
+; Default: 100
+
+click-left = "/home/kim/.scripts/batmon"
+
+full-at = 110
+
+; format-low once this charge percentage is reached
+; Default: 10
+; New in version 3.6.0
+low-at = 5
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = ADP1
+
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 5
+; see "man date" for details on how to format the time string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+; Default: %H:%M:%S
+time-format = %H:%M
+
+; Available tags:
+;   <label-charging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-charging>
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.blue}
+; Available tags:
+;   <label-discharging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${colors.blue}
+; Available tags:
+;   <label-full> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+format-full = <ramp-capacity> <label-full>
+format-full-underline = ${colors.blue}
+format-full-padding = 2
+; Format used when battery level drops to low-at
+; If not defined, format-discharging is used instead.
+; Available tags:
+;   <label-low>
+;   <animation-low>
+;   <bar-capacity>
+;   <ramp-capacity>
+; New in version 3.6.0
+;format-low = <label-low> <animation-low>
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current charge rate in watts)
+label-charging = Charging %percentage%%
+label-charging-padding = 2
+LABEL-charging-foreground = ${colors.white}
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current discharge rate in watts)
+label-discharging = Batteri 0 %percentage%%
+label-discharging-padding = 1
+label-discharging-foreground = ${colors.white}
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+label-full = Batteri 0 %percentage%%
+;label-full-overline = #cyan
+label-full-foreground = ${colors.white}
+;label-full-background = #81a2be
+label-full-padding = 1
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current discharge rate in watts)
+; New in version 3.6.0
+label-low = BATTERY LOW
+
+; Only applies if <ramp-capacity> is used
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+ramp-capacity-foreground = ${colors.background}
+ramp-capacity-background = ${colors.blue}
+ramp-capacity-padding = 2
+
+; Only applies if <bar-capacity> is used
+bar-capacity-width = 10
+
+; Only applies if <animation-charging> is used
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+; Framerate in milliseconds
+animation-charging-framerate = 750
+
+animation-charging-foreground = ${colors.background}
+animation-charging-background = ${colors.blue}
+animation-charging-padding = 2
+
+; Only applies if <animation-discharging> is used
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+; Framerate in milliseconds
+animation-discharging-framerate = 500
+
+animation-discharging-foreground = ${colors.background}
+animation-discharging-background = ${colors.blue}
+animation-discharging-padding = 2
+
+; Only applies if <animation-low> is used
+; New in version 3.6.0
+animation-low-0 = !
+animation-low-1 = 
+animation-low-framerate = 200
+
+label-foreground = ${colors.primary}
+
+[module/battery2]
+type = internal/battery
+click-left = "/home/kim/.scripts/batmon"
+
+; This is useful in case the battery never reports 100% charge
+; Default: 100
+full-at = 101
+
+; format-low once this charge percentage is reached
+; Default: 10
+; New in version 3.6.0
+low-at = 5
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT1
+adapter = ADP1
+
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 5
+; see "man date" for details on how to format the time string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+; Default: %H:%M:%S
+time-format = %H:%M
+
+; Available tags:
+;   <label-charging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-charging>
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.darkgreen}
+; Available tags:
+;   <label-discharging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${colors.darkgreen}
+; Available tags:
+;   <label-full> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+format-full = <ramp-capacity> <label-full>
+format-full-underline = ${colors.darkgreen}
+format-full-padding = 0
+; Format used when battery level drops to low-at
+; If not defined, format-discharging is used instead.
+; Available tags:
+;   <label-low>
+;   <animation-low>
+;   <bar-capacity>
+;   <ramp-capacity>
+; New in version 3.6.0
+;format-low = <label-low> <animation-low>
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current charge rate in watts)
+label-charging = Charging %percentage%%
+label-charging-padding = 2
+label-charging-foreground = ${colors.white}
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current discharge rate in watts)
+label-discharging = Batteri 1 %percentage%%
+label-discharging-foreground = ${colors.white}
+label-discharging-padding = 2
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+label-full = Fully charged
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current discharge rate in watts)
+; New in version 3.6.0
+label-low = BATTERY LOW
+
+; Only applies if <ramp-capacity> is used
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+ramp-capacity-foreground = #282a2e
+ramp-capacity-background = #5e8d87
+ramp-capacity-padding = 2
+
+; Only applies if <bar-capacity> is used
+bar-capacity-width = 10
+
+; Only applies if <animation-charging> is used
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+; Framerate in milliseconds
+animation-charging-framerate = 750
+
+animation-charging-foreground = #282a2e
+animation-charging-background = #5e8d87
+animation-charging-padding = 2
+
+; Only applies if <animation-discharging> is used
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+animation-discharging-padding = 2
+; Framerate in milliseconds
+animation-discharging-framerate = 500
+
+; Only applies if <animation-low> is used
+; New in version 3.6.0
+animation-low-0 = !
+animation-low-1 = 
+animation-low-framerate = 200
+
+
+[settings]
+screenchange-reload = true
+pseudo-transparency = true
+
+; vim:ft=dosini

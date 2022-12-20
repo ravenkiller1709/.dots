@@ -1,0 +1,15 @@
+//@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+configutation {
+modi: "window,drun,run,ssh,filebrowser";
+show-icons: true;
+terminal: "kitty";
+/*	ssh-client: "ssh";*/
+/*	ssh-command: "{terminal} -e {ssh-client} {host}";*/
+/*	run-command: "{cmd}";*/
+/*	run-list-command: "";*/
+/*	run-shell-command: "{terminal} -e {cmd}";*/
+/*	window-command: "xkill -id {window}";*/
+/*	window-match-fields: "all";*/
+/*	drun-icon-theme: ;*/
+comb-modi: "drun,run,ssh";
+}@theme "/usr/share/rofi/themes/nord.rasi"

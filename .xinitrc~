@@ -1,0 +1,23 @@
+#!/bin/sh
+xset +fp /home/kim/.local/share/fonts &
+xset fp rehash &
+xrdb -load ~/.Xresources &
+picom &
+dunst &
+setxkbmap dk &
+dbus-run-session &
+clipmenud &
+dropbox &
+emacs --daemon &
+sxhkd &
+#$HOME/.local/bin/statusbar/mpdup &
+feh --bg-scale ~/.baggrunde/artix.jpg &
+xsetroot -cursor_name left_ptr &
+/usr/lib/polkit-1/polkit-agent-helper-1 &
+xrdb -load ~/.Xresources &
+redshift -l 55.49:12.6 &
+$HOME/.config/polybar/launch.sh &
+#slstatus &
+#exec dwm
+#exec herbstluftwm
+exec bspwn

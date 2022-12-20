@@ -1,0 +1,943 @@
+942
+DejaVuMathTeXGyre.ttf -misc-dejavu math tex gyre-medium-r-normal--0-0-0-0-p-0-iso10646-1
+DejaVuMathTeXGyre.ttf -misc-dejavu math tex gyre-medium-r-normal--0-0-0-0-p-0-iso8859-2
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-iso10646-1
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-iso8859-1
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-iso8859-10
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-iso8859-15
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-iso8859-2
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-iso8859-3
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-iso8859-4
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-iso8859-5
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-iso8859-6
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-iso8859-7
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-iso8859-8
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-iso8859-9
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-koi8-e
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-koi8-r
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-koi8-ru
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-koi8-u
+DejaVuSans-Bold.ttf -misc-dejavu sans-bold-r-normal--0-0-0-0-p-0-koi8-uni
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-iso10646-1
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-iso8859-1
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-iso8859-10
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-iso8859-15
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-iso8859-2
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-iso8859-3
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-iso8859-4
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-iso8859-5
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-iso8859-7
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-iso8859-8
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-iso8859-9
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-koi8-e
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-koi8-r
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-koi8-ru
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-koi8-u
+DejaVuSans-BoldOblique.ttf -misc-dejavu sans-bold-o-normal--0-0-0-0-p-0-koi8-uni
+DejaVuSans-ExtraLight.ttf -misc-dejavu sans light-extralight-r-normal--0-0-0-0-p-0-iso10646-1
+DejaVuSans-ExtraLight.ttf -misc-dejavu sans light-extralight-r-normal--0-0-0-0-p-0-iso8859-1
+DejaVuSans-ExtraLight.ttf -misc-dejavu sans light-extralight-r-normal--0-0-0-0-p-0-iso8859-10
+DejaVuSans-ExtraLight.ttf -misc-dejavu sans light-extralight-r-normal--0-0-0-0-p-0-iso8859-15
+DejaVuSans-ExtraLight.ttf -misc-dejavu sans light-extralight-r-normal--0-0-0-0-p-0-iso8859-2
+DejaVuSans-ExtraLight.ttf -misc-dejavu sans light-extralight-r-normal--0-0-0-0-p-0-iso8859-3
+DejaVuSans-ExtraLight.ttf -misc-dejavu sans light-extralight-r-normal--0-0-0-0-p-0-iso8859-4
+DejaVuSans-ExtraLight.ttf -misc-dejavu sans light-extralight-r-normal--0-0-0-0-p-0-iso8859-5
+DejaVuSans-ExtraLight.ttf -misc-dejavu sans light-extralight-r-normal--0-0-0-0-p-0-iso8859-7
+DejaVuSans-ExtraLight.ttf -misc-dejavu sans light-extralight-r-normal--0-0-0-0-p-0-iso8859-9
+DejaVuSans-ExtraLight.ttf -misc-dejavu sans light-extralight-r-normal--0-0-0-0-p-0-koi8-e
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-iso10646-1
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-iso8859-1
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-iso8859-10
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-iso8859-15
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-iso8859-2
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-iso8859-3
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-iso8859-4
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-iso8859-5
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-iso8859-7
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-iso8859-8
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-iso8859-9
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-koi8-e
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-koi8-r
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-koi8-ru
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-koi8-u
+DejaVuSans-Oblique.ttf -misc-dejavu sans-medium-o-normal--0-0-0-0-p-0-koi8-uni
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-iso10646-1
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-iso8859-1
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-iso8859-10
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-iso8859-15
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-iso8859-2
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-iso8859-3
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-iso8859-4
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-iso8859-5
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-iso8859-6
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-iso8859-7
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-iso8859-8
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-iso8859-9
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-koi8-e
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-koi8-r
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-koi8-ru
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-koi8-u
+DejaVuSans.ttf -misc-dejavu sans-medium-r-normal--0-0-0-0-p-0-koi8-uni
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-iso10646-1
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-1
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-10
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-15
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-2
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-3
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-4
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-5
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-6
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-7
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-8
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-9
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-koi8-e
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-koi8-r
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-koi8-ru
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-koi8-u
+DejaVuSansCondensed-Bold.ttf -misc-dejavu sans condensed-bold-r-semicondensed--0-0-0-0-p-0-koi8-uni
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-iso10646-1
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-iso8859-1
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-iso8859-10
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-iso8859-15
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-iso8859-2
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-iso8859-3
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-iso8859-4
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-iso8859-5
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-iso8859-7
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-iso8859-8
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-iso8859-9
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-koi8-e
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-koi8-r
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-koi8-ru
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-koi8-u
+DejaVuSansCondensed-BoldOblique.ttf -misc-dejavu sans condensed-bold-o-semicondensed--0-0-0-0-p-0-koi8-uni
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-iso10646-1
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-iso8859-1
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-iso8859-10
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-iso8859-15
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-iso8859-2
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-iso8859-3
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-iso8859-4
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-iso8859-5
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-iso8859-7
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-iso8859-8
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-iso8859-9
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-koi8-e
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-koi8-r
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-koi8-ru
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-koi8-u
+DejaVuSansCondensed-Oblique.ttf -misc-dejavu sans condensed-medium-o-semicondensed--0-0-0-0-p-0-koi8-uni
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-iso10646-1
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-1
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-10
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-15
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-2
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-3
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-4
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-5
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-6
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-7
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-8
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-9
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-koi8-e
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-koi8-r
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-koi8-ru
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-koi8-u
+DejaVuSansCondensed.ttf -misc-dejavu sans condensed-medium-r-semicondensed--0-0-0-0-p-0-koi8-uni
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-iso10646-1
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-iso8859-1
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-iso8859-10
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-iso8859-15
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-iso8859-2
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-iso8859-3
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-iso8859-4
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-iso8859-5
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-iso8859-6
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-iso8859-7
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-iso8859-9
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-koi8-e
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-koi8-r
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-koi8-ru
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-koi8-u
+DejaVuSansMono-Bold.ttf -misc-dejavu sans mono-bold-r-normal--0-0-0-0-m-0-koi8-uni
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-iso10646-1
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-iso8859-1
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-iso8859-10
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-iso8859-15
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-iso8859-2
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-iso8859-3
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-iso8859-4
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-iso8859-5
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-iso8859-7
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-iso8859-9
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-koi8-e
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-koi8-r
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-koi8-ru
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-koi8-u
+DejaVuSansMono-BoldOblique.ttf -misc-dejavu sans mono-bold-o-normal--0-0-0-0-m-0-koi8-uni
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-iso10646-1
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-iso8859-1
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-iso8859-10
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-iso8859-15
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-iso8859-2
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-iso8859-3
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-iso8859-4
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-iso8859-5
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-iso8859-7
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-iso8859-9
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-koi8-e
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-koi8-r
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-koi8-ru
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-koi8-u
+DejaVuSansMono-Oblique.ttf -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-koi8-uni
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-iso10646-1
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-iso8859-1
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-iso8859-10
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-iso8859-15
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-iso8859-2
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-iso8859-3
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-iso8859-4
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-iso8859-5
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-iso8859-6
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-iso8859-7
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-iso8859-9
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-koi8-e
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-koi8-r
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-koi8-ru
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-koi8-u
+DejaVuSansMono.ttf -misc-dejavu sans mono-medium-r-normal--0-0-0-0-m-0-koi8-uni
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-iso10646-1
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-iso8859-1
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-iso8859-10
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-iso8859-15
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-iso8859-2
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-iso8859-3
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-iso8859-4
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-iso8859-5
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-iso8859-7
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-iso8859-9
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-koi8-e
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-koi8-r
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-koi8-ru
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-koi8-u
+DejaVuSerif-Bold.ttf -misc-dejavu serif-bold-r-normal--0-0-0-0-p-0-koi8-uni
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-iso10646-1
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-iso8859-1
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-iso8859-10
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-iso8859-15
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-iso8859-2
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-iso8859-3
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-iso8859-4
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-iso8859-5
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-iso8859-7
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-iso8859-9
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-koi8-e
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-koi8-r
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-koi8-ru
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-koi8-u
+DejaVuSerif-BoldItalic.ttf -misc-dejavu serif-bold-i-normal--0-0-0-0-p-0-koi8-uni
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-iso10646-1
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-iso8859-1
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-iso8859-10
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-iso8859-15
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-iso8859-2
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-iso8859-3
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-iso8859-4
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-iso8859-5
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-iso8859-7
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-iso8859-9
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-koi8-e
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-koi8-r
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-koi8-ru
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-koi8-u
+DejaVuSerif-Italic.ttf -misc-dejavu serif-medium-i-normal--0-0-0-0-p-0-koi8-uni
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-iso10646-1
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-iso8859-1
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-iso8859-10
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-iso8859-15
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-iso8859-2
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-iso8859-3
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-iso8859-4
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-iso8859-5
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-iso8859-7
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-iso8859-9
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-koi8-e
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-koi8-r
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-koi8-ru
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-koi8-u
+DejaVuSerif.ttf -misc-dejavu serif-medium-r-normal--0-0-0-0-p-0-koi8-uni
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-iso10646-1
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-1
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-10
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-15
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-2
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-3
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-4
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-5
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-7
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-iso8859-9
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-koi8-e
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-koi8-r
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-koi8-ru
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-koi8-u
+DejaVuSerifCondensed-Bold.ttf -misc-dejavu serif condensed-bold-r-semicondensed--0-0-0-0-p-0-koi8-uni
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-iso10646-1
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-iso8859-1
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-iso8859-10
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-iso8859-15
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-iso8859-2
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-iso8859-3
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-iso8859-4
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-iso8859-5
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-iso8859-7
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-iso8859-9
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-koi8-e
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-koi8-r
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-koi8-ru
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-koi8-u
+DejaVuSerifCondensed-BoldItalic.ttf -misc-dejavu serif condensed-bold-i-semicondensed--0-0-0-0-p-0-koi8-uni
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-iso10646-1
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-iso8859-1
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-iso8859-10
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-iso8859-15
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-iso8859-2
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-iso8859-3
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-iso8859-4
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-iso8859-5
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-iso8859-7
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-iso8859-9
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-koi8-e
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-koi8-r
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-koi8-ru
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-koi8-u
+DejaVuSerifCondensed-Italic.ttf -misc-dejavu serif condensed-medium-i-semicondensed--0-0-0-0-p-0-koi8-uni
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-iso10646-1
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-1
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-10
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-15
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-2
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-3
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-4
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-5
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-7
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-iso8859-9
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-koi8-e
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-koi8-r
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-koi8-ru
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-koi8-u
+DejaVuSerifCondensed.ttf -misc-dejavu serif condensed-medium-r-semicondensed--0-0-0-0-p-0-koi8-uni
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-iso10646-1
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-iso8859-1
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-iso8859-10
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-iso8859-15
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-iso8859-2
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-iso8859-3
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-iso8859-4
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-iso8859-5
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-iso8859-7
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-iso8859-9
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-koi8-e
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-koi8-r
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-koi8-ru
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-koi8-u
+FiraCode-Bold.ttf -misc-fira code-bold-r-normal--0-0-0-0-m-0-koi8-uni
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-iso10646-1
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-iso8859-1
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-iso8859-10
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-iso8859-15
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-iso8859-2
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-iso8859-3
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-iso8859-4
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-iso8859-5
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-iso8859-7
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-iso8859-9
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-koi8-e
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-koi8-r
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-koi8-ru
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-koi8-u
+FiraCode-Light.ttf -misc-fira code light-light-r-normal--0-0-0-0-m-0-koi8-uni
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-iso10646-1
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-iso8859-1
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-iso8859-10
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-iso8859-15
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-iso8859-2
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-iso8859-3
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-iso8859-4
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-iso8859-5
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-iso8859-7
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-iso8859-9
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-koi8-e
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-koi8-r
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-koi8-ru
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-koi8-u
+FiraCode-Medium.ttf -misc-fira code medium-medium-r-normal--0-0-0-0-m-0-koi8-uni
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-iso10646-1
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-iso8859-1
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-iso8859-10
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-iso8859-15
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-iso8859-2
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-iso8859-3
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-iso8859-4
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-iso8859-5
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-iso8859-7
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-iso8859-9
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-koi8-e
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-koi8-r
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-koi8-ru
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-koi8-u
+FiraCode-Regular.ttf -misc-fira code-medium-r-normal--0-0-0-0-m-0-koi8-uni
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-iso10646-1
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-iso8859-1
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-iso8859-10
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-iso8859-15
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-iso8859-2
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-iso8859-3
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-iso8859-4
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-iso8859-5
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-iso8859-7
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-iso8859-9
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-koi8-e
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-koi8-r
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-koi8-ru
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-koi8-u
+FiraCode-Retina.ttf -misc-fira code retina-medium-r-normal--0-0-0-0-m-0-koi8-uni
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-iso10646-1
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-iso8859-1
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-iso8859-10
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-iso8859-15
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-iso8859-2
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-iso8859-3
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-iso8859-4
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-iso8859-5
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-iso8859-7
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-iso8859-9
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-koi8-e
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-koi8-r
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-koi8-ru
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-koi8-u
+FiraCode-SemiBold.ttf -misc-fira code semibold-semibold-r-normal--0-0-0-0-m-0-koi8-uni
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-iso10646-1
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-iso8859-1
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-iso8859-10
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-iso8859-15
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-iso8859-2
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-iso8859-3
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-iso8859-4
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-iso8859-5
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-iso8859-7
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-iso8859-9
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-koi8-e
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-koi8-r
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-koi8-ru
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-koi8-u
+FiraMono-Bold.ttf -misc-fira mono-bold-r-normal--0-0-0-0-m-0-koi8-uni
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-iso10646-1
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-iso8859-1
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-iso8859-10
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-iso8859-15
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-iso8859-2
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-iso8859-3
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-iso8859-4
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-iso8859-5
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-iso8859-7
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-iso8859-9
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-koi8-e
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-koi8-r
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-koi8-ru
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-koi8-u
+FiraMono-Medium.ttf -misc-fira mono medium-medium-r-normal--0-0-0-0-m-0-koi8-uni
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-iso10646-1
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-iso8859-1
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-iso8859-10
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-iso8859-15
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-iso8859-2
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-iso8859-3
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-iso8859-4
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-iso8859-5
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-iso8859-7
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-iso8859-9
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-koi8-e
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-koi8-r
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-koi8-ru
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-koi8-u
+FiraMono-Regular.ttf -misc-fira mono-medium-r-normal--0-0-0-0-m-0-koi8-uni
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Bold.ttf -misc-fira sans-bold-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-BoldItalic.ttf -misc-fira sans-bold-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Book.ttf -misc-fira sans book-medium-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-BookItalic.ttf -misc-fira sans book-medium-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Eight.ttf -misc-fira sans eight-thin-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-EightItalic.ttf -misc-fira sans eight-thin-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-ExtraBold.ttf -misc-fira sans extrabold-extrabold-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-ExtraBoldItalic.ttf -misc-fira sans extrabold-extrabold-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-ExtraLight.ttf -misc-fira sans extralight-light-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-ExtraLightItalic.ttf -misc-fira sans extralight-light-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Four.ttf -misc-fira sans four-thin-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-FourItalic.ttf -misc-fira sans four-thin-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Hair.ttf -misc-fira sans hair-thin-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-HairItalic.ttf -misc-fira sans hair-thin-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Heavy.ttf -misc-fira sans heavy-black-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-HeavyItalic.ttf -misc-fira sans heavy-black-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Italic.ttf -misc-fira sans-medium-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Light.ttf -misc-fira sans light-light-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-LightItalic.ttf -misc-fira sans light-light-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Medium.ttf -misc-fira sans medium-medium-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-MediumItalic.ttf -misc-fira sans medium-medium-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Regular.ttf -misc-fira sans-medium-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-SemiBold.ttf -misc-fira sans semibold-semibold-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-SemiBoldItalic.ttf -misc-fira sans semibold-semibold-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Thin.ttf -misc-fira sans thin-thin-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-ThinItalic.ttf -misc-fira sans thin-thin-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Two.ttf -misc-fira sans two-thin-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-TwoItalic.ttf -misc-fira sans two-thin-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-Ultra.ttf -misc-fira sans ultra-black-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-UltraItalic.ttf -misc-fira sans ultra-black-i-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-koi8-e
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-koi8-r
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-koi8-u
+FiraSans-UltraLight.ttf -misc-fira sans ultralight-extralight-r-normal--0-0-0-0-p-0-koi8-uni
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-iso10646-1
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-iso8859-1
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-iso8859-10
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-iso8859-15
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-iso8859-2
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-iso8859-3
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-iso8859-4
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-iso8859-5
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-iso8859-7
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-iso8859-9
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-koi8-e
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-koi8-r
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-koi8-ru
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-koi8-u
+FiraSans-UltraLightItalic.ttf -misc-fira sans ultralight-extralight-i-normal--0-0-0-0-p-0-koi8-uni

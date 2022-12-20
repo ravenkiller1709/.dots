@@ -1,0 +1,25 @@
+#!/bin/sh
+xset +fp /home/kim/.local/share/fonts &
+xset fp rehash &
+xsetroot -cursor_name left_ptr &
+xset r rate 200 50 &
+xbacklight -set 90 &
+xrdb -load ~/.config/x11/xresources &
+picom &
+dunst &
+pulseaudio &
+setxkbmap dk &
+dbus-run-session &
+clipmenud &
+dropbox &
+transmission-daemon &
+/usr/lib/polkit-1/polkit-agent-helper-1 &
+redshift -l 55.49:12.6 &
+wal -R
+
+for program in $autostart; do
+	pidof -s "$program" || "$program" &
+done >/dev/null 2>&1
+
+# Ensure that xrdb has finished running before moving on to start the WM/DE.
+[ -n "$xrdbpid" ] && wait "$xrdbpid"

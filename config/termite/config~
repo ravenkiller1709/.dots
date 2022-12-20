@@ -1,0 +1,7 @@
+[options]
+font = Monospace 13
+font = xos4 Terminus 13px
+font = Droid Sans Mono 13
+[colors]
+foreground = #dcdccc
+background  = #3f3f3f

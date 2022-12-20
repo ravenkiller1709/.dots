@@ -1,0 +1,33 @@
+;; This buffer is for text that is not saved, and for Lisp evaluation.
+;; To create a file, visit it with <open> and enter text in its buffer.
+
+
+[global]
+    monitor = 0
+    follow = keyboard
+    width = 300
+    height = 300
+    offset = 20x65
+    padding = 2
+    horizontal_padding = 2
+    transparency = 25
+    font = SourceCodePro 13
+    format = "<b>%s</b>\n%b"
+
+[urgency_low]
+    background ="#131A1C"
+    foreground = "#5E8D87"
+    timeout = 3
+
+[urgency_normal]
+    foreground = "#C5C8C6"
+    background = "#0d0e16"
+    timeout = 5
+
+[urgency_critical]
+    background = "#131A1C"
+    foreground = "#5E8D87"
+    frame_color = "#c5c8c6"
+    timeout = 10
+
+ 
