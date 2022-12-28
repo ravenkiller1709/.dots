@@ -39,7 +39,7 @@ window:
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
-  opacity: 0.95
+  opacity: 0.85
   # Window decorations
   #
   # Values for `decorations`:
@@ -371,7 +371,7 @@ schemes:
   Nord: &Nord
     # Default colors
     primary:
-      background: '#282C34'
+      background: '#000000'
       foreground: '#D8DEE9'
 
     # Normal colors

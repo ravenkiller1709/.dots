@@ -49,9 +49,30 @@ brightness() {
 }
 
 mem() {
-  printf "^c$blue^^b$black^  "
+  printf "^c$blue^^b$black^    "
   printf "^c$blue^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 }
+
+mpd() {
+  PREFIX_PLAY=' '
+  PREFIX_PAUSE=' '
+  current_song="$(mpc current)"
+
+	if [[ "$current_song" = "" ]]; then
+		echo " "
+		exit 0
+	else
+		playpause=$(mpc | awk '/\[.*]/{split($0, a, " "); print a[1]}')
+		if [[ "$playpause" = "[playing]" ]]; then
+			current_song="$PREFIX_PLAY $current_song"
+		elif [[ "$playpause" = "[paused]" ]]; then
+			current_song="$PREFIX_PAUSE $current_song"
+		fi
+	fi
+
+	echo "^c$black^ ^b#866f8c^   ^c$black^ ^b#b294bb^ $current_song ^b$black^"
+}
+
 
 network() {
 hostname="${HOSTNAME:-${hostname:-$(hostname)}}"
@@ -92,5 +113,5 @@ while true; do
   [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
   interval=$((interval + 1))
 
-  sleep 1 && xsetroot -name "$(pkg_updates) $(mail) $(cpu) $(mem) $(network) $(vpn) $(clock) $(volume)" 
+  sleep 1 && xsetroot -name "$(mem) $(cpu) $(mpd) $(pkg_updates) $(mail) $(network) $(vpn) $(clock) $(volume)" 
 done
