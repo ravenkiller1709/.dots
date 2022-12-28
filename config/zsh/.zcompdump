@@ -1,8 +1,7 @@
-#files: 798	version: 5.9
+#files: 818	version: 5.9
 
 _comps=(
 '-' '_precommand'
-'-*-' '_loginctl'
 '.' '_source'
 '5g' '_go'
 '5l' '_go'
@@ -92,6 +91,7 @@ _comps=(
 'bogofilter' '_bogofilter'
 'bogotune' '_bogofilter'
 'bogoutil' '_bogofilter'
+'bootctl' '_bootctl'
 'bpython' '_bpython'
 'bpython2' '_bpython'
 'bpython2-gtk' '_bpython'
@@ -120,7 +120,7 @@ _comps=(
 'builtin' '_builtin'
 'bunzip2' '_bzip2'
 'burst' '_mh'
-'bwrap' '_bwrap'
+'busctl' '_busctl'
 'bzcat' '_bzip2'
 'bzegrep' '_grep'
 'bzfgrep' '_grep'
@@ -197,6 +197,7 @@ _comps=(
 'config.status' '_configure'
 'configure' '_configure'
 'convert' '_imagemagick'
+'coredumpctl' '_coredumpctl'
 'cowsay' '_cowsay'
 'cowthink' '_cowsay'
 'cp' '_cp'
@@ -575,6 +576,7 @@ _comps=(
 'history' '_fc'
 'host' '_host'
 'hostname' '_hostname'
+'hostnamectl' '_hostnamectl'
 'hotjava' '_webbrowser'
 'htop' '_htop'
 'iceweasel' '_mozilla'
@@ -630,8 +632,10 @@ _comps=(
 'jobs' '_jobs_builtin'
 'joe' '_joe'
 'join' '_join'
+'journalctl' '_journalctl'
 'jq' '_jq'
 'kdeconnect-cli' '_kdeconnect'
+'kernel-install' '_kernel-install'
 'keystone' '_openstack'
 'keytool' '_java'
 'kfmclient' '_kfmclient'
@@ -656,7 +660,6 @@ _comps=(
 'ldd' '_ldd'
 'less' '_less'
 'let' '_math'
-'lf' '_lf'
 'lftp' '_ncftp'
 'lha' '_lha'
 'libinput' '_libinput'
@@ -673,6 +676,7 @@ _comps=(
 'loadkeys' '_loadkeys'
 'local' '_typeset'
 'locale' '_locale'
+'localectl' '_localectl'
 'localedef' '_localedef'
 'locate' '_locate'
 'log' '_nothing'
@@ -710,6 +714,7 @@ _comps=(
 'lzma' '_xz'
 'lzop' '_lzop'
 'mac2unix' '_dos2unix'
+'machinectl' '_machinectl'
 'magnum' '_openstack'
 'Mail' '_mail'
 'mail' '_mail'
@@ -740,7 +745,6 @@ _comps=(
 'mencal' '_mencal'
 'mere' '_mere'
 'merge' '_rcs'
-'meson' '_meson'
 'metaflac' '_flac'
 'mformat' '_mtools'
 'mgv' '_pspdf'
@@ -786,7 +790,6 @@ _comps=(
 'mpc' '_mpc'
 'mplayer' '_mplayer'
 'mpstat' '_sysstat'
-'mpv' '_mpv'
 'mr' '_myrepos'
 'mrd' '_mtools'
 'mread' '_mtools'
@@ -825,6 +828,7 @@ _comps=(
 'netrik' '_webbrowser'
 'netscape' '_netscape'
 'netstat' '_netstat'
+'networkctl' '_networkctl'
 'neutron' '_openstack'
 'new' '_mh'
 'newgrp' '_groups'
@@ -832,7 +836,6 @@ _comps=(
 'nginx' '_nginx'
 'ngrep' '_ngrep'
 'nice' '_nice'
-'ninja' '_ninja'
 'nkf' '_nkf'
 'nl' '_nl'
 'nm' '_nm'
@@ -859,6 +862,7 @@ _comps=(
 'ogginfo' '_vorbis'
 'oksh' '_sh'
 'okular' '_okular'
+'oomctl' '_oomctl'
 'openstack' '_openstack'
 'opera' '_webbrowser'
 'opera-next' '_webbrowser'
@@ -1052,6 +1056,7 @@ _comps=(
 'remsh' '_rlogin'
 'renice' '_renice'
 'repl' '_mh'
+'resolvectl' '_resolvectl'
 'restart' '_initctl'
 'retawq' '_webbrowser'
 'rgrep' '_grep'
@@ -1129,7 +1134,6 @@ _comps=(
 'sha512sum' '_md5sum'
 'sha512t256' '_cksum'
 'shasum' '_shasum'
-'shell-script' '_loginctl'
 'shift' '_arrays'
 'show' '_mh'
 'showchar' '_psutils'
@@ -1206,6 +1210,23 @@ _comps=(
 'swiftc' '_swift'
 'sync' '_nothing'
 'sysctl' '_sysctl'
+'systemctl' '_systemctl'
+'systemd-analyze' '_systemd-analyze'
+'systemd-ask-password' '_systemd'
+'systemd-cat' '_systemd'
+'systemd-cgls' '_systemd'
+'systemd-cgtop' '_systemd'
+'systemd-delta' '_systemd-delta'
+'systemd-detect-virt' '_systemd'
+'systemd-inhibit' '_systemd-inhibit'
+'systemd-machine-id-setup' '_systemd'
+'systemd-notify' '_systemd'
+'systemd-nspawn' '_systemd-nspawn'
+'systemd-path' '_systemd-path'
+'systemd-resolve' '_resolvectl'
+'systemd-run' '_systemd-run'
+'systemd-tmpfiles' '_systemd-tmpfiles'
+'systemd-tty-ask-password-agent' '_systemd'
 'tac' '_tac'
 'tacker' '_openstack'
 'tail' '_tail'
@@ -1232,6 +1253,7 @@ _comps=(
 'tig' '_git'
 '-tilde-' '_tilde'
 'time' '_precommand'
+'timedatectl' '_timedatectl'
 'timeout' '_timeout'
 'times' '_nothing'
 'tin' '_tin'
@@ -1273,6 +1295,7 @@ _comps=(
 'txt' '_hosts'
 'type' '_which'
 'typeset' '_typeset'
+'udevadm' '_udevadm'
 'ulimit' '_ulimit'
 'uml_mconsole' '_uml'
 'uml_moo' '_uml'
@@ -1482,7 +1505,6 @@ _comps=(
 'ypxfr' '_yp'
 'ytalk' '_other_accounts'
 'zargs' '_zargs'
-'zathura' '_zathura'
 'zcalc' '_zcalc'
 '-zcalc-line-' '_zcalc_line'
 'zcat' '_zcat'
@@ -1646,13 +1668,17 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _alacritty _bluetoothctl _bwrap _cargo _checkupdates \
-            _curl _email-notmuch _exa _lf _libinput \
-            _loginctl _meson _mkinitcpio _mpv _ninja \
-            _notmuch _paccache _pacdiff _paclist _paclog-pkglist \
+autoload -Uz _alacritty _bluetoothctl _bootctl _busctl _cargo \
+            _checkupdates _coredumpctl _curl _email-notmuch _exa \
+            _hostnamectl _journalctl _kernel-install _libinput _localectl \
+            _loginctl _machinectl _mkinitcpio _networkctl _notmuch \
+            _oomctl _paccache _pacdiff _paclist _paclog-pkglist \
             _pacman _pacscripts _pacsearch _pacsort _pactree \
-            _pass _pulseaudio _qpdf _rankmirrors _rustup \
-            _updpkgsums _xwallpaper _yay _zathura _cdr \
+            _pass _pulseaudio _qpdf _rankmirrors _resolvectl \
+            _rustup _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files \
+            _systemctl _systemd _systemd-analyze _systemd-delta _systemd-inhibit \
+            _systemd-nspawn _systemd-path _systemd-run _systemd-tmpfiles _timedatectl \
+            _udevadm _updpkgsums _xwallpaper _yay _cdr \
             _all_labels _all_matches _alternative _approximate _arg_compile \
             _arguments _bash_completions _cache_invalid _call_function _combination \
             _complete _complete_debug _complete_help _complete_help_generic _complete_tag \

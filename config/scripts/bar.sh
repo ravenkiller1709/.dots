@@ -53,12 +53,20 @@ mem() {
   printf "^c$blue^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 }
 
-wlan() {
-	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c$black^ ^b#b55960^ 直 ^c$black^ ^b#CE656E^ Connected ";;
-	down) printf "^c$black^ ^b#b55960^ 睊 ^c$black^ ^b#CE656E^  Disconnected ";;
-	esac
+network() {
+hostname="${HOSTNAME:-${hostname:-$(hostname)}}"
+wire="$(ip a | grep 'enp4s0' | grep inet | wc -l)"
+wifi="$(ip a | grep wlp4s0 | grep inet | wc -l)"
+
+if [ $wire = 1 ]; then 
+    echo "^c$black^ ^b#964a50^  " "^c$black^ ^b#b55960^ $(ifconfig | grep inet | awk 'NR==1 {print $2}')"
+elif [ $wifi = 1 ]; then
+    echo "^c$black^ ^b#b55960^  " "^c#b5bd68^$(ifconfig | grep inet | awk 'NR==3 {print $2}')"
+else 
+    echo "睊 "
+fi
 }
+
 
 vpn() {
   state="$(ip a | grep tun0 | grep inet | wc -l)"
@@ -84,5 +92,5 @@ while true; do
   [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
   interval=$((interval + 1))
 
-  sleep 1 && xsetroot -name "$(pkg_updates) $(mail) $(battery) $(brightness) $(cpu) $(mem) $(wlan) $(vpn) $(clock) $(volume)" 
+  sleep 1 && xsetroot -name "$(pkg_updates) $(mail) $(cpu) $(mem) $(network) $(vpn) $(clock) $(volume)" 
 done

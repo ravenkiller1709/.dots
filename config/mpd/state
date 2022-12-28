@@ -1,26 +1,56 @@
 sw_volume: 62
 audio_device_state:1:mpd-alsa
 audio_device_state:1:toggle_visualizer
-state: pause
-current: 0
-time: 16.549000
+state: play
+current: 4
+time: 119.967000
 random: 0
 repeat: 0
-single: 1
+single: 0
 consume: 0
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Agnes Obel - Aventine/01.Chord Left.mp3
-1:Agnes Obel - Aventine/02.Fuel To Fire.mp3
-2:Agnes Obel - Aventine/03.Dorian.mp3
-3:Agnes Obel - Aventine/04.Aventine.mp3
-4:Agnes Obel - Aventine/05.Run Cried The Crawling.mp3
-5:Agnes Obel - Aventine/06.Tokka.mp3
-6:Agnes Obel - Aventine/07.The Curse.mp3
-7:Agnes Obel - Aventine/08.Pass Them By.mp3
-8:Agnes Obel - Aventine/09.Words Are Dead.mp3
-9:Agnes Obel - Aventine/10.Fivefold.mp3
-10:Agnes Obel - Aventine/11.Smoke & Mirrors.mp3
+0:Prefab Sprout - Andromeda Heights/01.Electric Guitars.mp3
+1:Prefab Sprout - Andromeda Heights/02.A Prisoner Of The Past.mp3
+2:Prefab Sprout - Andromeda Heights/03.The Mystery Of Love.mp3
+3:Prefab Sprout - Andromeda Heights/04.Life's A Miracle.mp3
+4:Prefab Sprout - Andromeda Heights/05.Anne Marie.mp3
+5:Prefab Sprout - Andromeda Heights/06.Whoever You Are.mp3
+6:Prefab Sprout - Andromeda Heights/07.Steal Your Thunder.mp3
+7:Prefab Sprout - Andromeda Heights/08.Avenue Of Stars.mp3
+8:Prefab Sprout - Andromeda Heights/09.Swans.mp3
+9:Prefab Sprout - Andromeda Heights/10.The Fifth Horseman.mp3
+10:Prefab Sprout - Andromeda Heights/11.Weightless.mp3
+11:Prefab Sprout - Andromeda Heights/12.Andromeda Heights.mp3
+12:Prefab Sprout - Crimson_Red/01.The Best Jewel Thief In The World.mp3
+13:Prefab Sprout - Crimson_Red/02.List Of Impossible Things.mp3
+14:Prefab Sprout - Crimson_Red/03.Adolescence.mp3
+15:Prefab Sprout - Crimson_Red/04.Grief Built The Taj Mahal.mp3
+16:Prefab Sprout - Crimson_Red/05.Devil Came A Calling.mp3
+17:Prefab Sprout - Crimson_Red/06.Billy.mp3
+18:Prefab Sprout - Crimson_Red/07.The Dreamer.mp3
+19:Prefab Sprout - Crimson_Red/08.The Songs Of Danny Galway.mp3
+20:Prefab Sprout - Crimson_Red/09.The Old Magician.mp3
+21:Prefab Sprout - Crimson_Red/10.Mysterious.mp3
+22:Prefab Sprout - Jordan The Comeback/01.Looking For Atlantis.mp3
+23:Prefab Sprout - Jordan The Comeback/02.Wild Horses.mp3
+24:Prefab Sprout - Jordan The Comeback/03.Machine Gun Ibiza.mp3
+25:Prefab Sprout - Jordan The Comeback/04.We Let The Stars Go.mp3
+26:Prefab Sprout - Jordan The Comeback/05.Carnival 2000.mp3
+27:Prefab Sprout - Jordan The Comeback/06.Jordan - The Comeback.mp3
+28:Prefab Sprout - Jordan The Comeback/07.Jesse James Symphony.mp3
+29:Prefab Sprout - Jordan The Comeback/08.Jesse James Bolero.mp3
+30:Prefab Sprout - Jordan The Comeback/09.Moon Dog.mp3
+31:Prefab Sprout - Jordan The Comeback/10.All The World Loves Lovers.mp3
+32:Prefab Sprout - Jordan The Comeback/11.All Boys Believe Anything.mp3
+33:Prefab Sprout - Jordan The Comeback/12.The Ice Maiden.mp3
+34:Prefab Sprout - Jordan The Comeback/13.Paris Smith.mp3
+35:Prefab Sprout - Jordan The Comeback/14.The Wedding March.mp3
+36:Prefab Sprout - Jordan The Comeback/15.One Of The Broken.mp3
+37:Prefab Sprout - Jordan The Comeback/16.Michael.mp3
+38:Prefab Sprout - Jordan The Comeback/17.Mercy.mp3
+39:Prefab Sprout - Jordan The Comeback/18.Scarlet Nights.mp3
+40:Prefab Sprout - Jordan The Comeback/19.Doo Wop In Harlem.mp3
 playlist_end

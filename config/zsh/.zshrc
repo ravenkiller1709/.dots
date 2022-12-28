@@ -58,6 +58,5 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # enabling vim mode
 bindkey -v
-(cat ~/.cache/wal/sequences &)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 colorscript -r

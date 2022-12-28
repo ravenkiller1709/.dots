@@ -87,7 +87,7 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     iscentered   isfloating noswallow  monitor */
     { "Gimp",     NULL,       NULL,       0,            0,           1,     0,           -1 },
     { "Mpv",     NULL,       NULL,       0,            0,     0,           1,           -1 },
-    { "firefox",  NULL,       NULL,       1 << 1,       0,           0,      0,           -1 },
+    { "LibreWolf",  NULL,       NULL,       1 << 1,       0,           0,      0,           -1 },
     { "st-256color",  NULL,       NULL,       1 << 0,       0,           0,     1,           -1 },
     { "eww",      NULL,       NULL,       0,            0,           1,       0,           -1 },
 };
@@ -162,7 +162,7 @@ static Key keys[] = {
     { Mod1Mask|ShiftMask,               XK_d,       spawn,          SHCMD("dmenuunicode") },
     { Mod1Mask,                         XK_s,       spawn,          SHCMD("st -e /home/kim/.scripts/buildconf") },
     { MODKEY,                           XK_Return,  spawn,          SHCMD("st")},
-    { MODKEY,                           XK_w,       spawn,          SHCMD("firefox")},
+    { MODKEY,                           XK_w,       spawn,          SHCMD("librewolf")},
     { Mod1Mask,                         XK_p,       spawn,          SHCMD("alacritty -e neomutt")},
     { Mod1Mask,                         XK_n,       spawn,          SHCMD("alacritty -e newsboat")},
     { Mod1Mask,                         XK_m,       spawn,          SHCMD("alacritty -e ncmpcpp")},
