@@ -1,0 +1,6 @@
+config/mpd/socket
+config/mpd/pid
+config/mpd/mpdstate
+config/mpd/log
+config/mpd/state
+config/zsh/.zcompdump

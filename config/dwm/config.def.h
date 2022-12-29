@@ -159,6 +159,7 @@ static Key keys[] = {
 
     { MODKEY,                           XK_d,       spawn,          SHCMD("dmenu_run -c -l 10") },
     { Mod1Mask,                         XK_d,       spawn,          SHCMD("st -e /home/kim/.scripts/editconf") },
+    { Mod1Mask,                         XK_w,       spawn,          SHCMD("$HOME/.local/bin/setbg ~/.dots/.baggrunde/") },
     { Mod1Mask|ShiftMask,               XK_d,       spawn,          SHCMD("dmenuunicode") },
     { Mod1Mask,                         XK_s,       spawn,          SHCMD("st -e /home/kim/.scripts/buildconf") },
     { MODKEY,                           XK_Return,  spawn,          SHCMD("st")},
