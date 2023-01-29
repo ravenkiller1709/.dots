@@ -1,0 +1,695 @@
+#+title: My Emacs Configuration
+* Repo
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+#+END_SRC
+* Interface tweaks
+Make frame transparency overridable
+
+#+BEGIN_SRC emacs-lisp
+(defvar efs/frame-transparency '(100 . 100))
+(set-frame-parameter (selected-frame) 'alpha '(100 100))
+(add-to-list 'default-frame-alist '(alpha 100 100))
+
+;; The default is 800 kilobytes.  Measured in bytes.
+(setq gc-cons-threshold (* 50 1000 1000))
+
+(defun efs/display-startup-time ()
+  (message "Emacs loaded in %s with %d garbage collections."
+           (format "%.2f seconds"
+                   (float-time
+                     (time-subtract after-init-time before-init-time)))
+           gcs-done))
+
+(add-hook 'emacs-startup-hook #'efs/display-startup-time)
+
+(setq inhibit-startup-message t)
+
+(tool-bar-mode -1)
+
+(scroll-bar-mode -1)
+
+(menu-bar-mode -1)
+
+(set-fringe-mode 10)
+#+END_SRC
+
+* Display line numbers relative to current place
+
+#+BEGIN_SRC emacs-lisp
+(global-display-line-numbers-mode)
+(setq display-line-numbers-type 'relative)
+#+END_SRC
+
+* Keybindings
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "<f5>") 'revert-buffer)
+(global-set-key (kbd "<f6>") 'org-export-dispatch)
+(global-set-key (kbd "<f7>") 'eshell)
+(global-set-key (kbd "<f8>") 'magit)
+#+END_SRC
+
+* Misc
+#+BEGIN_SRC emacs-lisp
+(fset 'yes-or-no-p 'y-or-n-p)
+(setenv "HOME" "/home/kim/")
+#+END_SRC
+
+* Try
+try packages without installing first
+#+BEGIN_SRC emacs-lisp
+  (use-package try
+    :ensure t)
+#+END_SRC
+* Set the default font
+#+BEGIN_SRC emacs-lisp
+(set-face-attribute 'default nil
+                    :family "Source Code Pro"
+                    :height 160
+                    :weight 'normal
+                    :width 'normal)
+#+END_SRC
+
+* Toggle fullscreen
+#+BEGIN_SRC emacs-lisp
+'(initial-frame-alist '((fullscreen . maximized)))
+#+END_SRC
+
+* Ivy,Swiper,Avy
+
+#+BEGIN_SRC emacs-lisp
+
+  (use-package counsel
+    :ensure t)
+  
+  (use-package ivy
+    :ensure t
+    :diminish (ivy-mode)
+    :bind (("C-x b" . ivy-switch-buffer))
+    :config
+    (ivy-mode 1)
+    (setq ivy-use-virtual-buffers t)
+    (setq ivy-display-style 'fancy)
+    (setq enable-recursive-minibuffers t)
+  )
+    (use-package swiper
+      :ensure try
+      :bind (("C-s" . swiper)
+	     ("C-r" . swiper)
+	     ("C-c C-r" . ivy-resume)
+	     ("M-x" . counsel-M-x)
+	     ("C-x C-f" . counsel-find-file))
+      :config
+      (progn
+	(ivy-mode 1)
+	(setq ivy-use-virtual-buffers t)
+	(setq ivy-display-style 'fancy)
+	(define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
+	))
+
+  (use-package avy
+    :ensure t
+    :bind ("M-s" . avy-goto-char))
+#+END_SRC
+
+* Auto-complete
+#+BEGIN_SRC emacs-lisp
+(use-package auto-complete
+  :ensure t
+  :init
+  (progn
+    (ac-config-default)
+    (global-auto-complete-mode t)
+  ))
+#+END_SRC
+
+* Ido mode and Buffers
+You are strongly encouraged to enable something like `ido-mode' to alter
+the default behavior of 'C-x b', or you will take great pains to switch
+to or back from a floating frame (remember 'C-x 5 o' if you refuse this
+proposal however).
+
+#+BEGIN_SRC emacs-lisp
+;;(setq ido-enable-flex-matching t)
+;;(setq ido-everywhere t)
+;;(ido-mode 1)
+
+(defalias 'list-buffers 'ibuffer)
+
+;;(defalias 'list-buffers 'ibuffer-other-window)
+#+END_SRC
+
+* Window movements with ace window
+
+#+BEGIN_SRC emacs-lisp
+(use-package ace-window
+  :ensure t
+  :init
+  (progn
+    (global-set-key [remap other-window] 'ace-window)
+    (custom-set-faces
+     '(aw-leading-char-face
+       ((t (:inherit ace-jumb-face-foreground :height 3.0)))))
+    ))
+ #+END_SRC
+
+* Let's get encrypted
+
+#+BEGIN_SRC emacs-lisp
+(setenv "GPG_AGENT_INFO" nil)  ;; use emacs pinentry
+    (setq auth-source-debug t)
+
+    (setq epg-gpg-program "gpg2")  ;; not necessary
+    (require 'epa-file)
+    (epa-file-enable)
+(setq epa-pinentry-mode 'loopback)
+(setq epg-pinentry-mode 'loopback)
+
+    (require 'org-crypt)
+    (org-crypt-use-before-save-magic)
+
+(defun efs/lookup-password (&rest keys)
+  (let ((result (apply #'auth-source-search keys)))
+    (if result
+	(funcall (plist-get (car result) :secret))
+      nil)))
+#+END_SRC
+
+* Magit
+
+#+BEGIN_SRC emacs-lisp
+(use-package magit
+  :ensure t)
+#+END_SRC
+
+* Which key
+
+#+BEGIN_SRC emacs-lisp
+(use-package which-key
+  :ensure t
+  :config (which-key-mode))
+#+END_SRC
+
+* Erc Chat
+
+#+BEGIN_SRC emacs-lisp
+(setq erc-server "irc.libera.chat"
+      erc-nick "ravenkiller1709"
+      erc-user-full-name "Kim Kruse"
+      erc-track-shorten-start 8
+      erc-autojoin-channels-alist '(("irc.libera.chat" "#systemcrafters" "#emacs"))
+      erc-kill-buffer-on-part t
+      erc-auto-query 'bury)
+
+(setq erc-fill-column 120
+      erc-fill-function 'erc-fill-static
+      erc-fill-static-center 20)
+
+(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE" "AWAY")
+      erc-hide-list '("JOIN" "NICK" "PART" "QUIT" "MODE" "AWAY"))
+      ;; erc-track-exclude-server-buffer t)
+
+(setq erc-track-visibility nil) ; Only use the selected frame for visibility
+#+END_SRC
+
+* DOOM THEMES
+
+#+BEGIN_SRC emacs-lisp
+  (use-package doom-themes
+    :ensure t
+    :config
+    ;; Global settings (defaults)
+    (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+          doom-themes-enable-italic t) ; if nil, italics is universally disabled
+    (load-theme 'doom-nord t)1)
+  
+  ;; Enable flashing mode-line on errors
+   (doom-themes-visual-bell-config)
+  ;;
+  ;;;; Enable custom neotree theme
+  ;; (doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
+
+  ;;(use-package dracula-theme
+  ;;  :config
+  ;;  (load-theme 'dracula t)
+  ;;  :ensure t)
+  
+  ;;(use-package dracula-theme
+  ;;  :ensure t
+  ;;  :config (load-theme 'dracula t))
+
+  ;;(load-theme 'leuven t)
+  ;;(add-to-list 'custom-theme-load-path "~/.dots/emacs/themes/") ;; for themes loaded locally
+  ;;(load-theme 'bubbleberry t)
+#+END_SRC
+
+* Doom Modeline
+To make the information go somewhere visible
+
+#+BEGIN_SRC emacs-lisp
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+  :custom ((doom-modeline-height 35)
+	   (doom-modeline-bar-width 10)
+	   (doom-modeline-buffer-file-name-style 'auto)
+	   (doom-modeline-icon (display-graphic-p))
+	   (doom-modeline-major-mode-icon t)
+	   (doom-modeline-major-mode-color-icon t)
+	   (doom-modeline-enable-word-count t)
+	   (doom-modeline-modal-icon t)
+	   (doom-modeline-mu4e nil)
+	   (mu4e-alert-enable-mode-line-display)))
+
+(display-battery-mode 1)
+
+;; Turn on `display-time-mode' if you don't use an external bar.
+(setq display-time-default-load-average nil)
+
+(display-time-mode t)
+
+(setq display-time-24hr-format 1)
+
+;;(display-time-mode nil)
+;;(setq display-time-24hr-format nil)
+#+END_SRC
+
+* Vertico
+
+#+BEGIN_SRC emacs-lisp
+;; Enable vertico
+(use-package vertico
+  :ensure t
+  :init
+  (vertico-mode)
+
+  ;; Different scroll margin
+  ;; (setq vertico-scroll-margin 0)
+
+  ;; Show more candidates
+  (setq vertico-count 20)
+
+  ;; Grow and shrink the Vertico minibuffer
+  (setq vertico-resize t)
+
+  ;; Optionally enable cycling for `vertico-next' and `vertico-previous'.
+  (setq vertico-cycle t)
+  )
+
+;; Optionally use the `orderless' completion style. See
+;; `+orderless-dispatch' in the Consult wiki for an advanced Orderless style
+;; dispatcher. Additionally enable `partial-completion' for file path
+;; expansion. `partial-completion' is important for wildcard support.
+;; Multiple files can be opened at once with `find-file' if you enter a
+;; wildcard. You may also give the `initials' completion style a try.
+(use-package orderless
+  :init
+  ;; Configure a custom style dispatcher (see the Consult wiki)
+  ;; (setq orderless-style-dispatchers '(+orderless-dispatch)
+  ;;       orderless-component-separator #'orderless-escapable-split-on-space)
+  (setq completion-styles '(orderless)
+        completion-category-defaults nil
+        COMPLETION-CATEGORY-OVERRIDES '((FILE (styles partial-completion)))))
+
+;; Persist history over Emacs restarts. Vertico sorts by history position.
+(use-package savehist
+  :init
+  (savehist-mode))
+
+;; A few more useful configurations...
+(use-package emacs
+  :init
+  ;; Add prompt indicator to `completing-read-multiple'.
+  ;; Alternatively try `consult-completing-read-multiple'.
+  (defun crm-indicator (args)
+    (cons (concat "[CRM] " (car args)) (cdr args)))
+  (advice-add #'completing-read-multiple :filter-args #'crm-indicator)
+
+  ;; Do not allow the cursor in the minibuffer prompt
+  (setq minibuffer-prompt-properties
+        '(read-only t cursor-intangible t face minibuffer-prompt))
+  (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode)
+
+  ;; Vertico commands are hidden in normal buffers.
+  ;; (setq read-extended-command-predicate
+  ;;       #'command-completion-default-include-p)
+
+  ;; Enable recursive minibuffers
+  (setq enable-recursive-minibuffers t))
+
+;; Optionally use the `orderless' completion style.
+(use-package orderless
+  :init
+  ;; Configure a custom style dispatcher (see the Consult wiki)
+  ;; (setq orderless-style-dispatchers '(+orderless-dispatch)
+  ;;       orderless-component-separator #'orderless-escapable-split-on-space)
+  (setq completion-styles '(orderless basic)
+        completion-category-defaults nil
+        completion-category-overrides '((file (styles partial-completion)))))
+
+(use-package hydra
+  :defer t)
+
+(defhydra hydra-text-scale (:timeout 4)
+  "scale text"
+  ("j" text-scale-increase "in")
+  ("k" text-scale-decrease "out")
+  ("f" nil "finished" :exit t))
+#+END_SRC
+
+* ORG MODE
+
+#+BEGIN_SRC emacs-lisp
+  (defun efs/org-mode-setup ()
+    (org-indent-mode)
+    (variable-pitch-mode 1)
+    (visual-line-mode 1))
+
+    (setq org-ellipsis " ▾")
+
+  (use-package org-bullets
+    :hook (org-mode . org-bullets-mode)
+    :custom
+    (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
+
+  (defun efs/org-mode-visual-fill ()
+    (setq visual-fill-column-width 80
+	  visual-fill-column-center-text t)
+    (visual-fill-column-mode 1))
+
+  (use-package visual-fill-column
+    :hook (org-mode . efs/org-mode-visual-fill))
+
+   (setq org-latex-pdf-process
+	    '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
+
+  (require 'org-tempo)
+
+
+  (unless (boundp 'org-latex-classes)
+    (setq org-latex-classes nil))
+
+      (add-to-list 'org-latex-classes
+		   '("ethz"
+		     "\\documentclass[a4paper,11pt,titlepage]{memoir}
+      \\usepackage[utf8]{inputenc}
+      \\usepackage[T1]{fontenc}
+      \\usepackage{fixltx2e}
+      \\usepackage{graphicx}
+      \\usepackage{longtable}
+      \\usepackage{float}
+      \\usepackage{wrapfig}
+      \\usepackage{rotating}
+      \\usepackage[normalem]{ulem}
+      \\usepackage{amsmath}
+      \\usepackage{textcomp}
+      \\usepackage{marvosym}
+      \\usepackage{wasysym}
+      \\usepackage{amssymb}
+      \\usepackage{hyperref}
+      \\usepackage{mathpazo}
+      \\usepackage{color}
+      \\usepackage{enumerate}
+      \\definecolor{bg}{rgb}{0.95,0.95,0.95}
+      \\tolerance=1000
+	    [NO-DEFAULT-PACKAGES]
+	    [PACKAGES]
+	    [EXTRA]
+      \\linespread{1.1}
+      \\hypersetup{pdfborder=0 0 0}"
+		     ("\\chapter{%s}" . "\\chapter*{%s}")
+		     ("\\section{%s}" . "\\section*{%s}")
+		     ("\\subsection{%s}" . "\\subsection*{%s}")
+		     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+		     ("\\paragraph{%s}" . "\\paragraph*{%s}")
+		     ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+
+      (add-to-list 'org-latex-classes
+		   '("article"
+		     "\\documentclass[11pt,a4paper]{article}
+      \\usepackage[utf8]{inputenc}
+      \\usepackage[T1]{fontenc}
+      \\usepackage{fixltx2e}
+      \\usepackage{graphicx}
+      \\usepackage{longtable}
+      \\usepackage{float}
+      \\usepackage{wrapfig}
+      \\usepackage{rotating}
+      \\usepackage[normalem]{ulem}
+      \\usepackage{amsmath}
+      \\usepackage{textcomp}
+      \\usepackage{marvosym}
+      \\usepackage{wasysym}
+      \\usepackage{amssymb}
+      \\usepackage{hyperref}
+      \\usepackage{mathpazo}
+      \\usepackage{color}
+      \\usepackage{enumerate}
+      \\definecolor{bg}{rgb}{0.95,0.95,0.95}
+      \\tolerance=1000
+	    [NO-DEFAULT-PACKAGES]
+	    [PACKAGES]
+	    [EXTRA]
+      \\linespread{1.1}
+      \\hypersetup{pdfborder=0 0 0}"
+		     ("\\section{%s}" . "\\section*{%s}")
+		     ("\\subsection{%s}" . "\\subsection*{%s}")
+		     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+		     ("\\paragraph{%s}" . "\\paragraph*{%s}")))
+
+
+      (add-to-list 'org-latex-classes '("ebook"
+					"\\documentclass[11pt, oneside]{memoir}
+      \\setstocksize{9in}{6in}
+      \\settrimmedsize{\\stockheight}{\\stockwidth}{*}
+      \\setlrmarginsandblock{2cm}{2cm}{*} % Left and right margin
+      \\setulmarginsandblock{2cm}{2cm}{*} % Upper and lower margin
+      \\checkandfixthelayout
+      % Much more laTeX code omitted
+      "
+					("\\chapter{%s}" . "\\chapter*{%s}")
+					("\\section{%s}" . "\\section*{%s}")
+					("\\subsection{%s}" .
+  "\\subsection*{%s}")))
+#+END_SRC
+
+* Eshell conf
+
+#+BEGIN_SRC emacs-lisp
+(defun efs/configure-eshell ()
+  ;; Save command history when commands are entered
+  (add-hook 'eshell-pre-command-hook 'eshell-save-some-history)
+
+  ;; Truncate buffer for performance
+  (add-to-list 'eshell-output-filter-functions 'eshell-truncate-buffer)
+
+ 
+  (setq eshell-history-size         10000
+        eshell-buffer-maximum-lines 10000
+        eshell-hist-ignoredups t
+        eshell-scroll-to-bottom-on-input t))
+
+(use-package eshell-git-prompt)
+
+(use-package eshell
+  :hook (eshell-first-time-mode . efs/configure-eshell)
+  :config
+
+  (with-eval-after-load 'esh-opt
+    (setq eshell-destroy-buffer-when-process-dies t)
+    (setq eshell-visual-commands '("htop" "zsh" "vim")))
+
+  (eshell-git-prompt-use-theme 'powerline))
+#+END_SRC
+  
+* Dired MODE
+This should be uncommented if on BSD and remember to download package coreutils on OS
+#+BEGIN_SRC emacs-lisp
+;;(cond ((eq system-type 'berkeley-unix)
+;;          (setq insert-directory-program "/usr/local/bin/gls")))
+
+(use-package dired
+  :ensure nil
+  :commands (dired dired-jump)
+  :bind (("C-x C-j" . dired-jump))
+  :custom ((dired-listing-switches "-agho --group-directories-first")))
+(use-package dired-single)
+
+(use-package all-the-icons-dired
+  :hook (dired-mode . all-the-icons-dired-mode))
+
+(use-package dired-open
+  :config
+  ;; Doesn't work as expected!
+  ;;(add-to-list 'dired-open-functions #'dired-open-xdg t)
+  (setq dired-open-extensions '(("png" . "feh")
+                                ("mkv" . "mpv")
+				("mp3" . "mplayer"))))
+
+;;(use-package dired-hide-dotfiles
+;;  :hook (dired-mode . dired-hide-dotfiles-mode)))
+#+END_SRC
+
+* Mu4e email configuration
+
+#+BEGIN_SRC emacs-lisp
+(use-package mu4e
+  :ensure nil
+  :config
+
+  ;;this is set to 't' to avoid mail syncing issues when using mbsync
+  (setq mu4e-change-filenames-when-moving t)
+
+  ;; refresh mail using isync every 10 minutes
+  (setq mu4e-update-interval (* 10 60))
+  (setq mu4e-get-mail-command "mbsync -a")
+  (setq mu4e-maildir "~/Mail")
+
+  ;; Configure the function to use for sending mail
+(setq message-send-mail-function 'smtpmail-send-it)
+
+  (setq mu4e-contexts
+        (list
+         ;; Work account
+         (make-mu4e-context
+          :name "Work"
+          :match-func
+            (lambda (msg)
+              (when msg
+                (string-prefix-p "/Gmail" (mu4e-message-field msg :maildir))))
+          :vars '((user-mail-address . "mail4kruse@gmail.com")
+                  (user-full-name    . "Kim Kruse")
+		  (smtpmail-smtp-server  . "smtp.gmail.com")
+                  (smtpmail-smtp-service . 465)
+                  (smtpmail-stream-type  . ssl)
+                  (mu4e-drafts-folder  . "/Gmail/Drafts")
+                  (mu4e-sent-folder  . "/Gmail/Sent Mail")
+                  (mu4e-refile-folder  . "/Gmail/[Gmail]/Alle mails")
+                  (mu4e-trash-folder  . "/Gmail/[Gmail]/Trash")))
+
+	 ;; Hotmail account
+         (make-mu4e-context
+          :name "Hotmail"
+          :match-func
+            (lambda (msg)
+              (when msg
+                (string-prefix-p "/Hotmail" (mu4e-message-field msg :maildir))))
+          :vars '((user-mail-address . "kimkruse@hotmail.com")
+                  (user-full-name    . "Kim Kruse")
+		  (smtpmail-smtp-server  . "smtp-mail.outlook.com")
+                  (smtpmail-smtp-service . 587)
+                  (smtpmail-stream-type  . starttls)
+                  (mu4e-drafts-folder  . "/Hotmail/Drafts")
+                  (mu4e-sent-folder  . "/Hotmail/Sent Mail")
+                  (mu4e-refile-folder  . "/Hotmail/Alle mails")
+                  (mu4e-trash-folder  . "/Hotmail/Trash")))
+
+         ;; Personal account
+         (make-mu4e-context
+          :name "Personal"
+          :match-func
+            (lambda (msg)
+              (when msg
+                (string-prefix-p "/kimkruse" (mu4e-message-field msg :maildir))))
+          :vars '((user-mail-address . "kim@kimkruse.xyz")
+                  (user-full-name    . "Kim Kruse")
+		  (smtpmail-smtp-server . "mail.kimkruse.xyz")
+		  (smtpmail-smtp-service . 587)
+		  (smtpmail-stream-type . starttls)
+                  (mu4e-drafts-folder  . "/kimkruse/Drafts")
+                  (mu4e-sent-folder  . "/kimkruse/Sent")
+                  (mu4e-refile-folder  . "/kimkruse/Archive")
+                  (mu4e-trash-folder  . "/kimkruse/Trash")))))
+
+  (setq mu4e-maildir-shortcuts
+      '(("/kimkruse/Inbox"             . ?i)
+        ("/kimkruse/Sent" . ?s)
+        ("/Hotmail/Inbox"    . ?d)
+        ("/Gmail/Inbox"     . ?t))))
+#+END_SRC
+
+* Latin text load with C-c l p
+
+#+BEGIN_SRC emacs-lisp
+  (use-package lorem-ipsum
+    :ensure t
+    :init
+    (lorem-ipsum-use-default-bindings))
+#+END_SRC
+* Reveal.js
+Enabling presentation mode
+#+begin_src emacs-lisp
+  (use-package ox-reveal
+  :ensure ox-reveal)
+
+  (setq org-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js")
+  (setq org-reveal-mathjax t)
+#+end_src
+
+* Flycheck
+#+begin_src emacs-lisp
+  (use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode t))
+#+end_src
+* Jedi
+#+begin_src emacs-lisp
+  (use-package jedi
+  :ensure t
+  :init
+  (add-hook 'python-mode-hook 'jedi:setup)
+  (add-hook 'python-mode-hook 'jedi:ac-setup))
+#+end_src
+
+* Yasnippet
+#+begin_src emacs-lisp
+  (use-package yasnippet
+    :ensure t
+    :init
+      (yas-global-mode 1))
+
+#+end_src
+
+* Undo tree
+#+begin_src emacs-lisp
+    (use-package undo-tree
+      :ensure t
+      :init
+      (global-undo-tree-mode))
+  
+  (global-set-key (kbd "C-z") 'undo)
+
+#+end_src
+
+* Misc packages
+#+begin_src emacs-lisp
+    ;;highlighting the line of the cursor
+    (global-hl-line-mode t)
+
+    (use-package beacon
+      :ensure t
+      :config
+      (beacon-mode 1)
+      (setq beacon-color "#666600")
+      )
+
+  ;; good for deleting white space
+    (use-package hungry-delete
+      :ensure t
+      :config
+      (hungry-delete-mode))
+
+  ;; tabs in better
+    (use-package aggressive-indent
+      :ensure t
+      :config
+      (global-aggressive-indent-mode 1))
+
+  ;;highlighting chunks
+  (use-package expand-region
+    :ensure t
+    :config
+    (global-set-key (kbd "C-=") 'er/expand-region))
+#+end_src

@@ -87,8 +87,8 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     iscentered   isfloating noswallow  monitor */
     { "Gimp",     NULL,       NULL,       0,            0,           1,     0,           -1 },
     { "Mpv",     NULL,       NULL,       0,            0,     0,           1,           -1 },
-    { "LibreWolf",  NULL,       NULL,       1 << 1,       0,           0,      0,           -1 },
-    { "st-256color",  NULL,       NULL,       1 << 0,       0,           0,     1,           -1 },
+    { "Firefox",  NULL,       NULL,       1 << 1,       0,           0,      0,           -1 },
+    { "Alacritty",  NULL,       NULL,       1 << 0,       0,           0,     1,           -1 },
     { "eww",      NULL,       NULL,       0,            0,           1,       0,           -1 },
 };
 
@@ -138,10 +138,10 @@ static Key keys[] = {
     /* modifier                         key         function        argument */
 
    // brightness and audio 
-  { 0, XF86XK_AudioMute,		spawn,		SHCMD("amixer -q sset Master toggle") },
+        { 0, XF86XK_AudioMute,		spawn,		SHCMD("amixer -q sset Master toggle") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("amixer -q sset Master 5%+") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("amixer -q sset Master 5%-") },
-  { 0, XF86XK_MonBrightnessUp,	spawn,		{.v = (const char*[]){"sudo",  "brightnessctl", "set", "+15", NULL } } },
+        { 0, XF86XK_MonBrightnessUp,	spawn,		{.v = (const char*[]){"sudo",  "brightnessctl", "set", "+15", NULL } } },
 	{ 0, XF86XK_MonBrightnessDown,	spawn,		{.v = (const char*[]){ "sudo", "brightnessctl", "set", "15-", NULL } } },
 	{ 0, XF86XK_AudioPrev,		spawn,		{.v = (const char*[]){ "mpc", "prev", NULL } } },
 	{ 0, XF86XK_AudioNext,		spawn,		{.v = (const char*[]){ "mpc",  "next", NULL } } },
@@ -158,21 +158,22 @@ static Key keys[] = {
     {MODKEY,                            XK_u,       spawn,          SHCMD("maim --select | xclip -selection clipboard -t image/png")},
 
     { MODKEY,                           XK_d,       spawn,          SHCMD("dmenu_run -c -l 10") },
-    { Mod1Mask,                         XK_d,       spawn,          SHCMD("st -e /home/kim/.scripts/editconf") },
-    { Mod1Mask,                         XK_w,       spawn,          SHCMD("$HOME/.local/bin/setbg ~/.dots/.baggrunde/") },
+    { MODKEY|ControlMask,               XK_d,       spawn,          SHCMD("st -e /home/kim/.scripts/editconf") },
+    { MODKEY|ControlMask,               XK_w,       spawn,          SHCMD("$HOME/.local/bin/setbg ~/.dots/.baggrunde/") },
     { Mod1Mask|ShiftMask,               XK_d,       spawn,          SHCMD("dmenuunicode") },
-    { Mod1Mask,                         XK_s,       spawn,          SHCMD("st -e /home/kim/.scripts/buildconf") },
+    { MODKEY|ControlMask,               XK_s,       spawn,          SHCMD("st -e /home/kim/.scripts/buildconf") },
     { MODKEY,                           XK_Return,  spawn,          SHCMD("st")},
-    { MODKEY,                           XK_w,       spawn,          SHCMD("librewolf")},
-    { Mod1Mask,                         XK_p,       spawn,          SHCMD("alacritty -e neomutt")},
-    { Mod1Mask,                         XK_n,       spawn,          SHCMD("alacritty -e newsboat")},
-    { Mod1Mask,                         XK_m,       spawn,          SHCMD("alacritty -e ncmpcpp")},
-    { Mod1Mask,                         XK_v,       spawn,          SHCMD("$HOME/.scripts/vpnup")},
-    { Mod1Mask|ShiftMask,               XK_v,       spawn,          SHCMD("$HOME/.scripts/vpndown")},
-    { MODKEY|ShiftMask,		              XK_e,		    spawn,		      SHCMD("alacritty -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
+    { MODKEY,                           XK_w,       spawn,          SHCMD("firefox")},
+    { MODKEY,                           XK_e,       spawn,          SHCMD("emacsclient -c -a 'emacs'")},
+    { MODKEY|ShiftMask,                 XK_p,       spawn,          SHCMD("alacritty -e neomutt")},
+    { MODKEY|ControlMask,               XK_n,       spawn,          SHCMD("alacritty -e newsboat")},
+    { MODKEY|ShiftMask,                 XK_m,       spawn,          SHCMD("alacritty -e ncmpcpp")},
+    { MODKEY|ControlMask,               XK_v,       spawn,          SHCMD("$HOME/.scripts/vpnup")},
+    { MODKEY|ShiftMask,                 XK_v,       spawn,          SHCMD("$HOME/.scripts/vpndown")},
+    { MODKEY|ShiftMask,	                XK_e,	    spawn,	    SHCMD("alacritty -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
     // toggle stuff
-    { MODKEY,			                      XK_Insert,	spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.local/share/snippets | dmenu -i -l 50 | cut -d' ' -f1)") },
-    { MODKEY,			                      XK_minus,	  spawn,	        {.v = (const char*[]){ "dmenuunicode", NULL } } },
+    { MODKEY,			        XK_Insert,  spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.local/share/snippets | dmenu -i -l 50 | cut -d' ' -f1)") },
+    { MODKEY,			        XK_minus,   spawn,	    {.v = (const char*[]){ "dmenuunicode", NULL } } },
     { MODKEY|ShiftMask,                 XK_Insert,  spawn,          SHCMD("bookmarkthis.sh") },
 
     { MODKEY,                           XK_b,       togglebar,      {0} },

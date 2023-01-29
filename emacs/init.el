@@ -1,8 +1,21 @@
-(set-face-attribute 'default nil
-                  :family "Fira Code"
-                  :height 160
-                  :weight 'normal
-                  :width 'normal)
+;; NOTE: init.el is now generated from Emacs.org.  Please edit that file
+;;       in Emacs and init.el will be generated automatically!
+
+;; You will most likely need to adjust this font size for your system!
+(defvar efs/default-font-size 180)
+(defvar efs/default-variable-font-size 180)
+
+;; Make frame transparency overridable
+(defvar efs/frame-transparency '(90 . 90))
+
+
+  (set-face-attribute 'default nil :font "MesloLGSDZ NF" :height efs/default-font-size)
+
+      ;; Set the fixed pitch face
+      (set-face-attribute 'fixed-pitch nil :font "MesloLGSDZ NF" :height efs/default-font-size)
+
+      ;; Set the variable pitch face
+      (set-face-attribute 'variable-pitch nil :font "Cantarell" :height efs/default-variable-font-size :weight 'regular)
 
 (require 'package)
 
@@ -28,18 +41,31 @@
   :ensure ace-window
   :config (setq aw-keys '(?a ?c ?e ?u ?e ?d ?h ?t ?n ?s))
   :bind ("C-x o" . ace-window))
+;reduce keystrokes replying
+(fset 'yes-or-no-p 'y-or-n-p)
+(setenv "HOME" "/home/kim/")
+
+(use-package ace-window
+  :ensure t
+  :init
+  (progn
+    (global-set-key [remap other-window] 'ace-window)
+    (custom-set-faces
+     '(aw-leading-char-face
+       ((t (:inherit ace-jumb-face-foreground :height 3.0)))))
+    ))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(nord))
- '(custom-safe-themes
-   '("37768a79b479684b0756dec7c0fc7652082910c37d8863c35b702db3f16000f8" "25b9bb88d2156398facbadf464fdf67379efb7f62709f38ff2dba5eb3dd1bd4b" default))
  '(package-selected-packages
-   '(man-commands nord-theme emms magit all-the-icons multi-vterm uwu-theme which-key vterm visual-fill-column vertico use-package try org-roam org-emms org-bullets marginalia ivy-rich ivy-prescient ivy-emms helm-emms forge doom-modeline dmenu dired-single dired-open counsel auto-complete all-the-icons-dired ace-window))
+   '(dmenu ivy-emms helm-emms emms rainbow-delimiters forge magit which-key visual-fill-column vertico use-package try org-roam org-bullets marginalia ivy-rich ivy-prescient doom-themes doom-modeline dired-single dired-open counsel auto-complete all-the-icons-dired ace-window))
  '(rational-ui-default-font '(:font "JetBrains Mono" :weight light :height 185)))
+
+(use-package doom-themes
+  :init (load-theme 'doom-palenight t))
 
 (use-package all-the-icons
     :ensure t)
@@ -212,6 +238,135 @@
 				      ("\\subsection{%s}" .
 "\\subsection*{%s}")))
 
+(defun efs/org-mode-setup ()
+  (org-indent-mode)
+  (variable-pitch-mode 1)
+  (visual-line-mode 1))
+
+(use-package org
+  :pin org
+  :commands (org-capture org-agenda)
+  :hook (org-mode . efs/org-mode-setup)
+  :config
+  (setq org-ellipsis " ▾")
+
+  (setq org-agenda-start-with-log-mode t)
+  (setq org-log-done 'time)
+  (setq org-log-into-drawer t)
+
+  (setq org-agenda-files
+        '("~/Projekter/Kode/OrgFiles/Opgaver.org"
+          "~/Projekter/Kode/OrgFiles/Vaner.org"
+          "~/Projekter/Kode/OrgFiles/Fødselsdage.org"))
+
+  (require 'org-habit)
+  (add-to-list 'org-modules 'org-habit)
+  (setq org-habit-graph-column 60)
+
+  (setq org-todo-keywords
+    '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)")
+      (sequence "BACKLOG(b)" "PLAN(p)" "READY(r)" "ACTIVE(a)" "REVIEW(v)" "WAIT(w@/!)" "HOLD(h)" "|" "COMPLETED(c)" "CANC(k@)")))
+
+  (setq org-refile-targets
+    '(("Archive.org" :maxlevel . 1)
+      ("Opgaver.org" :maxlevel . 1)))
+
+  ;; Save Org buffers after refiling!
+  (advice-add 'org-refile :after 'org-save-all-org-buffers)
+
+  (setq org-tag-alist
+    '((:startgroup)
+       ; Put mutually exclusive tags here
+       (:endgroup)
+       ("@errand" . ?E)
+       ("@home" . ?H)
+       ("@work" . ?W)
+       ("agenda" . ?a)
+       ("planning" . ?p)
+       ("publish" . ?P)
+       ("batch" . ?b)
+       ("note" . ?n)
+       ("idea" . ?i)))
+
+  ;; Configure custom agenda views
+  (setq org-agenda-custom-commands
+   '(("d" "Dashboard"
+     ((agenda "" ((org-deadline-warning-days 7)))
+      (todo "NEXT"
+        ((org-agenda-overriding-header "Next Tasks")))
+      (tags-todo "agenda/ACTIVE" ((org-agenda-overriding-header "Active Projekter")))))
+
+    ("n" "Next Tasks"
+     ((todo "NEXT"
+        ((org-agenda-overriding-header "Next Tasks")))))
+
+    ("W" "Work Tasks" tags-todo "+work-email")
+
+    ;; Low-effort next actions
+    ("e" tags-todo "+TODO=\"NEXT\"+Effort<15&+Effort>0"
+     ((org-agenda-overriding-header "Low Effort Tasks")
+      (org-agenda-max-todos 20)
+      (org-agenda-files org-agenda-files)))
+
+    ("w" "Workflow Status"
+     ((todo "WAIT"
+            ((org-agenda-overriding-header "Waiting on External")
+             (org-agenda-files org-agenda-files)))
+      (todo "REVIEW"
+            ((org-agenda-overriding-header "In Review")
+             (org-agenda-files org-agenda-files)))
+      (todo "PLAN"
+            ((org-agenda-overriding-header "In Planning")
+             (org-agenda-todo-list-sublevels nil)
+             (org-agenda-files org-agenda-files)))
+      (todo "BACKLOG"
+            ((org-agenda-overriding-header "Project Backlog")
+             (org-agenda-todo-list-sublevels nil)
+             (org-agenda-files org-agenda-files)))
+      (todo "READY"
+            ((org-agenda-overriding-header "Ready for Work")
+             (org-agenda-files org-agenda-files)))
+      (todo "ACTIVE"
+            ((org-agenda-overriding-header "Active Projekter")
+             (org-agenda-files org-agenda-files)))
+      (todo "COMPLETED"
+            ((org-agenda-overriding-header "Completed Projekter")
+             (org-agenda-files org-agenda-files)))
+      (todo "CANC"
+            ((org-agenda-overriding-header "Cancelled Projekter")
+             (org-agenda-files org-agenda-files)))))))
+
+  (setq org-capture-templates
+    `(("t" "Tasks / Projekter")
+      ("tt" "Task" entry (file+olp "~/Projekter/Kode/OrgFiles/Opgaver.org" "Inbox")
+           "* TODO %?\n  %U\n  %a\n  %i" :empty-lines 1)
+
+      ("j" "Journal Entries")
+      ("jj" "Journal" entry
+           (file+olp+datetree "~/Projekter/Kode/OrgFiles/Journal.org")
+           "\n* %<%I:%M %p> - Journal :journal:\n\n%?\n\n"
+           ;; ,(dw/read-file-as-string "~/Notes/Templates/Daily.org")
+           :clock-in :clock-resume
+           :empty-lines 1)
+      ("jm" "Meeting" entry
+           (file+olp+datetree "~/Projekter/Kode/OrgFiles/Journal.org")
+           "* %<%I:%M %p> - %a :meetings:\n\n%?\n\n"
+           :clock-in :clock-resume
+           :empty-lines 1)
+
+      ("w" "Workflows")
+      ("we" "Checking Email" entry (file+olp+datetree "~/Projekter/Kode/OrgFiles/Journal.org")
+           "* Checking Email :email:\n\n%?" :clock-in :clock-resume :empty-lines 1)
+
+      ("m" "Metrics Capture")
+      ("mw" "Weight" table-line (file+headline "~/Projekter/Kode/OrgFiles/Metrics.org" "Weight")
+       "| %U | %^{Weight} | %^{Notes} |" :kill-buffer t)))
+
+  (define-key global-map (kbd "C-c j")
+    (lambda () (interactive) (org-capture nil "jj")))
+
+  (efs/org-font-setup))
+
 (use-package org-roam
   :ensure t
   :init
@@ -232,6 +387,14 @@
   :config
   (require 'org-roam-dailies) ;; Ensure the keymap is available
   (org-roam-db-autosync-mode))
+
+(with-eval-after-load 'org
+  ;; This is needed as of Org 9.2
+  (require 'org-tempo)
+
+  (add-to-list 'org-structure-template-alist '("sh" . "src shell"))
+  (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
+  (add-to-list 'org-structure-template-alist '("py" . "src python")))
 
 (org-babel-do-load-languages
   'org-babel-load-languages
@@ -372,6 +535,9 @@
 (use-package forge
   :after magit)
 
+(use-package rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode))
+
 ;; EMMS basic configuration
 (use-package emms
   :demand t
@@ -412,4 +578,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(aw-leading-char-face ((t (:inherit ace-jumb-face-foreground :height 3.0)))))

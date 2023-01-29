@@ -9,9 +9,10 @@ setxkbmap dk &
 dbus-run-session &
 clipmenud &
 dropbox &
+emacs --daemon &
 transmission-daemon &
 #xwallpaper --zoom ~/.local/share/bg &
-#setbg ~/.dots/.baggrunde &
+setbg ~/.dots/.baggrunde &
 xsetroot -cursor_name left_ptr &
 /usr/lib/polkit-1/polkit-agent-helper-1 &
 xfce4-power-manager &
@@ -21,6 +22,7 @@ xbacklight -set 90 &
 xset r rate 200 50 &
 wal -R
 picom &
+#mpd ~/.config/mpd/mpd.conf &
 ~/.config/scripts/bar.sh &
 while type dwm >/dev/null; do dwm && continue || break; done
 

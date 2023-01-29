@@ -8,9 +8,8 @@ setxkbmap dk &
 dropbox &
 emacs --daemon &
 #$HOME/.local/bin/statusbar/mpdup &
-feh --bg-scale ~/.baggrunde/arch2.jpg &
+setbg ~/.baggrunde/ &
 xsetroot -cursor_name left_ptr &
 /usr/lib/polkit-1/polkit-agent-helper-1 &
-xrdb -load ~/.Xresources &
 redshift -l 55.49:12.6 &
 $HOME/.config/polybar/launch.sh &

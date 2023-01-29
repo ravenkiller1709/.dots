@@ -3,7 +3,7 @@
 #########################################################
 
 source ~/.config/zsh/.zprofile
-export EDITOR='nvim'
+export EDITOR='emacs'
 export TERMINAL='st-256color'
 export BROWSER='firefox'
 #export MANPAGER='emacs +Man!'
@@ -21,7 +21,7 @@ HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 #########################################################
 # Double prompt
 #########################################################
-PROMPT='%F{yellow}%1~%f %F{cyan} Artix %F{magenta}🗝 %F{yellow} %f '
+PROMPT='%F{yellow}%1~%f %F{cyan} Artix %F{magenta} %F{yellow} %f '
 #RPROMPT=\$vcs_info_msg_0_
 #zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%r%f'
 #zstyle ':vcs_info:*' enable git
@@ -57,6 +57,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # enabling vim mode
-bindkey -v
+bindkey -e
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 colorscript -r
