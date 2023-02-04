@@ -1,0 +1,3 @@
+#!/bin/sh
+$HOME/Projekter/my-org-site/build.sh &&
+scp -r /home/kim/Projekter/my-org-site/public/ root@kimkruse.xyz:/var/www/birken

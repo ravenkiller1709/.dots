@@ -21,7 +21,7 @@ HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 #########################################################
 # Double prompt
 #########################################################
-PROMPT='%F{yellow}%1~%f %F{cyan} Artix %F{magenta} %F{yellow} %f '
+PROMPT='%F{yellow}%1~%f%F{cyan}@Arch %F{magenta} %F{yellow} %f '
 #RPROMPT=\$vcs_info_msg_0_
 #zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%r%f'
 #zstyle ':vcs_info:*' enable git
@@ -59,4 +59,4 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # enabling vim mode
 bindkey -e
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-colorscript -r
+neofetch

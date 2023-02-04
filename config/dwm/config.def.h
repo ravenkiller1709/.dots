@@ -87,7 +87,7 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     iscentered   isfloating noswallow  monitor */
     { "Gimp",     NULL,       NULL,       0,            0,           1,     0,           -1 },
     { "Mpv",     NULL,       NULL,       0,            0,     0,           1,           -1 },
-    { "Firefox",  NULL,       NULL,       1 << 1,       0,           0,      0,           -1 },
+    { "LibreWolf",  NULL,       NULL,       1 << 1,       0,           0,      0,           -1 },
     { "Alacritty",  NULL,       NULL,       1 << 0,       0,           0,     1,           -1 },
     { "eww",      NULL,       NULL,       0,            0,           1,       0,           -1 },
 };
@@ -163,7 +163,7 @@ static Key keys[] = {
     { Mod1Mask|ShiftMask,               XK_d,       spawn,          SHCMD("dmenuunicode") },
     { MODKEY|ControlMask,               XK_s,       spawn,          SHCMD("st -e /home/kim/.scripts/buildconf") },
     { MODKEY,                           XK_Return,  spawn,          SHCMD("st")},
-    { MODKEY,                           XK_w,       spawn,          SHCMD("firefox")},
+    { MODKEY,                           XK_w,       spawn,          SHCMD("librewolf")},
     { MODKEY,                           XK_e,       spawn,          SHCMD("emacsclient -c -a 'emacs'")},
     { MODKEY|ShiftMask,                 XK_p,       spawn,          SHCMD("alacritty -e neomutt")},
     { MODKEY|ControlMask,               XK_n,       spawn,          SHCMD("alacritty -e newsboat")},
@@ -265,7 +265,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask,                 XK_s, scratchpad_hide, {.i = 1} },
     { MODKEY|ShiftMask,                 XK_y, scratchpad_hide, {.i = 2} },
     { MODKEY|ShiftMask,                 XK_u, scratchpad_hide, {.i = 3} },
-  	{ MODKEY|ShiftMask,                 XK_r,      scratchpad_remove,           {0} },
+    { MODKEY|ShiftMask,                 XK_r, scratchpad_remove,    {0} },
 
     TAGKEYS(                            XK_1,                       0)
     TAGKEYS(                            XK_2,                       1)

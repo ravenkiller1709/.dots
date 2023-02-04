@@ -61,13 +61,13 @@
 		  (smtpmail-smtp-server . "mail.kimkruse.xyz")
 		  (smtpmail-smtp-service . 587)
 		  (smtpmail-stream-type . starttls)
-                  (mu4e-drafts-folder  . "/kimkruse/Drafts")
+                   (mu4e-drafts-folder  . "/kimkruse/Drafts")
                   (mu4e-sent-folder  . "/kimkruse/Sent")
                   (mu4e-refile-folder  . "/kimkruse/Archive")
                   (mu4e-trash-folder  . "/kimkruse/Trash")))))
 
   (setq mu4e-maildir-shortcuts
-      '(("/kimkruse/Inbox"             . ?i)
+      '(("/kimkruse/INBOX"             . ?i)
         ("/kimkruse/Sent" . ?s)
         ("/hotmail/INBOX"    . ?d)
         ("/hotmail/'Sendt Post'"     . ?t))))

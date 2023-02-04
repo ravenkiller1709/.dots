@@ -37,7 +37,7 @@ battery() {
 
 mail() {
   m="$(ls -l $HOME/Mail/kimkruse/INBOX/new | wc -l)"
-  n="$(ls -l $HOME/Mail/Hotmail/Inbox/new | wc -l)"
+  n="$(ls -l $HOME/Mail/Hotmail/INBOX/new | wc -l)"
   sum="$(($n + $m))"
   mail="$((sum - 2))"
   printf "^c$black^ ^b#8FBCBB^  $mail ^b#8FBCBB^ ^b$black^"
@@ -70,14 +70,14 @@ mpd() {
 		fi
 	fi
 
-	echo "^c$black^ ^b#866f8c^   ^c$black^ ^b#b294bb^ $current_song ^b$black^"
+	echo "^c$black^ ^b#866f8c^  ^c$black^ ^b#b294bb^ $current_song ^b$black^"
 }
 
 
 network() {
 hostname="${HOSTNAME:-${hostname:-$(hostname)}}"
 wire="$(ip a | grep 'enp4s0' | grep inet | wc -l)"
-wifi="$(ip a | grep wlan0 | grep inet | wc -l)"
+wifi="$(ip a | grep wlp4s0 | grep inet | wc -l)"
 
 if [ $wire = 1 ]; then 
     echo "^c$black^ ^b#964a50^  " "^c$black^ ^b#b55960^ $(ifconfig | grep inet | awk 'NR==1 {print $2}')"
@@ -105,7 +105,7 @@ clock() {
 
 volume() {
 level="$(amixer | grep Left | awk 'NR==2 { print $5 }' | sed 's/[][]//g')"
-echo "^b$blue^^c$black^  $level  "
+echo "^b$blue^^c$black^  $level ^b$black^   "
 }
 
 while true; do

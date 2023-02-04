@@ -2,11 +2,11 @@
 ;;       in Emacs and init.el will be generated automatically!
 
 ;; You will most likely need to adjust this font size for your system!
-(defvar efs/default-font-size 180)
-(defvar efs/default-variable-font-size 180)
+(defvar efs/default-font-size 150)
+(defvar efs/default-variable-font-size 150)
 
 ;; Make frame transparency overridable
-(defvar efs/frame-transparency '(90 . 90))
+(defvar efs/frame-transparency '(90 . 80))
 
 
   (set-face-attribute 'default nil :font "MesloLGSDZ NF" :height efs/default-font-size)
@@ -16,6 +16,35 @@
 
       ;; Set the variable pitch face
       (set-face-attribute 'variable-pitch nil :font "Cantarell" :height efs/default-variable-font-size :weight 'regular)
+
+(setq inhibit-startup-message t)
+
+(scroll-bar-mode -1)        ; Disable visible scrollbar
+(tool-bar-mode -1)          ; Disable the toolbar
+(tooltip-mode -1)           ; Disable tooltips
+(set-fringe-mode 10)        ; Give some breathing room
+
+(menu-bar-mode -1)            ; Disable the menu bar
+
+;; Set up the visible bell
+(setq visible-bell t)
+
+(column-number-mode)
+(global-display-line-numbers-mode t)
+
+;; Set frame transparency
+(set-frame-parameter (selected-frame) 'alpha efs/frame-transparency)
+(add-to-list 'default-frame-alist `(alpha . ,efs/frame-transparency))
+(set-frame-parameter (selected-frame) 'fullscreen 'maximized)
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;; Disable line numbers for some modes
+(dolist (mode '(org-mode-hook
+                term-mode-hook
+                shell-mode-hook
+                treemacs-mode-hook
+                eshell-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 (require 'package)
 
@@ -45,6 +74,9 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (setenv "HOME" "/home/kim/")
 
+(use-package simple-httpd
+  :ensure t)
+
 (use-package ace-window
   :ensure t
   :init
@@ -55,17 +87,8 @@
        ((t (:inherit ace-jumb-face-foreground :height 3.0)))))
     ))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(dmenu ivy-emms helm-emms emms rainbow-delimiters forge magit which-key visual-fill-column vertico use-package try org-roam org-bullets marginalia ivy-rich ivy-prescient doom-themes doom-modeline dired-single dired-open counsel auto-complete all-the-icons-dired ace-window))
- '(rational-ui-default-font '(:font "JetBrains Mono" :weight light :height 185)))
-
 (use-package doom-themes
-  :init (load-theme 'doom-palenight t))
+  :init (load-theme 'doom-spacegrey t))
 
 (use-package all-the-icons
     :ensure t)
@@ -365,6 +388,8 @@
   (define-key global-map (kbd "C-c j")
     (lambda () (interactive) (org-capture nil "jj")))
 
+  ;; start org with displaying inline images
+  (setq org-startup-with-inline-images t)
   (efs/org-font-setup))
 
 (use-package org-roam
@@ -573,9 +598,3 @@
 
 (load "~/.dots/emacs/mail.el")
 (require 'mu4e)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(aw-leading-char-face ((t (:inherit ace-jumb-face-foreground :height 3.0)))))

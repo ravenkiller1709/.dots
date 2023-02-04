@@ -1,0 +1,1 @@
+scp -R /home/kim//Projekter/my-org-site/public root@kimkruse.xyz:/var/www/birken
