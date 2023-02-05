@@ -1,0 +1,155 @@
+herbstclient(1)
+===============
+:doctype: manpage
+:man version: {herbstluftwmversion}
+
+
+NAME
+----
+herbstclient - sends commands to a running herbstluftwm instance via X
+
+
+SYNOPSIS
+--------
+*herbstclient* ['OPTIONS'] 'COMMAND' ['ARGS ...']
+
+*herbstclient* ['OPTIONS'] ['--wait'|'--idle'] ['FILTER ...']
+
+
+DESCRIPTION
+-----------
+Sends a 'COMMAND' with its (optional) arguments 'ARGS' to a running
+link:herbstluftwm.html[*herbstluftwm*(1)] instance via Xlib. If 'COMMAND' has an
+output, it is printed by *herbstclient*. If output does not end with a newline,
+then a newline is added to improve readability.
+
+See link:herbstluftwm.html[*herbstluftwm*(1)] for a list of available
+__COMMAND__s and their 'ARGS'.
+
+If '--wait' or '--idle' is passed, then it waits for hooks from *herbstluftwm*.
+The hook is printed, if it matches the optional 'FILTER'. __FILTER__s are
+regular expressions. For a list of available hooks see *herbstluftwm*(1).
+
+OPTIONS
+-------
+*-n*, *--no-newline*::
+    Do not print a newline if output does not end with a newline.
+
+*-0*, *--print0*::
+    Use the null character as delimiter between the output of hooks.
+
+*-l*, *--last-arg*::
+    When using *-i* or *-w*, only print the last argument of the hook.
+
+*-i*, *--idle*::
+    Wait for hooks instead of executing commands.
+
+*-w*, *--wait*::
+    Same as *--idle* but exit after first *--count* hooks.
+
+*-c*, *--count* 'COUNT'::
+    Let *--wait* exit after 'COUNT' hooks were received and printed. The default
+    'COUNT' is 1.
+
+*-q*, *--quiet*::
+    Do not print error messages if herbstclient cannot connect to the running
+    herbstluftwm instance.
+
+*-v*, *--version*::
+    Print the herbstclient version. To get the herbstluftwm version, use
+    *herbstclient version*.
+
+*-h*, *--help*::
+    Print the herbstclient usage with its command line options.
+
+*--binary-pipe*::
+    Run multiple commands via a binary interface. The protocol is described in
+    the <<BINARY_PIPE,*BINARY PIPE*>> section below.
+
+
+[[BINARY_PIPE]]
+BINARY PIPE
+-----------
+When *--binary-pipe* is passed, a binary communication channel to herbstluftwm
+is established such that multiple commands can be run through a single
+herbstclient instance. Both stdin and stdout are in binary mode, whereas the
+stderr channel remains text mode. The interface consists of null-byte terminated
+UTF-8 text tokens. The following token sequences are supported on stdin, where *0*
+denotes a null-byte:
+
+    * +ARG+ *0* 'T' *0* pushes the text token 'T' to the next command to be run.
+    * +RUN+ *0* runs the command (i.e. sends it to herbstluftwm).
+    * After writing 'RUN' and the nullbyte to herbstclient's stdin, do not
+      forget to flush!
+
+On stdout, null-byte separated key-value pairs are printed, that is, the output
+will always be a sequence of the format 'KEY' *0* 'VALUE' *0*. The protocol
+may be extended in the future, but will always stick to the key-value-format.
+
+    * +STDOUT+ *0* 'TEXT' *0* means that the stdout of the recently executed
+      command is 'TEXT'
+    * +STDERR+ *0* 'TEXT' *0* means that the stderr of the recently executed
+      command is 'TEXT'
+    * +STATUS+ *0* 'N' *0* means that the exit status of the recently executed
+      command is the integer 'N'
+
+Whenever herbstluftwm quits or when the EOF of stdin is reached, then the binary
+pipe also closes and herbstclient exits.
+
+Example:
+
+----
+printf 'ARG\0echo\0ARG\0hello world\0RUN\0ARG\0get_attr\0ARG\0tags.count\0RUN\0' \
+    | herbstclient --binary-pipe \
+    | hexdump -C
+----
+
+
+ENVIRONMENT VARIABLES
+---------------------
+DISPLAY::
+    Specifies the 'DISPLAY' to use, i.e. where *herbstluftwm*(1) is running.
+
+EXIT STATUS
+-----------
+Returns the exit status of the 'COMMAND' execution in *herbstluftwm*(1) server.
+
+*0*::
+    Success.
+
+other::
+    Failure. See link:herbstluftwm.html[*herbstluftwm*(1)] for a list of error
+    codes.
+
+
+BUGS
+----
+See the *herbstluftwm* Github issues: https://github.com/herbstluftwm/herbstluftwm/issues
+
+COMMUNITY
+---------
+Feel free to join the IRC channel '#herbstluftwm' on 'irc.libera.chat'.
+
+AUTHOR
+------
+*herbstclient* was written by Thorsten Wißmann. All contributors are listed in
+the *herbstluftwm* distribution AUTHORS file.
+
+RESOURCES
+---------
+Homepage: <http://herbstluftwm.org>
+
+Github page: <http://github.com/herbstluftwm/herbstluftwm>
+
+Patch submission and bug reporting:
+
+    hlwm@lists.herbstluftwm.org
+
+COPYING
+-------
+Copyright 2011-2020 Thorsten Wißmann. All rights reserved.
+
+This software is licensed under the "Simplified BSD License". See LICENSE for
+details.
+
+// vim: tw=80 ft=asciidoc

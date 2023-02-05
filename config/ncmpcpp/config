@@ -1,7 +1,7 @@
 # vim: filetype=conf
 mpd_host = "127.0.0.1"
 mpd_port = 6600
-mpd_music_dir = ~/Musik
+mpd_music_dir = "~/Musik"
 
 ncmpcpp_directory = "~/.config/ncmpcpp"
 lyrics_directory = "~/.local/share/lyrics"

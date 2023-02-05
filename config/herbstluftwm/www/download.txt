@@ -1,0 +1,68 @@
+Get it!
+-------
+Install herbstluftwm via your package manager! It is currently available on the
+following platforms:
+
+  * Arch Linux via the package in the community repository or the git-version
+    in the
+    link:https://aur.archlinux.org/packages.php?O=0&K=herbstluftwm-git[Arch
+    User Repository]
+  * link:http://packages.debian.org/search?keywords=herbstluftwm[Debian]
+  * link:http://packages.gentoo.org/package/x11-wm/herbstluftwm[Gentoo Linux]
+  * Mac OS X via
+    link:http://trac.macports.org/browser/trunk/dports/x11/herbstluftwm/Portfile[MacPorts]
+  * FreeBSD
+  * Ubuntu Linux
+  * link:https://apps.fedoraproject.org/packages/herbstluftwm[Fedora]
+  * link:https://software.opensuse.org/package/herbstluftwm[openSUSE]
+  * link:http://www.openbsd.org/cgi-bin/cvsweb/ports/x11/herbstluftwm/[OpenBSD]
+  * link:http://alpinelinux.org/apk/main/x86_64/herbstluftwm[Alpine Linux]
+  * link:https://git.exherbo.org/summer/packages/x11-wm/herbstluftwm/index.html[Exherbo]
+
+It's confirmed to run on:
+
+  * Cygwin
+  * Many other Linux distributions
+
+If your distribution is not supported you can build a package on your own using
+the most current released tarball:
+
+[options="header"]
+|====================================================================================================================
+| Version | Date       | link:tarballs/MD5SUMS[MD5SUMS] | Tarball                                         | Signature
+| 0.1     | 2011-10-02 | 284067728e56f...               | link:tarballs/herbstluftwm-0.1.tar.gz[tar.gz]   |
+| 0.2     | 2012-01-25 | 1628f236a7086...               | link:tarballs/herbstluftwm-0.2.tar.gz[tar.gz]   |
+| 0.3     | 2012-04-12 | 176b82a7b5881...               | link:tarballs/herbstluftwm-0.3.tar.gz[tar.gz]   |
+| 0.4     | 2012-08-18 | 698b43bde76f9...               | link:tarballs/herbstluftwm-0.4.tar.gz[tar.gz]   |
+| 0.4.1   | 2012-08-30 | 2cf235dd9e0c4...               | link:tarballs/herbstluftwm-0.4.1.tar.gz[tar.gz] |
+| 0.5.0   | 2012-12-31 | ed28cc9d89d5f...               | link:tarballs/herbstluftwm-0.5.0.tar.gz[tar.gz] |
+| 0.5.1   | 2013-01-05 | c6ea924d947df...               | link:tarballs/herbstluftwm-0.5.1.tar.gz[tar.gz] |
+| 0.5.2   | 2013-06-23 | 4cbbe35ac3627...               | link:tarballs/herbstluftwm-0.5.2.tar.gz[tar.gz] |
+| 0.5.3   | 2013-12-24 | 8b7f430c85d22...               | link:tarballs/herbstluftwm-0.5.3.tar.gz[tar.gz] |
+| 0.6.0   | 2014-03-19 | c62caa0c67a25...               | link:tarballs/herbstluftwm-0.6.0.tar.gz[tar.gz] |
+| 0.6.1   | 2014-03-25 | c385fe9e68876...               | link:tarballs/herbstluftwm-0.6.1.tar.gz[tar.gz] |
+| 0.6.2   | 2014-03-27 | 8bfbbdb16cf88...               | link:tarballs/herbstluftwm-0.6.2.tar.gz[tar.gz] |
+| 0.7.0   | 2016-02-04 | 2a4f05d113fd8...               | link:tarballs/herbstluftwm-0.7.0.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.7.0.tar.gz.sig[sig]
+| 0.7.1   | 2018-08-09 | 7f091559503d1...               | link:tarballs/herbstluftwm-0.7.1.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.7.1.tar.gz.sig[sig]
+| 0.7.2   | 2019-05-28 | eccbb5d0b1836...               | link:tarballs/herbstluftwm-0.7.2.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.7.2.tar.gz.sig[sig]
+| 0.8.0   | 2020-04-09 | 73323c507b05a...               | link:tarballs/herbstluftwm-0.8.0.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.8.0.tar.gz.sig[sig]
+| 0.8.1   | 2020-04-21 | 00e08ecc1225e...               | link:tarballs/herbstluftwm-0.8.1.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.8.1.tar.gz.sig[sig]
+| 0.8.2   | 2020-05-04 | 52a9faf22c131...               | link:tarballs/herbstluftwm-0.8.2.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.8.2.tar.gz.sig[sig]
+| 0.8.3   | 2020-06-06 | d372114c411f5...               | link:tarballs/herbstluftwm-0.8.3.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.8.3.tar.gz.sig[sig]
+| 0.9.0   | 2020-10-31 | dc50e40a24511...               | link:tarballs/herbstluftwm-0.9.0.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.9.0.tar.gz.sig[sig]
+| 0.9.1   | 2020-12-28 | 62e5c28a4263e...               | link:tarballs/herbstluftwm-0.9.1.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.9.1.tar.gz.sig[sig]
+| 0.9.2   | 2021-02-17 | 52c55b5671351...               | link:tarballs/herbstluftwm-0.9.2.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.9.2.tar.gz.sig[sig]
+| 0.9.3   | 2021-05-15 | 1fe15cbf5abca...               | link:tarballs/herbstluftwm-0.9.3.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.9.3.tar.gz.sig[sig]
+| 0.9.4   | 2022-03-16 | 41f5a543d1401...               | link:tarballs/herbstluftwm-0.9.4.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.9.4.tar.gz.sig[sig]
+| 0.9.5   | 2022-07-30 | d62c066ea25dc...               | link:tarballs/herbstluftwm-0.9.5.tar.gz[tar.gz] |link:tarballs/herbstluftwm-0.9.5.tar.gz.sig[sig]
+// do not remove this: next version line will be added here
+|====================================================================================================================
+
+The current development version is available on
+link:http://github.com/herbstluftwm/herbstluftwm[Github]
+or can be cloned with:
+
+----
+git clone https://github.com/herbstluftwm/herbstluftwm
+----
+

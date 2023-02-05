@@ -24,10 +24,10 @@
 #+begin_src emacs-lisp :tangle ./init.el
 (setq inhibit-startup-message t)
 
-(scroll-bar-mode -1)        ; Disable visible scrollbar
-(tool-bar-mode -1)          ; Disable the toolbar
-(tooltip-mode -1)           ; Disable tooltips
-(set-fringe-mode 10)        ; Give some breathing room
+;;(scroll-bar-mode -1)        ; Disable visible scrollbar
+;;(tool-bar-mode -1)          ; Disable the toolbar
+;;(tooltip-mode -1)           ; Disable tooltips
+;;(set-fringe-mode 10)        ; Give some breathing room
 
 (menu-bar-mode -1)            ; Disable the menu bar
 
@@ -102,10 +102,11 @@ My custom keybindings:
        ((t (:inherit ace-jumb-face-foreground :height 3.0)))))
     ))
  #+END_SRC
-* Doom Theme
+* Custom Theme
 #+begin_src emacs-lisp :tangle ./init.el
-(use-package doom-themes
-  :init (load-theme 'doom-spacegrey t))
+    (set-background-color "#252525")
+  (set-foreground-color "#ABC2AB")
+  (load-theme 'wombat)
 #+end_src
 * Doom Modeline setup
 #+begin_src emacs-lisp :tangle ./init.el

@@ -1,0 +1,400 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.pagewidth {
+    /* this class controls the maximum page width */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    width: 90%; max-width: 70em;
+    border: none;
+}
+
+#header, #navigationbar {
+    background-color: #B8DEB1;
+}
+
+@media (max-width: 35em) {
+    .pagewidth {
+        border: none;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    body {
+        padding: 0px;
+        background-color: black;
+    }
+}
+
+
+body, #navigationbar .curtab {
+    background-color: white;
+}
+
+#navigationbar {
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+#navigationbar .notab, #navigationbar .curtab {
+    display: inline-block;
+    margin: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 1px;
+}
+
+#navigationbar .spacing {
+    size: fixed;
+    font-size: 0px;
+    /* space between tabs in the navigation bar */
+    width: 10px;
+    //border: 0px solid red;
+}
+
+
+#navigationbar .curtab {
+    background-color: #176800;
+    border-bottom: 0px solid transparent;
+}
+
+
+#navigationbar a {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+#navigationbar .notab a {
+    color: black;
+}
+
+#navigationbar .curtab a {
+    color: #efefef;
+}
+
+
+.sect {
+    border-top: none;
+    border-bottom: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.sect, #content {
+    border-top: none;
+    margin-top: 0px;
+}
+#footnotes hr {
+    display: none;
+}
+
+#content, #sect1, .sectionbody{
+    padding-bottom: 0px;
+}
+
+#footer {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+    border-top: none;
+    color: #1C3812;
+    font-size: 0.6em;
+}
+
+#content {
+    padding: 1em;
+    color: #2e3436;
+}
+
+#header h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+#header {
+    padding: 0.2em;
+    text-align: center;
+}
+
+#header #squeezeheader {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#header #logoname {
+    margin: auto;
+    display: inline-block;
+}
+#header #icon {
+    height: 3em;
+}
+
+
+/* elements in content */
+
+h1 {
+    font-size: 1.6em;
+    padding: 0px;
+    margin: 0px;
+    color: #8f5902;
+}
+
+#subheader {
+    text-align: left;
+    font-size: 0.6em;
+    color: black;
+}
+
+h2, h3 {
+    width: 100%;
+    color: #2e3436;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.0em; }
+
+li {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+a {
+    color: #288900;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #49962B;
+}
+
+
+.footer {
+    margin-top: 4em;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.codeblock {
+    margin: 1em;
+    padding: 0.3em;
+    border: 1px solid black;
+    background-color: #2e3436;
+    color: #fce94f;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+code {
+    font-family: monospace;
+    color: #700718;
+}
+
+.entryname {
+    font-weight: normal;
+}
+
+.datatype {
+    color: #077024;
+    font-style: normal;
+}
+
+.defaultvalue {
+    color: #727272;
+}
+
+.screenshot img {
+    border: none;
+    padding: 1px;
+    background-color: #878787;
+    border: 1px solid black;
+}
+.screenshot {
+    text-decoration: none;
+}
+
+dt.hdlist1 {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    font-weight: bold;
+    color: #2e3436;
+}
+
+.listingblock {
+    border: 1px solid black;
+    padding: 1px;
+    background-color: #454545;
+}
+
+.listingblock .content {
+    margin: 0px;
+    background-color: #1e1e1e;
+    padding: 0px;
+}
+
+.listingblock .content pre {
+    padding: 0.4em;
+    margin: 0px;
+}
+
+.listingblock .content pre,
+.listingblock .content pre > code {
+    color: #efefef;
+}
+
+.admonitionblock {
+    border: 1px solid #a40000;
+    background-color: #ef2929;
+    padding: 1px;
+}
+
+.admonitionblock .content {
+    color: #eeeeec;
+}
+
+.admonitionblock table {
+    background-color: #cc0000;
+    width: 100%;
+}
+
+.admonitionblock .icon {
+    font-weight: bold;
+    color: #efefef;
+    vertical-align: top;
+}
+
+tt {
+  font-family: monospace;
+  font-size: inherit;
+}
+
+
+span.image a.image img {
+    text-decoration: none;
+    background-color: #454545;
+    border: 1px solid black;
+}
+
+.sidebarblock  {
+    background-color: #58AD3A;
+    border: 2px solid #214C11;
+}
+
+.sidebarblock .content p {
+    margin: auto;
+    text-align: center;
+    padding: 0em;
+    border: 2px solid #7ED75E;
+}
+
+.sidebarblock .content p a,
+.sidebarblock .content p a:visited
+{
+    padding-left: 3em;
+    padding-right: 3em;
+    margin: 0px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #efefef;
+    background: transparent;
+}
+
+.sidebarblock .content p a:hover {
+    background-color: #30691B;
+}
+
+.tableblock {
+    background-color: white;
+}
+
+thead th, p.table {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+table, table td {
+    border: none;
+}
+table thead th {
+    border: none;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.ulist li p {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.tabbarseparator, .subpagebar {
+    background-color: #176800;
+}
+
+.tabbarseparator {
+    min-height: 4px;
+}
+
+.subpagebar {
+    padding: 0em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    padding-top: 3px;
+}
+
+.subpagebar .subpage {
+    padding: 2px;
+    line-height: 1.3em;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+    margin: 2px;
+}
+
+.subpagebar .subpage a {
+    color: white;
+}
+
+.subpagebar .subpagecur a {
+    color: black;
+    display: inline-block;
+}
+
+.subpagebar .subpagecur {
+    background-color: white;
+}
+
+/* things for table of contents */
+.toc {
+    list-style: outside none;
+    border: 1px solid #5D9B4C;
+    background-color: #EAF7E6;
+    marker-offset: 0px;
+    padding: 0.4em;
+    margin: 1em;
+}
+
+.toc h4 {
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: 0.3em;
+}
+
+.toc li a {
+    color: black;
+}
+
+.toc li {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    padding: 0pt;
+    padding-left: 1.3em;
+}

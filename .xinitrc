@@ -4,7 +4,7 @@ xset +fp /home/kim/.local/share/fonts &
 xset fp rehash &
 xrdb -load ~/.Xresources &
 dunst &
-pulseaudio &
+pulseaudio -k && pulseaudio &
 setxkbmap dk &
 dbus-run-session &
 clipmenud &

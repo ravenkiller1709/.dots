@@ -7,6 +7,7 @@ alias dok='cd ~/Dokumenter'
 alias nm=mu4e
 alias r=ranger
 alias v=emacs
+alias e=emacs
 alias cdv='cd ~/.config/nvim && nvim init.vim'
 #alias c='cd ~/.config/i3/ && nvim config'
 alias c='cd ~/.xmonad/ && nvim xmonad.hs'

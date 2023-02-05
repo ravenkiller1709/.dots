@@ -19,10 +19,10 @@
 
 (setq inhibit-startup-message t)
 
-(scroll-bar-mode -1)        ; Disable visible scrollbar
-(tool-bar-mode -1)          ; Disable the toolbar
-(tooltip-mode -1)           ; Disable tooltips
-(set-fringe-mode 10)        ; Give some breathing room
+;;(scroll-bar-mode -1)        ; Disable visible scrollbar
+;;(tool-bar-mode -1)          ; Disable the toolbar
+;;(tooltip-mode -1)           ; Disable tooltips
+;;(set-fringe-mode 10)        ; Give some breathing room
 
 (menu-bar-mode -1)            ; Disable the menu bar
 
@@ -87,8 +87,9 @@
        ((t (:inherit ace-jumb-face-foreground :height 3.0)))))
     ))
 
-(use-package doom-themes
-  :init (load-theme 'doom-spacegrey t))
+(set-background-color "#252525")
+(set-foreground-color "#ABC2AB")
+(load-theme 'wombat)
 
 (use-package all-the-icons
     :ensure t)
@@ -598,3 +599,17 @@
 
 (load "~/.dots/emacs/mail.el")
 (require 'mu4e)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(vterm which-key visual-fill-column vertico use-package try simple-httpd rainbow-delimiters org-roam org-bullets marginalia ivy-rich ivy-prescient ivy-emms helm-emms forge doom-themes doom-modeline dmenu dired-single dired-open counsel auto-complete all-the-icons-dired ace-window)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(aw-leading-char-face ((t (:inherit ace-jumb-face-foreground :height 3.0)))))
+(put 'downcase-region 'disabled nil)

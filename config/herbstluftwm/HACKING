@@ -1,0 +1,114 @@
+HACKING
+=======
+
+If you want to contribute to herbstluftwm, this file is for you!
+
+Contributing
+------------
+Beside writing code you can help herbstluftwm by testing, reporting bugs,
+writing/fixing documentation (e.g. by fixing spelling mistakes) or packaging it
+for distributions.
+
+Test Makefile Targets
+---------------------
+Use
+
+    make smoke-test
+
+to get rapidly a rough idea if your changes break anything. If nothing
+breaks, then you may want to run
+
+    make check
+
+to run a more extensive test suite.
+
+The following sections further describe, in detail, how to carry out a
+successful bug hunt in herbstluftwm's codebase.
+
+Testing herbstluftwm
+--------------------
+You can test herbstluftwm under any window manager. Install Xephyr and valgrind,
+and make sure you have herbstluftwm compiled. Then run the following:
+
+    # create a build directory
+    mkdir debug && cd debug
+    # in the build directory, compile it:
+    cmake -DCMAKE_BUILD_TYPE=Debug ..
+    make
+    # run herbstluftwm within a xeyphyr session:
+    ../valgrind-xephyr.sh
+
+It creates a Xephyr window in which herbstluftwm runs using the default
+autostart. Any crashes or memory leaks are reported in detail by valgrind. Quit
+herbstluftwm (Alt-Shift-q or run herbstclient quit) to end testing.
+
+Running tests
+-------------
+Tests are run using pytest[1] and tox[2]. In addition to tox,
+you'll have to install additional dependencies, in order to successfully
+run the complete test suite:
+
+  - xvfb[3]
+  - xdotool
+  - xsetroot
+  - xterm
+
+With everything installed, you can run the following from the build directory:
+
+    tox -c ..  -- -v --maxfail=1
+
+Depending on the Python 3 version you have installed, e.g. 3.9.x, it may be
+necessary to add -e py39 to the tox parameters (that is, before the --). If you
+have an old version of tox installed, it may be necessary to pass ../tox.ini
+instead of .. to the -c parameter.
+
+The argument after the -- are pytest parameters (add -h to see a help). If you
+do not want to use tox and instead run pytest directly, then call the following
+command in the build directory:
+
+    python3 -m pytest ../tests
+
+[1] http://pytest.org/
+[2] https://tox.readthedocs.io/
+[3] https://www.x.org/archive/current/doc/man/man1/Xvfb.1.xhtml
+
+Sending patches
+---------------
+You can hand in pull requests on github[1], but also send patches directly
+(obtained by git format-patch). You can send those patches to the mailing
+list[2] or via the irc[3].
+
+[1] https://github.com/herbstluftwm/herbstluftwm
+[2] hlwm@lists.herbstluftwm.org +
+[3] #herbstluftwm on irc.libera.chat
+
+Mailing list
+------------
+The main mailing list for general development, discussion, release
+announcements is:
+
+    hlwm@lists.herbstluftwm.org
+
+You can subscribe by sending a mail with subscribe in the subject to
+
+    hlwm-request@lists.herbstluftwm.org
+
+or by using the web interface at:
+
+    https://listi.jpberlin.de/mailman/listinfo/hlwm
+
+
+Coding style
+------------
+The coding style is mainly Qt's C++ coding style.
+
+  - Use 4 spaces instead of tabs.
+  - Do not add any trailing spaces at the end of a line.
+  - Data type names are CamelCase
+  - If a function returns success or failure, then encode it in a bool. Use
+    main()-like exit codes (0 = success, non zero = failure) only for commands.
+  - Order includes according to the Google C++ Style Guide:
+    https://google.github.io/styleguide/cppguide.html#Names_and_Order_of_Includes
+    (Note that for the purposes of this rule, all <…> headers are system headers)
+
+// vim: nowrap ft=asciidoc tw=80

@@ -1,0 +1,75 @@
+What is it?
+-----------
+
+herbstluftwm is a manual tiling window manager for the X window system.
+
+  * the entire configuration happens at runtime via the tool herbstclient. So
+    the configuration file is just a script which is run on startup. All
+    configuration options, window rules, virtual desktops, keybindings, ... can
+    be updated live without the need to restart the window manager.
+
+  * every virtual desktop (called 'tag') consists of a tiling and a floating
+    layer. Windows in the tiling layer fill up the screen space and the
+    floating windows can be placed freely above them.
+
+  * both tiling and floating windows can be moved, resized, focused using
+    the keyboard only.
+
+  * the tiling algorithm is based on splitting frames into subframes which can be split
+    again or can be filled with windows.
+
+  * the screen space can be freely divided into "monitors" which may or may not
+    match the actual (multi-)monitor hardware configuration. If you have a
+    monitor with a large resolution just divide it into two or more virtual
+    monitors such that you can view two virtual desktops at a time.
+
+  * all monitors share the same pool of tags. You can switch the contents of
+    two monitors with a single keystroke.
+
+How to get it?
+--------------
+Install it via the package manager, link:download.html[download tarballs], or
+clone the link:https://github.com/herbstluftwm/herbstluftwm[git repository]:
+
+----
+git clone https://github.com/herbstluftwm/herbstluftwm
+----
+
+How to use it?
+---------------
+If you are new to herbstluftwm, the link:tutorial.html[tutorial] is the best
+place to start.
+
+There are manpages for link:herbstluftwm.html[herbstluftwm] and
+link:herbstclient.html[herbstclient] in the +doc/+ directory. They also can be
+seen link:herbstluftwm.html[online].
+
+Community & Support
+-------------------
+You are welcome to join the IRC channel +#herbstluftwm+ on +irc.libera.chat+
+for asking question or simply to hang out with fellow herbstluftwm users and developers.
+There is also a community on reddit
+link:https://www.reddit.com/r/herbstluftwm[r/herbstluftwm].
+
+Feel free to ask questions on the link:https://github.com/herbstluftwm/herbstluftwm/issues[github issue tracker].
+For bug reporting open an link:https://github.com/herbstluftwm/herbstluftwm/issues[issue on github] or
+contact the mailing list:
+----
+hlwm@lists.herbstluftwm.org
+----
+You can subscribe by sending a mail with the subject +subscribe+ to
++hlwm-request@lists.herbstluftwm.org+ or by using the
+link:https://listi.jpberlin.de/mailman/listinfo/hlwm[Mailman
+web interface].
+
+Screenshots
+-----------
+// these screenshots are not in the git repo, so they must exist in the target
+// directory
+image:img/irc-layout-tab-thumb.png["scr",link="img/irc-layout-tab.png"]
+image:img/herbstluftwm-autumncolors-thumb.png["scr",link="img/herbstluftwm-autumncolors.png"]
+image:img/hlwm-panelicons-0-thumb.png["scr",link="img/hlwm-panelicons-0.png"]
+image:img/hlwm-panelicons-1-thumb.png["scr",link="img/hlwm-panelicons-1.png"]
+image:img/hlwm-pseudotile-1-thumb.png["scr",link="img/hlwm-pseudotile-1.png"]
+
+// vim: nowrap

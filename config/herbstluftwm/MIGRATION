@@ -1,0 +1,102 @@
+herbstluftwm migration guide
+============================
+
+This guide describes the list of incompatible changes between the different
+herbstluftwm releases and how to migrate scripts and configuration.
+See the link:NEWS[] file for a list of all changes and new features.
+
+0.9.5 to current git version
+----------------------------
+The geometry based detection of panels now is only active if the setting
+'panels.geometry_fallback' is activated. In order to restore the old behaviour,
+put
+
+    hc set_attr panels.geometry_fallback on
+
+in your autostart.
+
+0.9.4 to 0.9.5
+--------------
+The command 'smart_frame_surroundings' is no longer a boolean, and as such it is
+now incompatible with the 'toggle' command. Use 'cycle_values' instead:
+
+    hc cycle_value settings.smart_frame_surroundings off hide_gaps hide_all
+
+Instead of 'always_show_frame', the new 'show_frame_decorations' setting should
+be used.
+
+0.9.2 to 0.9.3
+--------------
+The command 'cycle_value' now expects an attribute path instead of a settings
+name. For compatibility reasons, passing settings name directly (without the
+prefix +settings.+) is still supported.
+
+In ipc commands, herbstclient prints error messages always on stderr and normal
+output always on stdout. Before, both were printed to the same channel,
+either to stdout or stderr depending on the command's exit status. This
+mainly affects combined commands.
+
+In the rules, 'toggle' can not be used anymore in rule consequences. Moreover,
+invalid arguments to rule consequences now will be reported during 'rule'
+creation, already.
+
+Only for people using the git-version: During the development of 0.9.3, the
+'content_geometry' attribute of clients initially had the name
+'geometry_reported'.
+
+0.8.3 to 0.9.0
+--------------
+
+The tag_renamed hook has changed. The hook now emits *two* parameters.
+The first parameter contains the old name of the tag
+and the second parameter is the new name of the tag.
+
+0.5.3 to 0.6.0
+--------------
+// Will be activated as soon as the patches are fixed and re-reverted
+//The tag attributes curframe_windex and curframe_wcount have been removed, they
+//are replaced by the more general attributes frames.focus.windex
+//frames.focus.wcount.
+
+The behaviour of swap_monitors_to_get_tag = 0 has changed. If
+swap_monitors_to_get_tag is set to 0, then focus the other monitor if the
+desired tag is shown on another monitor. Previously nothing has been done.
+
+0.5.1 to 0.5.2
+--------------
+The herbstclient completion options changed for bash. If you manually setup the
+completion -- e.g. for an alias like hc -- then update the complete line as
+follows:
+
+    complete -F _herbstclient_complete -o nospace herbstclient # or hc
+
+0.4.1 to 0.5.0
+--------------
+herbstclient now returns the exitstatus 9 (HERBST_NEED_MORE_ARGS) instead of 3
+(HERBST_INVALID_ARGUMENT) if a command needs more arguments. If an error occurs,
+it now outputs an error message to stderr.
+
+The padding arguments have been removed from add_monitor and a monitor name has
+been added instead. If you add a monitor with padding, instead of 'hc
+add_monitor 1024x768+0+0 1 2 3 4' now use 'hc add_monitor 1024x768+0+0; hc pad N
+1 2 3 4'.
+
+As a result from adding monitor names, the output of list_monitors and stack
+changes a bit for named monitors. list_padding only outputs the padding for one
+monitor now.
+
+The setting focus_follows_shift has been removed. The behaviour now is set like
+it were set to 1; the focus always follows the shift now.
+
+0.3 to 0.4
+----------
+The setting window_gap is now called frame_gap. Simply replace all occurrences
+of window_gap by frame_gap in your old scripts (and autostart).
+
+0.2 to 0.3
+----------
+The setting ignore_class is removed, because this also can be done by rules. You
+can replace a line like 'set ignore_class "$foo"' in your autostart by 'rule
+class~"$foo" manage=off'
+
+// vim: nowrap ft=asciidoc tw=80

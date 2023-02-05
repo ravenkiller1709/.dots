@@ -1,0 +1,488 @@
+Hints and FAQ
+=============
+
+Hint: Don't restart
+-------------------
+To make changes in your autostart take effect immediately, just type
++herbstclient reload+. There is no need to restart herbstluftwm or X. +
+
+Even if you just updated you herbstluftwm-binary, there's no need to restart
+anything. Run +herbstclient wmexec+, which does an +exec+(3) on the new
+herbstluftwm version. (You also can use +wmexec+ to switch to another window
+manager without restarting anything)
+
+Hint: Use scripts!
+------------------
+There are a bunch of scripts coming along with herbstluftwm. Check out the
+scripts directory in the sources and the examples directory after installing.
+
+Hint: Understanding processes
+-----------------------------
+To understand the relationship between the different processes that running
+in a typical herbstluftwm setup, consider the following diagram:
+
+----
+                 startx
+                   | f/e
+                   V
+              ~/.xinitrc
+                   | f/e or exec
+    IPC-Call       V
+    .- - - -> herbstluftwm           __________________
+  ."            /     \             | Symbol | Meaning |
+  .            /       \            |--------+---------|
+  .       f/e /         \ f/e       |  A     | A forks |
+  .          /           \          |  | f/e | and     |
+  .         V             V         |  V     | execs   |
+  .     autostart       xterm       |  B     | into B  |
+  .         |             |         |________|_________|
+  .     f/e |             | f/e
+  .         V             V
+   --  herbstclient     $SHELL
+
+----
+
+As you can see, +herbstclient+ does nothing except sending requests to
++herbstluftwm+. Whenever a process performs a fork-and-exec, the following
+rules apply:
+
+        * A child process inherits the environment variables of its parent
+          process. If you change an environment variable (like 'PATH'), then it
+          will stay unchanged in the parent process. +
+          +
+          => If you want to set some environment variables for your complete
+          session (i.e. all processes) then you have to set it in your
+          +~/.xinitrc+.
+
+        * If a process spawns a window, then the window will spawn delayed. This
+          delay differs from application to application (and from time to time).
+          So a script like +
++
+----
+herbstclient spawn xterm
+herbstclient spawn xev
+----
++
+does *not* guarantee that the +xterm+ window will appear before the
++xev+ window! It only guarantees that the +xterm+ is executed before +xev+ will
+be executed. +
+    +
+    => If you want to apply some rules only for the next windows, then use a
+    bash-script like the one for <<TEMP_RULES,temporary rules>>.
+
+
+Q: Why is herbstluftwm called herbstluftwm?
+-------------------------------------------
+I liked the name of the e-mail client wanderlust. Unfortunately I am a happy
+mutt user, so I needed an other application with a similar name.
+
+[[FORK]]
+Q: Is herbstluftwm a fork of dwm/musca/wmii/...?
+------------------------------------------------
+No. It was written from scratch, although it borrows some basic XLib function calls
+(like updating numlock-state, sending a +WMDelete+-Message to a client,
+updating the urgent hints, ...) from dwm.
+
+Q: If the config is a bash script, does it mean it is called on each keystroke?
+-------------------------------------------------------------------------------
+No, the configuration file is executed once to set internal settings and
+keybindings and so on. If a keybinding is registered and its key is pressed,
+the according (internal) command directly is called.
+
+Q: How can I let single clients float?
+--------------------------------------
+You can assign a shortcut for +herbstclient attr clients.focus.floating toggle+.
+Also, herbstluftwm floats some clients like dialogs by default (you can disable
+this with a rule). Single floating clients are supported since version 0.8.
+
+Q: I use GIMP very often, how can I use it without floating?
+------------------------------------------------------------
+Load a predefined layout to a gimp tag. Move the GIMP-Tool windows to the
+left and right border and put the rest in the center. Add this to your
+autostart:
+
+----
+# GIMP
+# ensure there is a gimp tag
+hc add gimp
+hc load gimp '
+(split horizontal:0.850000:0
+(split horizontal:0.200000:1
+(clients vertical:0)
+(clients grid:0))
+(clients vertical:0))
+'               # load predefined layout
+# center all other gimp windows on gimp tag
+hc rule class=Gimp tag=gimp index=01 pseudotile=on
+hc rule class=Gimp windowrole~'gimp-(image-window|toolbox|dock)' \
+pseudotile=off
+hc rule class=Gimp windowrole=gimp-toolbox focus=off index=00
+hc rule class=Gimp windowrole=gimp-dock focus=off index=1
+----
+
+Q: What about a layout for Instant Messaging applications (Gajim, Pidgin, …)?
+-----------------------------------------------------------------------------
+A good layout for Instant Messaging applications looks as follows: One frame on
+the left displays the buddy list/roster, consuming ~15% of the monitor space,
+while the right side is used for the conversations. This can be configured
+easily with herbstluftwm. The following example configures such a layout on tag
+'7' and creates the rules to automatically move Gajim's windows to the right
+frame:
+
+----
+hc load 7 '(split horizontal:0.15:1 (clients horizontal:0) (clients grid:4))'
+hc rule class="Gajim" tag=7 index=1
+hc rule class="Gajim" windowrole="roster" tag=7 index=0
+----
+
+For pidgin, the setup looks similar. In this case the buddy list is on the
+right with a width of 20% of the monitor space. In addition to the above, the
+buddy list will not receive input focus when it shows up:
+----
+imtag=7 # just set the name of the tag here
+hc load "$imtag" '(split horizontal:0.800000:0 (clients grid:0) (clients vertical:0))'
+hc rule class=Pidgin   windowrole=buddy_list tag=$imtag index=1 focus=off
+hc rule class=Pidgin ! windowrole=buddy_list tag=$imtag index=0
+----
+
+
+[[TEMP_RULES]]
+Q: How can I add rules temporarily for some special clients?
+------------------------------------------------------------
+Add a rule for the clients pid, before the client appears. This script
+creates two xterms with different behaviours:
+
+----
+#!/usr/bin/env bash
+
+# Requirement: bash >= 4.0 (because of the usage of $BASHPID)
+
+spawn_with_rules() {(
+    # this rule also requires, that the client
+    # sets the _NET_WM_PID property
+    herbstclient rule once pid=$BASHPID maxage=10 "${RULES[@]}"
+    exec "$@"
+    ) &
+}
+
+# spawn an xterm with uname info, but not where the focus is
+RULES=( index='/' focus=off )
+spawn_with_rules xterm -e 'uname -a ; read'
+
+# spawn an xterm in pseudotile mode
+RULES=( pseudotile=on focus=on )
+spawn_with_rules xterm
+----
+
+Q: Why doesn't a new client receive focus?
+------------------------------------------
+The reason is the default setting of the +focus+ consequence in the rules.
+You can change it by adding this to the link:herbstluftwm.html#RULES[rules]
+section in the autostart file:
+
+----
+hc unrule --all      # clear rules
+hc rule focus=on     # focus new clients by default
+----
+
+Q: herbstclient is too long to type it in the shell
+---------------------------------------------------
+Use tab-completion! +her&lt;tab&gt;c&lt;tab&gt;+ expands to herbstclient.
+There is also a tab-completion for the herbstclient parameters. After
+installing herbstluftwm, add this to your .bashrc:
+
+----
+source /usr/share/bash-completion/completions/herbstclient
+----
+
+(The tab-completion in zsh works out of the box with most zsh-configurations).
+
+You also can add an alias for herbstclient:
+
+----
+alias hc='herbstclient'
+----
+
+If you use bash, then also add this to make the tab-completion work for the
++hc+ alias:
+----
+complete -F _herbstclient_complete -o nospace hc
+----
+(For zsh and fish, the tab-completion is inherited by aliases and no further
+configuration is needed)
+
+
+Q: My rules seem to be messed up
+--------------------------------
+Clear them with +hc unrule -F+ and start over. It is recommended to do this
+in the autostart file.
+
+Q: I don't like that my mplayervideo/inputdialogs get resized to full framesize
+-------------------------------------------------------------------------------
+
+Add this to your autostartfile:
+
+----
+hc rule instance=<instancename> pseudotile=on
+----
+
+You can request the instancename with xprop by clicking on the related window.
++<instancename>+ is the first string in the line +WM_CLASS(STRING)+ (for
+mplayer that would be +xv+, for firefox dialogs it is +Dialog+).
+
+Q: I set default_frame_layout to my favorite layout but it doesn't work with the root frame/existing frames
+-----------------------------------------------------------------------------------------------------------
+Existing tags are not affected by a change of that variable (only new
+ones), so be sure to set it *before* creating any tags.
+
+In order to change the layout algorithm for the existing root-frames on all
+tags, put the following in the autostart after setting +default_frame_layout+:
+----
+hc substitute ALGO settings.default_frame_layout \
+    foreach T tags.by-name. \
+    sprintf ATTR '%c.tiling.root.algorithm' T \
+    set_attr ATTR ALGO
+----
+
+On old herbstluftwm versions, a workaround is to put +hc split vertical 0.5; hc
+remove+ at the end in your autostart file.  You can also 'cycle_layout' in
+existing tags.
+
+[[PANELS]]
+Q: How can I start external panels correctly?
+---------------------------------------------
+The cleanest solution to start the external EWMH panel (like +xfce4-panel+)
+from the autostart and manually reserve some space for it. Also start
++herbstclient+ instance that knows when to kill the panel again so that
+there aren't multiple instances when reloading the autostart multiple
+times. Append the following code to your +bash+ autostart (assuming the
+panel needs 31 pixels at the bottom of monitor 0):
+
+----
+# add an external panel
+{
+    pids=( )
+    # reserve some space for the panel on monitor 0
+    hc pad 0 "" "" 31
+    # start the panel itself and remember its pid
+    xfce4-panel -d --sm-client-disable &
+    pids+=( $! )
+    # or start another panel:
+    # mypanel &
+    # pids+=( $! )
+    # wait until the panels should be stopped
+    herbstclient -w '(quit_panel|reload)'
+    # stopp all started panels
+    kill ${pids[@]}
+} &
+----
+
+Q: I'm using a compositing manager like xcompmgr and get ugly artifacts when switching tags or splitting frames
+---------------------------------------------------------------------------------------------------------------
+You probably have an old version of herbstluftwm and +frame_bg_transparent+
+enabled. Disable this setting and use +frame_active_opacity+ and/or
++frame_normal_opacity+ instead or upgrade to a current version.
+
+Q: How can I keybind a simple "Run" dialog?
+-------------------------------------------
+Install dmenu and keybind +dmenu_run_hlwm+ by adding the following line to
+your autostart file:
+
+----
+hc keybind $Mod-p spawn dmenu_run_hlwm
+----
+
+Note that +$Mod-p+ is bound to +pseudotile toggle+ in the default
+autostart of herbstluftwm, so you either need to change that binding or
+use a different one for +spawn dmenu_run_hlwm+.
+
+Q: How can I have some of the tags on specific monitors only?
+-------------------------------------------------------------
+For each tag, save the desired monitor name or index in the tag's attributes.
+Before switching to another tag, check whether it has such an attribute, and if
+so, switch to that monitor first. This is accomplished by the following code in
+the autostart:
+----
+# Replace the default section for tags in your autostart by the following:
+# This is the default tag section of the autostart, with a single change:
+# In the use_index keybinding, check the presence of the my_monitor attribute,
+# before focusing the desired tag.
+hc rename default "${tag_names[0]}" || true
+for i in ${!tag_names[@]} ; do
+    hc add "${tag_names[$i]}"
+    key="${tag_keys[$i]}"
+    if ! [ -z "$key" ] ; then
+        # first check if the tag is locked to some monitor.
+        # if so, first focus the monitor
+        hc keybind "$Mod-$key" \
+            chain , silent substitute M tags."$i".my_monitor \
+                        focus_monitor M \
+                  , use_index "$i"
+        hc keybind "$Mod-Shift-$key" move_index "$i"
+    fi
+done
+
+# Add a keybinding for locking the current tag to the monitor it is displayed
+# on. This is done by saving the current monitor index in the my_monitor
+# attribute of the focused tag. If the monitor has a (nonempty) name, use the
+# monitor name instead of its index.
+herbstclient keybind $Mod-t chain \
+    , new_attr string tags.focus.my_monitor \
+    , substitute M monitors.focus.index set_attr tags.focus.my_monitor M \
+    , try and \
+        . compare monitors.focus.name != "" \
+        . substitute M monitors.focus.name \
+                set_attr tags.focus.my_monitor M
+
+# Add a keybinding for removing the lock
+herbstclient keybind $Mod-Shift-t \
+    remove_attr tags.focus.my_monitor
+
+# Statically define which tag should be send to which monitor
+lock_tag_to_monitor() {
+    herbstclient chain \
+        , new_attr string tags.by-name."$1".my_monitor \
+        , set_attr tags.by-name."$1".my_monitor "$2"
+}
+# Already lock some of the tags to a monitor, for example:
+# lock the second tag to the monitor with index 0
+lock_tag_to_monitor 2 0
+----
+The usage is: adjust the +lock_tag_to_monitor+-lines in your autostart to
+statically define which tag should be send to which monitor. Press Mod-t to
+lock the focused tag to the monitor it is currently on. Press Mod-Shift-t to
+release the locking and to allow the tag to be displayed on any monitor.
+
+
+
+Q: How can I have a separate list of tags per monitor?
+------------------------------------------------------
+
+As a solution: add the desired tags for each monitor and then configure the
+keybindings s.t. the i'th key references the i'th tag of that monitor instead
+of the i'th of all the tags. You can achieve this by replacing the section
+"tags" and "cycle through tags" in the autostart by the following:
+
+----
+# tags
+mon1_names=( 1_{1..5} ) # tag names for monitor 1
+mon2_names=( 2_{1..5} ) # tag names for monitor 2
+fallback_names=( {1..5} ) # tag names for all other monitors
+tag_keys=( {1..9} 0 )
+
+hc rename default "${mon1_names[0]}" || true
+for tag in "${mon1_names[@]}" "${mon2_names[@]}" "${fallback_names[@]}" ; do
+    hc try silent add "$tag"
+done
+
+for i in ${!tag_keys[@]} ; do
+    key="${tag_keys[$i]}"
+    # the keybinding works as follows: the or executes the commands separated by
+    # CASE and stops executing them after the first of those succeeds.
+    # the first command is: check that we are on monitor 3 and can switch to tag "${mon1_names[$i]}"
+    # if only one of these two steps fail, try the second one (and so one).
+    # The setup for two monitors is as follows:
+    hc keybind "$Mod-$key" \
+        or CASE and . compare monitors.focus.index = 0 . use "${mon1_names[$i]}" \
+           CASE and . compare monitors.focus.index = 1 . use "${mon2_names[$i]}" \
+           CASE use "${fallback_names[$i]}"
+    hc keybind "$Mod-Shift-$key" \
+        or CASE and . compare monitors.focus.index = 0 . move "${mon1_names[$i]}" \
+           CASE and . compare monitors.focus.index = 1 . move "${mon2_names[$i]}" \
+           CASE move "${fallback_names[$i]}"
+done
+
+# cycle through tags
+# add additional information in order to cycle only through a monitor's tags
+# and not through all tags
+define-tag-cycle() {
+    local n=$#
+    local tags=( "$@" )
+    for i in "${!tags[@]}" ; do
+        local t="${tags[$i]}"
+        hc chain , new_attr string tags.by-name."$t".my_previous_tag \
+                 , set_attr tags.by-name."$t".my_previous_tag "${tags[$(((i - 1 + n) % n))]}" \
+                 , new_attr string tags.by-name."$t".my_next_tag \
+                 , set_attr tags.by-name."$t".my_next_tag "${tags[$(((i + 1) % n))]}"
+    done
+}
+
+define-tag-cycle "${mon1_names[@]}"
+define-tag-cycle "${mon2_names[@]}"
+define-tag-cycle "${fallback_names[@]}"
+
+# cycle through tags
+# check whether the current tag as a custom "next tag" configured
+# if yes, jump to that one, otherwise fall back to ordinary use_index +1
+hc keybind $Mod-period or , substitute NEXT tags.focus.my_next_tag use NEXT  \
+                          , use_index +1 --skip-visible
+hc keybind $Mod-comma  or , substitute PREV tags.focus.my_previous_tag use PREV  \
+                          , use_index +1 --skip-visible
+----
+
+You should also set +swap_monitors_to_get_tag+ to 0. Also consider the
+following hint for shifting windows between monitors:
+
+Q: How to navigate between monitors?
+------------------------------------
+In order to switch focus between the monitors, use the usual direction based
+focusing (the command +focus+). It either focuses a window on the current
+monitor or the next monitor if the boundary is reached. Since version 0.9.3,
+the same works when moving windows (command +shift+).
+
+If you're using an older version you need to configure it in your +autostart+.
+In order to shift windows from monitor to monitor, replace the usual usage of
++shift+ in your autostart by this one:
+
+----
+hc keybind $Mod-Shift-h or / shift left / \
+    chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
+hc keybind $Mod-Shift-j or / shift down / \
+    chain , lock , shift_to_monitor -d , focus_monitor -d , unlock
+hc keybind $Mod-Shift-k or / shift up / \
+    chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
+hc keybind $Mod-Shift-l or / shift right / \
+    chain , lock , shift_to_monitor -r , focus_monitor -r , unlock
+----
+(or analogously with arrow keys instead of +hjkl+).  Again, this shifts a
+window to the next monitor if the monitor boundary is reached.
+
+[[firstautostart]]
+Q: How do I detect whether it is the first time that autostart is executed?
+----------------------------------------------------------------------------
+If you want to actually autostart applications on herbstluftwm startup, one
+needs to take care that they are not executed on successive reloads. The
+following command returns success on the first time, autostart is executed, and
+failure on successive calls:
+----
+herbstclient silent new_attr bool my_not_first_autostart
+----
+It tries to create a new attribute (on the root object). If it is the first
+autostart run, then this succeeds. On any successive execution, this command
+fails, because the attribute +my_not_first_autostart+ already exists.
+An example looks as follows:
+----
+if hc silent new_attr bool my_not_first_autostart ; then
+    /path/to/examples/exec_on_tag.sh web firefox &
+    pidgin &
+fi
+----
+
+
+Q: How can I unminimize all minimized clients?
+----------------------------------------------
+The following keybinding unminimizes all clients on the current tag:
+-----
+hc keybind Mod4-Ctrl-m \
+   substitute FOCUS "tags.focus.name" \
+   foreach CLIENT clients. \
+     sprintf MINATT "%c.minimized" CLIENT \
+     sprintf TAGATT "%c.tag" CLIENT and \
+       , compare MINATT "=" "true" \
+       , compare TAGATT "=" FOCUS \
+       , set_attr MINATT false
+-----
+It iterates over all clients, compares its +tag+ attribute sets the +minimized+
+attribute to +false+.
+
+
