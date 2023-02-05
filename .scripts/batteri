@@ -10,11 +10,11 @@ if [ "$ans" -gt 97 ]; then
    icon="   "
 elif [ "$ans" -gt 75 ]; then
     icon="   "
-elif [ "$ans" -gt 50 ]; then
+elif [ "$ans" -gt 30 ]; then
     icon="   "
-elif [ "$ans" -gt 25 ]; then
+elif [ "$ans" -gt 15 ]; then
     icon="   "
-elif [ "$ans" -gt 10 ]; then
+elif [ "$ans" -gt 8 ]; then
     icon="   "
 else
     icon="   "
@@ -22,4 +22,4 @@ fi
 
 
 
-echo "%{B#ABC2AB}%{F#1d1f21}${icon}%{F#ABC2AB} %{B#dd1d1f21} BAT ${ans} % "
+echo "%{B#ABC2AB}%{F#295340}${icon}%{F#ABC2AB} %{B#dd1d1f21} BAT ${ans} % "
