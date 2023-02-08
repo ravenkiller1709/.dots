@@ -104,9 +104,9 @@ My custom keybindings:
  #+END_SRC
 * Custom Theme
 #+begin_src emacs-lisp :tangle ./init.el
-    (set-background-color "#252525")
-  (set-foreground-color "#ABC2AB")
-  (load-theme 'wombat)
+  ;;(set-background-color "#252525")
+  ;;(set-foreground-color "#ABC2AB")
+  ;;(load-theme 'uwu)
 #+end_src
 * Doom Modeline setup
 #+begin_src emacs-lisp :tangle ./init.el

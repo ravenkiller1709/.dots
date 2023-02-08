@@ -15,6 +15,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/kim/Hentet/"
  "/home/kim/"
  "/home/kim/.local/bin/"
  "/home/kim/.dots/bin/"
@@ -41,6 +42,8 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/kim/Hentet/" (25570 26374 488257 486000) "../" "./")
+
  ("/home/kim/" (25561 33620 445212 91000) "Noter/" "David Bowie - Black Tie White Noise.zip" "client.ovpn" ".gnupg/" "Bryan Ferry - Dylanesque.zip" "Brockhampton - Saturation.zip" "Brockhampton - Saturation II.zip" "Brockhampton - Saturation III.zip" "Brockhampton - Roadrunner New Light, New Machine.zip" "Brockhampton - Iridescence.zip" "Brockhampton - Ginger.zip" "Brockhampton - All-American Trash.zip" "Billie Eilish - Guitar Songs (CDS).zip" "authinfo" ".zcompdump" ".Xauthority" ".crafted-emacs/" ".zshrc" ".mbsyncrc" ".xinitrc" ".scripts/" ".dwm/" ".baggrunde/" ".cache/" ".dots/" "Mail/" ".local/" ".bash_history" ".config/" "Videoklip/" "Billeder/" "Musik/" "Dokumenter/" "Offentligt/" "Skabeloner/" "Hentet/" "Skrivebord/" ".bashrc" ".bash_profile" ".bash_logout" "../" "./")
 
  ("/home/" (25561 29892 872762 646000) "kim/" "../" "./")
@@ -70,8 +73,6 @@
  ("/home/kim/.config/i3blocks/" (25399 6826 60025 784000) "config" "../" "./")
 
  ("/home/kim/.config/" (25399 6765 433356 376000) "i3blocks/" "user-dirs.dirs" "yay/" "emacs/" "qtile/" "newsboat/" "mpd/" "i3/" "fish/" "calibre/" "dunst/" "alacritty/" "user-dirs.locale" "../" "./")
-
- ("/home/kim/Hentet/" (25399 6673 123352 251000) "config" "../" "./")
 
  ("/home/kim/Videoklip/" (25398 6658 107240 890000) "../" "./")
 

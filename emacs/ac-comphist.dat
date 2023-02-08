@@ -1,98 +1,98 @@
-((("emacs" .
-   [1 0 0 0 0])
-  ("emacsclient" .
-   [0 0 0 0 0 0 0 0 1 0 0])
-  ("Mod-Shift-Return" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("bind" .
-   [0 0 0 1])
-  ("usr" .
-   [1 0 0])
-  ("panel" .
-   [2 0 0 0 0])
-  ("polybar" .
-   [1 0 0 0 1 0 1])
-  ("ControlMask" .
-   [1 0 0 1 1 7 2 0 0 0 0])
-  ("state" .
-   [1 0 0 0 0])
-  ("URxvt" .
-   [0 0 1 0 0])
-  ("follow" .
-   [1 0 0 0 0 0])
-  ("desktop" .
-   [1 0 0 0 0 0 0])
-  ("export" .
-   [0 0 0 1 0 0])
-  ("spawn" .
-   [2 0 0 0 0])
-  ("keybind" .
-   [1 0 0 0 0 0 0])
-  ("mail" .
-   [1 0 0 0])
-  ("the" .
-   [1 0 0])
-  ("unread" .
-   [1 0 0 0 0 0])
-  ("shift" .
-   [0 0 1 0 0])
-  ("BASH" .
-   [0 0 0 1])
-  ("statusbar" .
-   [1 0 0 0 0 0 0 0 0])
-  ("bin" .
-   [1 0 0])
-  (".local" .
-   [1 0 0 0 0 0])
-  ("home" .
-   [1 0 0 0])
-  ("display-line-numbers-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("multi-vterm" .
-   [0 0 0 0 0 0 0 2 0 0 0])
-  ("windmove-swap-states-left" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("windmove-swap-states-down" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("windmove-swap-states-up" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("windmove-swap-states-right" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("exwm-modeline-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("nil" .
-   [1 0 0])
-  ("server-start" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("mail.el" .
-   [1 0 0 0 0 0 0])
-  ("require" .
-   [0 0 0 0 0 0 1])
-  ("emms-default-players" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("display-line-numbers" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("alacritty" .
-   [3 0 0 0 0 0 0 0 0])
-  ("XK_d" .
-   [1 0 0 0])
-  ("XK_Return" .
-   [1 0 0 0 0 0 0 0 0])
-  ("MODKEY" .
-   [3 0 1 11 1 10])
-  ("ShiftMask" .
-   [1 0 4 1 2 0 0 1 0])
-  ("SHCMD" .
-   [1 0 0 0 0])
-  (".config" .
-   [2 0 0 0 0 0 0])
-  ("mpd" .
-   [1 0 0])
-  ("const" .
-   [0 0 0 0 1])
-  ("XK_e" .
-   [1 0 0 0])
+((("pulseaudio" .
+   [0 0 0 0 1 0 0 0 0 0])
   ("picom" .
    [1 0 0 0 0])
-  ("pulseaudio" .
-   [0 0 0 0 1 0 0 0 0 0])))
+  ("XK_e" .
+   [1 0 0 0])
+  ("const" .
+   [0 0 0 0 1])
+  ("mpd" .
+   [1 0 0])
+  (".config" .
+   [2 0 0 0 0 0 0])
+  ("SHCMD" .
+   [1 0 0 0 0])
+  ("ShiftMask" .
+   [1 0 4 1 2 0 0 1 0])
+  ("MODKEY" .
+   [3 0 1 11 1 10])
+  ("XK_Return" .
+   [1 0 0 0 0 0 0 0 0])
+  ("XK_d" .
+   [1 0 0 0])
+  ("alacritty" .
+   [3 0 0 0 0 0 0 0 0])
+  ("display-line-numbers" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("emms-default-players" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("require" .
+   [0 0 0 0 0 0 1])
+  ("mail.el" .
+   [1 0 0 0 0 0 0])
+  ("server-start" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [1 0 0])
+  ("exwm-modeline-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("windmove-swap-states-right" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("windmove-swap-states-up" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("windmove-swap-states-down" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("windmove-swap-states-left" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("multi-vterm" .
+   [0 0 0 0 0 0 0 2 0 0 0])
+  ("display-line-numbers-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("home" .
+   [1 0 0 0])
+  (".local" .
+   [1 0 0 0 0 0])
+  ("bin" .
+   [1 0 0])
+  ("statusbar" .
+   [1 0 0 0 0 0 0 0 0])
+  ("BASH" .
+   [0 0 0 1])
+  ("shift" .
+   [0 0 1 0 0])
+  ("unread" .
+   [1 0 0 0 0 0])
+  ("the" .
+   [1 0 0])
+  ("mail" .
+   [1 0 0 0])
+  ("keybind" .
+   [1 0 0 0 0 0 0])
+  ("spawn" .
+   [2 0 0 0 0])
+  ("export" .
+   [0 0 0 1 0 0])
+  ("desktop" .
+   [1 0 0 0 0 0 0])
+  ("follow" .
+   [1 0 0 0 0 0])
+  ("URxvt" .
+   [0 0 1 0 0])
+  ("state" .
+   [1 0 0 0 0])
+  ("ControlMask" .
+   [1 0 0 1 1 7 2 0 0 0 0])
+  ("polybar" .
+   [1 0 0 0 1 0 1])
+  ("panel" .
+   [2 0 0 0 0])
+  ("usr" .
+   [1 0 0])
+  ("bind" .
+   [0 0 0 1])
+  ("Mod-Shift-Return" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("emacsclient" .
+   [0 0 0 0 0 0 0 0 1 0 0])
+  ("emacs" .
+   [1 0 0 0 0])))
