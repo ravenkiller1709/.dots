@@ -19,7 +19,7 @@ get_mpd()
 		fi
 	fi
 
-	echo "%{B#81a2be} %{F#1d1f21}$current_song"
+	echo "%{B#5f819d} %{F#1d1f21}$current_song"
 }
 
 get_mpd

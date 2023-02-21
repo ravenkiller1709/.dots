@@ -21,7 +21,7 @@ redshift -l 55.49:12.6 &
 ssh-agent &
 xbacklight -set 90 &
 xset r rate 200 50 &
-picom --config ~/.config/picom/config &
+#picom --config ~/.config/picom/config &
 #mpd ~/.config/mpd/mpd.conf &
 #~/.config/scripts/bar.sh &
 #while type dwm >/dev/null; do dwm && continue || break; done
