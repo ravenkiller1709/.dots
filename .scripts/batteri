@@ -22,4 +22,4 @@ fi
 
 
 
-echo "%{B#ABC2AB}%{F#295340}${icon}%{F#ABC2AB} %{B#dd1d1f21} BAT ${ans} % "
+echo "%{B#5e8d87}%{F#1d1f21}${icon}%{F#1d1f21} %{B#8abeb7} BAT ${ans} % "

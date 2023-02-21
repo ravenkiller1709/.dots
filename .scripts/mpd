@@ -13,13 +13,13 @@ get_mpd()
 	else
 		playpause=$(mpc | awk '/\[.*]/{split($0, a, " "); print a[1]}')
 		if [[ "$playpause" = "[playing]" ]]; then
-			current_song="%{B#295340} %{F#ABC2AB} $PREFIX_PLAY %{B#dd1d1f21} %{F#c5c8c6} $current_song"
+			current_song="%{B#5f819d} %{F#1d1f21} $PREFIX_PLAY %{B#81a2be} %{F#1d1f21} $current_song"
 		elif [[ "$playpause" = "[paused]" ]]; then
-			current_song="%{B#295340} %{F#ABC2AB} $PREFIX_PAUSE %{B#dd1d1f21} %{F#c5c8c6} $current_song"
+			current_song="%{B#5f819d} %{F#1d1f21} $PREFIX_PAUSE %{B#81a2be} %{F#1d1f21} $current_song"
 		fi
 	fi
 
-	echo "%{B#295340} %{F#ABC2AB}$current_song"
+	echo "%{B#81a2be} %{F#1d1f21}$current_song"
 }
 
 get_mpd

@@ -599,3 +599,16 @@
 
 (load "~/.dots/emacs/mail.el")
 (require 'mu4e)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(vterm which-key visual-fill-column vertico use-package try simple-httpd rainbow-delimiters org-roam org-bullets marginalia ivy-rich ivy-prescient ivy-emms helm-emms forge doom-modeline dmenu dired-single dired-open counsel auto-complete all-the-icons-dired ace-window)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(aw-leading-char-face ((t (:inherit ace-jumb-face-foreground :height 3.0)))))

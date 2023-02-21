@@ -1,17 +1,17 @@
-
 #!/bin/sh
 xset +fp /home/kim/.local/share/fonts &
 xset fp rehash &
 xrdb -load ~/.Xresources &
 dunst &
-pulseaudio -k && pulseaudio &
 setxkbmap dk &
+pulseaudio &
 dbus-run-session &
 clipmenud &
 dropbox &
 emacs --daemon &
 transmission-daemon &
 nitrogen --restore &
+mpDris2 &
 #xwallpaper --zoom ~/.local/share/bg &
 #setbg ~/.dots/.baggrunde &
 xsetroot -cursor_name left_ptr &
