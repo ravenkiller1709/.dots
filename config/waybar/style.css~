@@ -1,0 +1,235 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+* {
+    border: 4;
+    border-radius: 0;
+    /*font-family: "Hack", "Noto Color Emoji", sans-serif;*/
+    font-size: 13px;
+    /*font-weight: bold;*/
+    min-height: 0;
+}
+
+window#waybar {
+    background: #1d1f21;
+    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
+    color: #e5e9f0;
+}
+
+#workspaces button {
+    border-radius: 4px;
+    margin: 4px 2px;
+    padding: 0px 4px;
+    background-color: #81a2be;
+    color: #1d1f21;    
+ }
+
+#workspaces button.focused {
+    border-radius: 4px;
+    margin: 4px 2px;
+    padding: 0px 4px;
+    background: #85678f;
+    color: #1d1f21;
+}
+
+#workspaces button.urgent {
+    background-color: #bf616a;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+#clock {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: #81a2be;
+    color: #1d1f21;
+    font-weight: bold;
+}
+
+#battery {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: #f0c674;
+    color: #1d1f21;
+}
+
+#battery.charging {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: #ee6c4d;
+    color: #1d1f21;
+}
+
+@keyframes blink {
+    to {
+        /*background-color: #ffffff;*/
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: #81a2be;
+    color: #1d1f21;    
+}
+
+#memory {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: #81a2be;
+    color: #1d1f21;    
+}
+
+#backlight {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: #81a2be;
+    color: #1d1f21;    
+}
+
+#network {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: #b294bb;
+    color: #1d1f21;    
+}
+
+#network.disconnected {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    /*background: #f53c3c;*/
+    color: #e5e9f0;
+}
+
+#pulseaudio {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: #81a2be;
+    color: #1d1f21;    
+}
+
+#pulseaudio.muted {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    /*background: #000000;*/
+    color: #e5e9f0;
+}
+
+#custom-media {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background: #66cc99;
+    color: #2a5c45;
+}
+
+.custom-spotify {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background: #66cc99;
+}
+
+.custom-vlc {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background: #ffa000;
+}
+
+#temperature {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: #cc6666;
+    color: #1d1f21;    
+}
+
+#temperature.critical {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background: #cc6666;
+    color: #C5C8C6;
+}
+
+#tray {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: #2980b9;
+    color: #e5e9f0;
+}
+
+#idle_inhibitor {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
+
+#mpd {
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 0px 4px;
+    background-color: transparent;
+    color: #8abeb7;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: transparent;
+    color: #8abeb7;
+}
+
+#mpd.paused {
+    background-color: transparent;
+    color: #f0c674;
+}
+

@@ -87,9 +87,23 @@
        ((t (:inherit ace-jumb-face-foreground :height 3.0)))))
     ))
 
-;;(set-background-color "#252525")
-;;(set-foreground-color "#ABC2AB")
-;;(load-theme 'uwu)
+(use-package doom-themes
+    :ensure t
+    :config
+    ;; Global settings (defaults)
+    (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+          doom-themes-enable-italic t) ; if nil, italics is universally disabled
+    (load-theme 'doom-one t)
+
+    ;; Enable flashing mode-line on errors
+    (doom-themes-visual-bell-config)
+    ;; Enable custom neotree theme (all-the-icons must be installed!)
+    (doom-themes-neotree-config)
+    ;; or for treemacs users
+    (setq doom-themes-treemacs-theme "doom-atom") ; use "doom-colors" for less minimal icon theme
+    (doom-themes-treemacs-config)
+    ;; Corrects (and improves) org-mode's native fontification.
+    (doom-themes-org-config))
 
 (use-package all-the-icons
     :ensure t)
@@ -599,16 +613,3 @@
 
 (load "~/.dots/emacs/mail.el")
 (require 'mu4e)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(vterm which-key visual-fill-column vertico use-package try simple-httpd rainbow-delimiters org-roam org-bullets marginalia ivy-rich ivy-prescient ivy-emms helm-emms forge doom-modeline dmenu dired-single dired-open counsel auto-complete all-the-icons-dired ace-window)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(aw-leading-char-face ((t (:inherit ace-jumb-face-foreground :height 3.0)))))

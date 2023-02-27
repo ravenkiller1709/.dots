@@ -39,7 +39,7 @@ window:
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
-  opacity: 0.75
+  # opacity: 0.75
   # Window decorations
   #
   # Values for `decorations`:
@@ -184,7 +184,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 9.0
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -371,7 +371,7 @@ schemes:
   Nord: &Nord
     # Default colors
     primary:
-      background: '#000000'
+      background: '#1d1f21'
       foreground: '#D8DEE9'
 
     # Normal colors
@@ -613,7 +613,7 @@ colors: *Nord
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
 window.opacity: 1.0
-window.opacity: 0.80
+# window.opacity: 0.80
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
