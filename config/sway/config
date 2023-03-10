@@ -80,6 +80,9 @@ input * {
     # Start a terminal
     bindsym $mod+Return exec $term
 
+    # Start emacs
+    bindsym $mod+Shift+Return exec --no-startup-id emacsclient -c -a 'emacs'
+
     # Kill focused window
     bindsym $mod+Shift+q kill
 
@@ -236,3 +239,5 @@ bar {
 include /etc/sway/config.d/*
 
 exec --no-startup-id autotiling
+exec --no-startup-id emacs --daemon
+bindsym Mod1+w exec --no-startup-id librewolf
