@@ -6,7 +6,7 @@
 (defvar efs/default-variable-font-size 150)
 
 ;; Make frame transparency overridable
-(defvar efs/frame-transparency '(90 . 80))
+(defvar efs/frame-transparency '(100 . 100))
 
 
   (set-face-attribute 'default nil :font "MesloLGSDZ NF" :height efs/default-font-size)
@@ -54,8 +54,11 @@
 
 
   ;; Initialize use-package on non-Linux platforms
-(unless (package-installed-p 'use-package)
-  (package-install 'use-package))
+;; This is only needed once, near the top of the file
+(eval-when-compile
+  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+  (add-to-list 'load-path "~/.config/emacs/use-package/")
+  (require 'use-package))
 
 (require 'use-package)
 (setq use-package-always-ensure t)
@@ -87,23 +90,27 @@
        ((t (:inherit ace-jumb-face-foreground :height 3.0)))))
     ))
 
-(use-package doom-themes
-    :ensure t
-    :config
-    ;; Global settings (defaults)
-    (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-          doom-themes-enable-italic t) ; if nil, italics is universally disabled
-    (load-theme 'doom-one t)
+;;  (use-package doom-themes
+  ;;      :ensure t
+  ;;      :config
+  ;;      ;; Global settings (defaults)
+  ;;      (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+  ;;            doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  ;;      (load-theme 'doom-nova t)
 
-    ;; Enable flashing mode-line on errors
-    (doom-themes-visual-bell-config)
-    ;; Enable custom neotree theme (all-the-icons must be installed!)
-    (doom-themes-neotree-config)
-    ;; or for treemacs users
-    (setq doom-themes-treemacs-theme "doom-atom") ; use "doom-colors" for less minimal icon theme
-    (doom-themes-treemacs-config)
-    ;; Corrects (and improves) org-mode's native fontification.
-    (doom-themes-org-config))
+        ;; Enable flashing mode-line on errors
+  ;;      (doom-themes-visual-bell-config)
+        ;; Enable custom neotree theme (all-the-icons must be installed!)
+  ;;      (doom-themes-neotree-config)
+        ;; or for treemacs users
+  ;;      (setq doom-themes-treemacs-theme "doom-atom") ; use "doom-colors" for less minimal icon theme
+  ;;      (doom-themes-treemacs-config)
+        ;; Corrects (and improves) org-mode's native fontification.
+  ;;      (doom-themes-org-config))
+(use-package ubuntu-theme
+  :ensure t
+  :config
+  (load-theme 'ubuntu t))
 
 (use-package all-the-icons
     :ensure t)
@@ -613,3 +620,25 @@
 
 (load "~/.dots/emacs/mail.el")
 (require 'mu4e)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(initial-major-mode 'fundamental-mode)
+ '(ispell-dictionary nil)
+ '(load-prefer-newer nil)
+ '(package-archive-priorities
+   '(("gnu" . 99)
+     ("nongnu" . 80)
+     ("stable" . 70)
+     ("melpa" . 0)))
+ '(package-selected-packages
+   '(use-package ubuntu-theme mu4e cmake-mode which-key visual-fill-column vertico try simple-httpd rainbow-delimiters org-roam org-bullets marginalia ivy-rich ivy-prescient ivy-emms helm-emms forge doom-themes doom-modeline dmenu dired-single dired-open counsel auto-complete all-the-icons-dired ace-window))
+ '(package-user-dir "/home/kim/.crafted-emacs/elpa/"))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(aw-leading-char-face ((t (:inherit ace-jumb-face-foreground :height 3.0)))))

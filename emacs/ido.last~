@@ -15,8 +15,8 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/kim/.config/waybar/"
  "/home/kim/"
+ "/home/kim/.config/waybar/"
  "/home/kim/Hentet/"
  "/home/kim/.local/bin/"
  "/home/kim/.dots/bin/"
@@ -33,6 +33,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ ".zshrc"
  "style.css"
  ".authinfo.gpg"
  "scratchpad2.sh"
@@ -44,9 +45,9 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/kim/.config/waybar/" (25596 35830 14656 86000) ".#style.css-orig" ".#style.css" "style.css" "style.css~" "style.css-orig" "config" "config~" "../" "./")
+ ("/home/kim/" (25626 49851 937783 493000) ".crafted-emacs/" ".baggrunde/" ".gnupg/" "NFCERT Stream.pdf" "Faktura_20220143.pdf" "client.ovpn" ".local/" "S45C-6e22051910200.pdf" ".bash_history" ".mozilla/" "terminus-font-4.49.1/" ".thunderbird/" ".bash_logout" ".zshrc" ".ssh/" "voidlinux_sleep_settings" "snap/" ".ZipArchive/" "NFCERT Stream.docx" "Noter/" ".dots/" ".sudo_as_admin_successful" "authinfo" "Billeder/" ".scripts/" ".bashrc" "Musik/" "nvim/" ".profile" ".config/" "Nordea 23052022.xlsx" "Stark.org" "Skabeloner/" ".zcompdump" "Skrivebord/" "Hentet/" ".cache/" "Nordea 28042022.xlsx" "Dokumenter/" "Videoklip/" "Projekter/" "Offentligt/" "../" "./")
 
- ("/home/kim/" (25596 32561 724847 922000) ".zcompdump" ".Xauthority" ".librewolf/" ".gnupg/" ".fehbg" ".xinitrc" "ZipArchive/" "voidlinux_sleep_settings" "terminus-font-4.49.1/" "Steve Lacy - Gemini Rights.zip" "Stark.org" "S45C-6e22051910200.pdf" "Röyksopp - The Understanding.zip" "Röyksopp - Profound Mysteries III.zip" "Projekter/" "Primal Fear - Primal Fear (Deluxe Edition).zip" "nvim/" "Nordea 28042022.xlsx" "Nordea 23052022.xlsx" "NFCERT Stream.pdf" "NFCERT Stream.docx" "John Mayer - Sob Rock.zip" "Faktura_20220143.pdf" ".crafted-emacs/" ".zshrc" ".scripts/" "David Bowie - Black Tie White Noise.zip" "client.ovpn" ".baggrunde/" "Bryan Ferry - Dylanesque.zip" "Brockhampton - Saturation.zip" "Brockhampton - Saturation II.zip" "Brockhampton - Saturation III.zip" "Brockhampton - Roadrunner New Light, New Machine.zip" "Brockhampton - Iridescence.zip" "Brockhampton - Ginger.zip" "Brockhampton - All-American Trash.zip" "Billie Eilish - Guitar Songs (CDS).zip" "authinfo" ".cache/" ".dots/" "Mail/" ".local/" ".bash_history" ".config/" "Videoklip/" "Billeder/" "Musik/" "Dokumenter/" "Offentligt/" "Skabeloner/" "Hentet/" "Skrivebord/" ".bashrc" ".bash_profile" ".bash_logout" "../" "./")
+ ("/home/kim/.config/waybar/" (25596 35830 14656 86000) ".#style.css-orig" ".#style.css" "style.css" "style.css~" "style.css-orig" "config" "config~" "../" "./")
 
  ("/home/kim/Hentet/" (25570 26374 488257 486000) "../" "./")
 
