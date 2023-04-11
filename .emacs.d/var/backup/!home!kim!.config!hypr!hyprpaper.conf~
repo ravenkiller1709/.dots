@@ -1,0 +1,15 @@
+preload = ~/.baggrunde/0118.jpg
+preload = ~/.baggrunde/0119.jpg
+preload = ~/.baggrunde/0120.jpg
+preload = ~/.baggrunde/0121.jpg
+preload = ~/.baggrunde/0122.jpg
+preload = ~/.baggrunde/0123.jpg
+preload = ~/.baggrunde/0124.jpg
+preload = ~/.baggrunde/0125.jpg
+preload = ~/.baggrunde/0126.jpg
+preload = ~/.baggrunde/0127.jpg
+
+
+wallpaper = eDP-1,~/.baggrunde/0118.jpg
+#$w1 = hyprctl hyprpaper wallpaper "eDP-1,~/.baggrunde/nordtheme5.jpg" 
+#$w2 = hyprctl hyprpaper wallpaper "eDP-1,~/.baggrunde/nordtheme01.jpg" 

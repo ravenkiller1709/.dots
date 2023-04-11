@@ -1,0 +1,1 @@
+("~/.emacs.d/" "~/Projekter/my-org-site/" "~/.dots/")
