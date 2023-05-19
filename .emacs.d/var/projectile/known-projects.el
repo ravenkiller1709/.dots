@@ -1,1 +1,0 @@
-("~/Projekter/my-org-site/" "~/.dots/")

@@ -103,7 +103,7 @@
   :commands command-log-mode)
 
 (use-package doom-themes
-	     :init (load-theme 'doom-wilmersdorf t))
+	     :init (load-theme 'doom-solarized-light t))
 
 (use-package which-key
   :defer 0

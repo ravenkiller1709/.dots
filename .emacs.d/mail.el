@@ -24,30 +24,13 @@
                 (string-prefix-p "/Hotmail" (mu4e-message-field msg :maildir))))
           :vars '((user-mail-address . "kimkruse@hotmail.com")
                   (user-full-name    . "Kim Kruse")
-		  (smtpmail-smtp-server  . "smtp.office365.com")
+		  (smtpmail-smtp-server  . "smtp-mail.outlook.com")
                   (smtpmail-smtp-service . 587)
-                  (smtpmail-stream-type  . ssl)
+                  (smtpmail-stream-type  . starttls)
                   (mu4e-drafts-folder  . "/Hotmail/Drafts")
-                  (mu4e-sent-folder  . "/Hotmail/Sendt Post")
-                  (mu4e-refile-folder  . "/Hotmail/Indbakke")
-                  (mu4e-trash-folder  . "/Hotmail/Slettet Post")))
-
-	 ;; Hotmail account
-;;         (make-mu4e-context
-;;          :name "Hotmail"
-;;          :match-func
-;;            (lambda (msg)
-;;              (when msg
-;;                (string-prefix-p "/Hotmail" (mu4e-message-field msg :maildir))))
-;;          :vars '((user-mail-address . "kimkruse@hotmail.com")
-;;                  (user-full-name    . "Kim Kruse")
-;;		  (smtpmail-smtp-server  . "smtp-mail.outlook.com")
-;;                  (smtpmail-smtp-service . 58;;7)
-;;                  (smtpmail-stream-type  . st;;arttls)
-;;                  (mu4e-drafts-folder  . "/Ho;;tmail/Drafts")
-;;                  (mu4e-sent-folder  . "/Hotm;;ail/Sent Mail")
-;;                  (mu4e-refile-folder  . "/Ho;;tmail/Alle mails")
-;;                  (mu4e-trash-folder  . "/Hot;;mail/Trash")))
+                  (mu4e-sent-folder  . "/Hotmail/Sent Mail")
+                  (mu4e-refile-folder  . "/Hotmail/Alle mails")
+                  (mu4e-trash-folder  . "/Hotmail/Trash")))
 
          ;; Personal account
          (make-mu4e-context
@@ -69,5 +52,5 @@
   (setq mu4e-maildir-shortcuts
       '(("/kimkruse/INBOX"             . ?i)
         ("/kimkruse/Sent" . ?s)
-        ("/hotmail/INBOX"    . ?d)
-        ("/hotmail/'Sendt Post'"     . ?t))))
+        ("/Hotmail/INBOX"    . ?d)
+        ("/Hotmail/'Sendt Post'"     . ?t))))
