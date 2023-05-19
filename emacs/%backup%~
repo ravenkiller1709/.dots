@@ -1,6 +1,0 @@
-machine smtp.gmail.com login mail4kruse@gmail.com password aFR8of61! port 465
-machine imap.gmail.com login mail4kruse@gmail.com password aFR8of61! port 993
-machine mail.kimkruse.xyz login kim password aFR8of55 port 587
-machine irc.libera.chat login ravenkiller1709 password aFR8of55 port 6697
-machine outlook.office365.com login kimkruse@nhotmail.com password aFR8of57 port 993
-machine smtp.office365.com login kimkruse@hotmail.com password aFR8of57 port 587

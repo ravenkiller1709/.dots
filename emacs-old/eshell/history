@@ -1,6 +1,0 @@
-ssh root@kimkruse.xyz
-exit
-ls
-cd emacs/
-ls
-exit

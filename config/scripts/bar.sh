@@ -21,9 +21,9 @@ pkg_updates() {
   # updates=$(aptitude search '~U' | wc -l)  # apt (ubuntu,debian etc)
 
   if [ -z "$updates" ]; then
-    printf " ^c$black^ ^b#769c9b^ 󰊡 ^c$black^ ^b#8FBCBB^ Fully Updated"
+    printf " ^c$black^ ^b#31A56B^ 󰊡 ^c$black^ ^b#7EC7A2^ Fully Updated"
   else
-    printf " ^c$black^ ^b#769c9b^ 󰊡 ^c$black^ ^b#8FBCBB^ $updates"" updates"
+    printf " ^c$black^ ^b#31A56B^ 󰊡 ^c$black^ ^b#7EC7A2^ $updates"" updates"
   fi
 }
 
@@ -40,7 +40,7 @@ mail() {
   n="$(ls -l $HOME/Mail/Hotmail/INBOX/new | wc -l)"
   sum="$(($n + $m))"
   mail="$((sum - 2))"
-  printf "^c$black^ ^b#8FBCBB^  $mail ^b#8FBCBB^ ^b$black^"
+  printf "^b$black^ ^c#b5bd68^   ^c#b5bd68^^b$black^ $mail nye beskeder "
 }
 
 brightness() {
@@ -70,7 +70,7 @@ mpd() {
 		fi
 	fi
 
-	echo "^c$black^ ^b#866f8c^  ^c$black^ ^b#b294bb^ $current_song ^b$black^"
+	echo "^c#866f8c^ $current_song ^b#1d1f21^"
 }
 
 
@@ -99,7 +99,7 @@ fi
 }
 
 clock() {
-	printf "^c$black^ ^b$darkblue^  "
+	printf "^c$black^ ^b$darkblue^   "
 	printf "^c$black^^b$blue^ $(date '+%H:%M')"
 }
 

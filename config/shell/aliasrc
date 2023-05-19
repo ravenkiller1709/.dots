@@ -32,7 +32,7 @@ alias ez='nvim ~/.config/zsh/.zshrc'
 alias sz='source ~/.config/zsh/.zshrc'
 alias critty='nvim ~/.config/alacritty/alacritty.yml'
 alias UU='sudo pacman -Syu --noconfirm && yay -Syu --noconfirm'
-alias build='sudo make clean install'
+alias build='sudo make clean install && sudo rm config.h'
 alias M='amixer sset Master toggle'
 alias matrix='unimatrix -f -l ocCgGkS -s 96'
 alias clock='tty-clock -sct -C 4'
@@ -44,4 +44,4 @@ alias l='exa -lahF --color=always --icons --sort=size --group-directories-first'
 alias ls='exa -lhF --color=always --icons --sort=size --group-directories-first'
 alias lst='exa -lahFT --color=always --icons --sort=size --group-directories-first'
 alias cat=bat
-alias UU='sudo pacman -Syu --noconfirm && yay -Syu --noconfirm
+

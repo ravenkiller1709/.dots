@@ -1,5 +1,0 @@
-;;;; -*- mode: lisp-data -*-
-(
- (:id "sha1:697e0c1494e7bd0acdd06fc4cb9346682a0941f9" :fingerprints ("sha1:5e:90:2d:47:1f:0b:a9:a7:70:45:de:85:e3:5a:f6:05:de:6b:67:ee" "sha1:9f:f9:07:50:16:cd:a8:ec:9c:68:b7:48:5b:cf:86:af:55:0c:61:0a") :host "mail.kimkruse.xyz:587" :conditions (:same-cert))
- (:id "sha1:85b31c268009209a8d3c5387033b219264f7e62b" :fingerprints ("sha1:be:f0:ce:76:0a:d1:19:9f:4c:e7:6c:b9:9f:53:54:6f:1e:81:4b:c4" "sha1:8f:65:09:eb:5f:dc:bd:ff:d7:0b:db:f8:3a:a8:b4:6a:2e:9c:3a:6b") :host "melpa.org:443" :conditions (:same-cert))
-)
