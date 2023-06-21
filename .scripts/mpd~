@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 PREFIX_PLAY=' '
 PREFIX_PAUSE=' '

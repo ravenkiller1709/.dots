@@ -23,12 +23,12 @@
 ;;primary = #F0C674
 ;;secondary = #8ABEB7
 ;;alert = #A54242
-disabled = #707880
+disabled = #ABC2AB
 
 
 ; special
-foreground = #c5c8c6
-background = #1d1f21
+foreground = #ABC2AB
+background = #2E3440
 cursorColor = #c5c8c6
 
 ;black
@@ -67,9 +67,10 @@ color15 = #c5c8c6
 
 [bar/example]
 width = 100%
-height = 22pt
-radius = 6
-
+height = 18pt
+radius = 0
+offset-y = 0
+offset-x = 0
 ; dpi = 96
 
 background = ${colors.background}
@@ -80,7 +81,7 @@ line-size = 3pt
 border-size = 4pt
 border-color = ${colors.background}
 
-padding-left = 0
+padding-left = 2
 padding-right = 1
 
 module-margin = 1
@@ -88,10 +89,12 @@ module-margin = 1
 ;separator = |
 separator-foreground = ${colors.disabled}
 
-font-0 = MesloLGS Nerd Font:pixelsize=12;2
+font-0 = "Arimo Nerd Font:style=Bold:pixelsize=11;2"
+font-1 = "MaterialDesignIconsDesktop:size=11:weight=bold;2"
+font-2 = "Siji:size=11:weight=bold;2"
 
-modules-left = xworkspaces xwindow
-modules-right = mpd batteri pulseaudio xkeyboard memory cpu wifi date
+modules-left = Void xworkspaces xwindow
+modules-right = spotify previous playpause next mpd batteri wifi cpu pulseaudio date
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -106,34 +109,216 @@ enable-ipc = true
 
 ; override-redirect = true
 
+[module/previous]
+type = custom/ipc
+format-font = 2
+; Default
+hook-0 = echo ""
+; When spotify active
+hook-1 = echo "Previous"
+click-left = "spotifyctl -q previous"
+
+
+[module/next]
+type = custom/ipc
+format-font = 2
+; Default
+hook-0 = echo ""
+; When spotify active
+hook-1 = echo "Next"
+click-left = "spotifyctl -q next"
+
+
+[module/playpause]
+type = custom/ipc
+format-font = 2
+; Default
+hook-0 = echo ""
+; Playing
+hook-1 = echo "Pause"
+; Paused
+hook-2 = echo "Play"
+click-left = "spotifyctl -q playpause"
+
+
+[module/spotify]
+type = custom/ipc
+; Default
+hook-0 = echo ""
+; Playing/paused show song name and artist
+hook-1 = spotifyctl -q status --format '%artist%: %title%'
+
+[module/Void]
+type = custom/text
+content = rtix
+
+; "content" has the same properties as "format-NAME"
+content-background = #34B1D4
+content-foreground = ${colors.background}
+content-padding = 1
+
+; "click-(left|middle|right)" will be executed using "/bin/sh -c $COMMAND"
+click-left = notify-send left
+click-middle = notify-send middle
+click-right = notify-send right
+
+; "scroll-(up|down)" will be executed using "/bin/sh -c $COMMAND"
+scroll-up = notify-send scroll up
+scroll-down = notify-send scroll down
+
+[module/menu-apps]
+type = custom/menu
+
+; If true, <label-toggle> will be to the left of the menu items (default).
+; If false, it will be on the right of all the items.
+expand-right = true
+
+; "menu-LEVEL-N" has the same properties as "label-NAME" with
+; the additional "exec" property
+;
+; Commands will be executed using "/bin/sh -c $COMMAND"
+
+menu-0-0 = Browsers
+menu-0-0-exec = #menu-apps.open.1
+menu-0-1 = Multimedia
+menu-0-1-exec = #menu-apps.open.2
+
+menu-1-0 = Firefox
+menu-1-0-exec = firefox
+menu-1-1 = Chromium
+menu-1-1-exec = chromium
+
+menu-2-0 = Gimp
+menu-2-0-exec = gimp
+menu-2-1 = Scrot
+menu-2-1-exec = scrot
+
 [module/xworkspaces]
 type = internal/xworkspaces
+enable-click = true
+enable-scroll = false
+
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+icon-default = 
 
 label-active = %name%
-label-active-background = ${colors.background}
-label-active-underline= ${colors.color10}
+label-active-foreground = ${colors.background}
+label-active-background = ${colors.color15}
+label-active-underline= ${colors.color15}
 label-active-padding = 1
 
 label-occupied = %name%
+label-occupied-foreground = ${colors.background}
+label-occupied-background = ${colors.color7}
+label-occupied-underline = ${colors.color7}
 label-occupied-padding = 1
 
 label-urgent = %name%
-label-urgent-background = ${colors.color9}
+label-urgent-background = ${colors.foreground}
 label-urgent-padding = 1
+label-urgent-underline = ${colors.color15}
 
-label-empty = 
-label-empty-foreground = ${colors.disabled}
+label-empty = %name%
+label-empty-foreground = ${colors.foreground}
 label-empty-padding = 1
+label-empty-underline = ${colors.color15}
 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:60:...%
+label-foreground = ${colors.background}
+label-background = ${colors.color15}
+label-padding = 2
+
+[module/alsa]
+type = internal/alsa
+
+; Soundcard to be used
+; Usually in the format hw:# where # is the card number
+; You can find the different card numbers in `/proc/asound/cards`
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+
+; Name of the master, speaker and headphone mixers
+; Use the following command to list available mixer controls:
+; $ amixer scontrols | sed -nr "s/.*'([[:alnum:]]+)'.*/\1/p"
+; If master, speaker or headphone-soundcard isn't the default, 
+; use `amixer -c # scontrols` instead where # is the number 
+; of the master, speaker or headphone soundcard respectively
+;
+; Default: Master
+master-mixer = Master
+
+; Optionally define speaker and headphone mixers
+; Default: none
+speaker-mixer = Speaker
+; Default: none
+headphone-mixer = Headphone
+
+; NOTE: This is required if headphone_mixer is defined
+; Use the following command to list available device controls
+; $ amixer controls | sed -r "/CARD/\!d; s/.*=([0-9]+).*name='([^']+)'.*/printf '%3.0f: %s\n' '\1' '\2'/e" | sort
+; You may also need to use `amixer -c # controls` as above for the mixer names
+; Default: none
+headphone-id = 9
+
+; Use volume mapping (similar to amixer -M and alsamixer), where the increase in volume is linear to the ear
+; Default: false
+mapped = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <ramp-volume> <label-volume>
+
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+;format-muted = <label-muted>
+
+; Available tokens:
+;   %percentage% (default)
+;label-volume = %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+label-muted = 婢 muted
+label-muted-foreground = #66
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
+
+; If defined, it will replace <ramp-volume> when
+; headphones are plugged in to `headphone_control_numid`
+; If undefined, <ramp-volume> will be used for both
+; Only applies if <ramp-volume> is used
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+; Right and Middle click
+; New in version 3.6.0
+; click-right =
+; click-middle = 
 
 [module/batteri]
 type = custom/script
 exec = /home/kim/.dots/.scripts/batteri
 tail = true
 interval = 0
+;label-underline = ${colors.color4}
 
 [module/filesystem]
 type = internal/fs
@@ -151,19 +336,20 @@ type = internal/pulseaudio
 
 format-volume-prefix = " "
 format-volume-prefix-padding = 1
-format-volume-prefix-padding-background = ${colors.color6}
+format-volume-prefix-padding-background = ${colors.color5}
 format-volume-prefix-foreground = ${colors.background}
-format-volume-prefix-background = ${colors.color3}
+format-volume-prefix-background = ${colors.color5}
 format-volume-padding = 0
 format-volume = <label-volume>
 format-volume-foreground = ${colors.background}
-format-volume-background = ${colors.color11}
+format-volume-background = ${colors.color13}
+;format-volume-underline = ${colors.color5}
 label-volume = VOL %percentage%%
 label-volume-padding = 1
 
 label-muted = muted
 label-muted-foreground = ${colors.background}
-label-muted-background = ${colors.color11}
+label-muted-background = ${colors.color13}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -172,10 +358,10 @@ format-prefix-foreground = ${colors.background}
 format-prefix-background = ${colors.color5}
 format-prefix = "  "
 format-prefix-padding = 1
-label-layout = " LANG %layout% "
-label-layout-foreground = ${colors.background}
-label-layout-background = ${colors.color13}
-
+label-layout = " LANG %layout%  "
+label-layout-foreground = ${colors.foreground}
+label-layout-background = ${colors.background}
+;label-layout-underline = ${colors.color5}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -189,9 +375,10 @@ format-prefix = "﬙ "
 format-prefix-padding = 1
 format-prefix-foreground = ${colors.background}
 format-prefix-background = ${colors.color4}
-label-foreground = ${colors.background}
-label-background = ${colors.color12}
-label = " RAM %percentage_used:2%% "
+label-foreground = ${colors.foreground}
+label-background = ${colors.background}
+;label-underline = ${colors.color4}
+label = " RAM %percentage_used:2%%  "
 
 [module/cpu]
 type = internal/cpu
@@ -199,10 +386,11 @@ interval = 2
 format-prefix = " "
 format-prefix-padding = 1
 format-prefix-foreground = ${colors.background}
-format-prefix-background = ${colors.color1}
+format-prefix-background = ${colors.color2}
 label-foreground = ${colors.background}
-label-background = ${colors.color9}
-label = " CPU %percentage:2%% "
+label-background = ${colors.color10}
+;label-underline = ${colors.color2}
+label = " CPU %percentage:2%%  "
 
 [network-base]
 type = internal/network
@@ -214,11 +402,15 @@ label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
 [module/wifi]
 type = custom/script
 exec = $HOME/.scripts/network
+;label-underline = ${colors.color3}
 
 [module/mpd]
 type = custom/script
 exec = $HOME/.scripts/mpd
-
+click-left = "mpc toggle"
+click-right = "mpc clear"
+tail = true
+;label-underline = ${colors.color4} 
 
 [module/wlan]
 inherit = network-base
@@ -236,11 +428,12 @@ interval = 1
 format-prefix = " "
 format-prefix-padding = 1
 format-prefix-foreground = ${colors.background}
-format-prefix-background = ${colors.color2}
+format-prefix-background = ${colors.color1}
 label-foreground = ${colors.background}
-label-background = ${colors.color10}
-date = " %H:%M "
-date-alt = " %Y-%m-%d %H:%M:%S "
+label-background = ${colors.color9}
+;label-underline = ${colors.color1}
+date = " %H:%M  "
+date-alt = " %Y-%m-%d %H:%M:%S  "
 
 label = %date%
 

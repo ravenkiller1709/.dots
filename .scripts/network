@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 # icons depend on nerdfonts being installed
 hostname="${HOSTNAME:-${hostname:-$(hostname)}}"
 network() {
 wire="$(ip a | grep 'enp4s0' | grep inet | wc -l)"
-wifi="$(ip a | grep wlan0 | grep inet | wc -l)"
+wifi="$(ip a | grep wlp4s0 | grep inet | wc -l)"
 
 if [ $wire = 1 ]; then 
     echo "%{F#dd1d1f21} %{B#de935f} %{F#1d1f21}%{B#f0c674} $(ifconfig | grep inet | awk 'NR==1 {print $2}')"

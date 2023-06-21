@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #### Unzip music into folders named after zip file and removing the zip file
 
