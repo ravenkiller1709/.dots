@@ -50,7 +50,7 @@ hc keybind $Mod-Return spawn "$HOME/.local/bin/scratchpad"
 hc keybind $Mod-Shift-w spawn qutebrowser
 #hc keybind $Mod-Shift-Return spawn alacritty
 hc keybind $Mod-m spawn emacsclient -c --eval '(mu4e)'
-hc keybind $Mod-Shift-Return spawn emacs
+hc keybind $Mod-Shift-Return spawn emacsclient -c -a 'emacs'
 
 # basic movement in tiling and floating mode
 # focusing clients
