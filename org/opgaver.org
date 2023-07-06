@@ -1,0 +1,30 @@
+* Liste over alle opgaver
+** DONE husk at sende tilbud til FCK
+CLOSED: [2023-07-05 ons 20:32] SCHEDULED: <2023-07-05 ons 11:00>
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2023-07-05 ons 20:32]
+:END:
+** DONE Skrive kontrakt under med Andreas
+CLOSED: [2023-07-05 ons 20:32] SCHEDULED: <2023-07-05 ons 09:00>
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2023-07-05 ons 20:32]
+:END:
+** NEXT Besøge Discovery Jonas Kaptain og Tue Heyn
+SCHEDULED: <2023-07-06 tor 11:00>
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2023-07-05 ons 20:32]
+:END:
+** DONE lave managements rapport
+CLOSED: [2023-07-05 ons 20:32] SCHEDULED: <2023-07-07 fre 15:00>
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2023-07-05 ons 20:32]
+:END:
+** TODO Lave tilbud til TV2 FYN med Michael Kristensen
+SCHEDULED: <2023-07-12 ons 10:00>
+** TODO Spille golf med Christian
+SCHEDULED: <2023-07-08 lør 10:00>
+** TODO Kontakte Jacob Lyngeraa om Axle AI
+SCHEDULED: <2023-08-01 tir 10:00>
+:PROPERTIES:
+:CATEGORY: Arbejde
+:END:
