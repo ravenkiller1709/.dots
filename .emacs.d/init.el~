@@ -508,6 +508,33 @@
 (use-package visual-fill-column
   :hook (org-mode . efs/org-mode-visual-fill))
 
+(setenv "GPG_AGENT_INFO" nil)  ;; use emacs pinentry
+    (setq auth-source-debug t)
+
+    (setq epg-gpg-program "gpg2")  ;; not necessary
+    (require 'epa-file)
+    (epa-file-enable)
+(setq epa-pinentry-mode 'loopback)
+(setq epg-pinentry-mode 'loopback)
+
+    (require 'org-crypt)
+    (org-crypt-use-before-save-magic)
+
+(defun efs/lookup-password (&rest keys)
+  (let ((result (apply #'auth-source-search keys)))
+    (if result
+	(funcall (plist-get (car result) :secret))
+      nil)))
+
+
+  (load "~/.emacs.d/mail.el")
+(require 'mu4e)
+
+(use-package elfeed-webkit
+  :ensure
+  :after elfeed)
+
+(load "~/.emacs.d/orgmode.el")
 
 (use-package magit
   :commands magit-status
@@ -520,13 +547,23 @@
 (use-package forge
   :after magit)
 
+(recentf-mode 1)
+
+  (setq history-length 25)
+  (savehist-mode 1)
+
+;; Global keybindings
+(global-set-key (kbd"C-M-r")'recentf-open-files)
+(global-set-key (kbd"C-M-j")'counsel-switch-buffer)
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(forge magit vterm mu4e-alert nerd-icons-ivy-rich treemacs visual-fill-column which-key use-package org-bullets no-littering ivy-rich ivy-prescient doom-themes doom-modeline counsel all-the-icons)))
+   '(elfeed-webkit sqlite3 forge magit vterm mu4e-alert nerd-icons-ivy-rich treemacs visual-fill-column which-key use-package org-bullets no-littering ivy-rich ivy-prescient doom-themes doom-modeline counsel all-the-icons)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
