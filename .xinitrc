@@ -25,5 +25,4 @@ xset r rate 200 50 &
 #mpd ~/.config/mpd/mpd.conf &
 #~/.config/scripts/bar.sh &
 #while type dwm >/dev/null; do dwm && continue || break; done
-polybar example &
-exec herbstluftwm
+exec awesome

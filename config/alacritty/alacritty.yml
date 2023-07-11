@@ -371,7 +371,7 @@ schemes:
   Nord: &Nord
     # Default colors
     primary:
-      background: '#1d1f21'
+      background: '#0E3642'
       foreground: '#D8DEE9'
 
     # Normal colors
