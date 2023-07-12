@@ -4,3 +4,4 @@ config/mpd/mpdstate
 config/mpd/log
 config/mpd/state
 config/zsh/.zcompdump
+.emacs.d/elpa/
