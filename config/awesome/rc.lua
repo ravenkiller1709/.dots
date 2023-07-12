@@ -108,8 +108,31 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
 
+local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
+local pacman_widget = require("awesome-wm-widgets.pacman-widget.pacman")
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+local myseparator = wibox.widget.textbox(" ")
+local mpdarc_widget = require("awesome-wm-widgets.mpdarc-widget.mpdarc")
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+mytextclock = wibox.widget.textclock()
+-- default
+local cw = calendar_widget()
+-- or customized
+local cw = calendar_widget({
+    theme = 'light',
+    placement = 'top_right',
+    start_sunday = true,
+    radius = 8,
+-- with customized next/previous (see table above)
+    previous_month_button = 1,
+    next_month_button = 3,
+})
+mytextclock:connect_signal("button::press",
+    function(_, _, _, button)
+        if button == 1 then cw.toggle() end
+    end)
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
@@ -195,7 +218,40 @@ awful.screen.connect_for_each_screen(function(s)
         filter  = awful.widget.tasklist.filter.currenttags,
         buttons = tasklist_buttons
     }
+    -- Create the sidebar
+    s.mysidebar = awful.wibar({ position = "left", screen = s })
 
+    -- Add widgets to the sidebar
+    s.mysidebar:setup {
+       layout = wibox.layout.align.vertical,
+       { -- Left widgets
+	  layout = wibox.layout.fixed.vertical,
+	  myseparator,
+       },
+       myseparator, --Middle widget
+       { -- Right widgets
+	  layout = wibox.layout.fixed.vertical,
+	  x20x10,
+	  align = bottom,
+	  spacing = 5,
+	  pacman_widget {
+	     interval = 600,	-- Refresh every 10 minutes
+            popup_bg_color = '#222222',
+            popup_border_width = 1,
+            popup_border_color = '#7e7e7e',
+            popup_height = 10,	-- 10 packages shown in scrollable window
+            popup_width = 300,
+            polkit_agent_path = '/usr/bin/pinentry-gnome3'
+	  },
+	  volume_widget{
+            widget_type = 'arc'
+        },
+	   s.mylayoutbox,
+       },
+	  
+    }
+       
+    
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s })
 
@@ -208,13 +264,15 @@ awful.screen.connect_for_each_screen(function(s)
             s.mytaglist,
             s.mypromptbox,
         },
-        s.mytasklist, -- Middle widget
+	s.mytasklist, -- Middle widget
         { -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
-            wibox.widget.systray(),
-            mytextclock,
-            s.mylayoutbox,
+	   layout = wibox.layout.fixed.horizontal,
+	   mpdarc_widget,
+	   myseparator,
+	   battery_widget(),
+	   mykeyboardlayout,
+           wibox.widget.systray(),
+           mytextclock,
         },
     }
 end)
@@ -316,10 +374,10 @@ globalkeys = gears.table.join(
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey },            "d",     function () awful.spawn("dmenu_run -b") end,
-              {description = "run prompt", group = "launcher"}),
+              {description = "run programlauncher", group = "launcher"}),
 
   awful.key({ modkey },            "w",     function () awful.spawn("firefox") end,
-              {description = "run prompt", group = "launcher"}),
+              {description = "run browser", group = "launcher"}),
 
     awful.key({ modkey }, "x",
               function ()

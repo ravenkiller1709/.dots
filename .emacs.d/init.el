@@ -654,7 +654,7 @@
  '(org-agenda-files
    '("~/.dots/opgaver.org" "/home/kim/org/org.org" "/home/kim/org/gtd/gtd.org" "/home/kim/org/gtd/inbox.org" "/home/kim/org/gtd/tickler.org"))
  '(package-selected-packages
-   '(lua-mode elfeed-webkit sqlite3 forge magit vterm mu4e-alert nerd-icons-ivy-rich treemacs visual-fill-column which-key use-package org-bullets no-littering ivy-rich ivy-prescient doom-themes doom-modeline counsel all-the-icons)))
+   '(lsp-treemacs lsp-ui lsp-mode lsp-ivy lua-mode elfeed-webkit sqlite3 forge magit vterm mu4e-alert nerd-icons-ivy-rich treemacs visual-fill-column which-key use-package org-bullets no-littering ivy-rich ivy-prescient doom-themes doom-modeline counsel all-the-icons)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
