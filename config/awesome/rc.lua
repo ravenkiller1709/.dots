@@ -115,7 +115,10 @@ local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 local myseparator = wibox.widget.textbox(" ")
 local mpdarc_widget = require("awesome-wm-widgets.mpdarc-widget.mpdarc")
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
+local weather_curl_widget = require("awesome-wm-widgets.weather-widget.weather")
+local fs_widget = require("awesome-wm-widgets.fs-widget.fs-widget")
+local email_widget, email_icon = require("email")
 mytextclock = wibox.widget.textclock()
 -- default
 local cw = calendar_widget()
@@ -235,7 +238,7 @@ awful.screen.connect_for_each_screen(function(s)
 	  align = bottom,
 	  spacing = 5,
 	  pacman_widget {
-	     interval = 600,	-- Refresh every 10 minutes
+	    interval = 600,	-- Refresh every 10 minutes
             popup_bg_color = '#222222',
             popup_border_width = 1,
             popup_border_color = '#7e7e7e',
@@ -243,10 +246,29 @@ awful.screen.connect_for_each_screen(function(s)
             popup_width = 300,
             polkit_agent_path = '/usr/bin/pinentry-gnome3'
 	  },
+	  myseparator,
+	  weather_curl_widget({
+             api_key='7534f3ecafae332f987f1cc71ac6da52',
+             coordinates = {55.676098, 12.568337},
+             time_format_12h = false,
+             units = 'metric',
+	     both_units_widget = true,
+             font_name = 'Carter One',
+             icons = 'VitalyGorbachev',
+             icons_extension = '.svg',
+             show_hourly_forecast = true,
+             show_daily_forecast = true,
+	  }),
+	  myseparator,
 	  volume_widget{
-            widget_type = 'arc'
-        },
-	   s.mylayoutbox,
+	     widget_type = 'arc',
+	     device = 'pipewire',
+	     mixer_cmd = 'pavucontrol',
+	     step = '10',
+	  },
+	  myseparator,
+          s.mylayoutbox,
+	  myseparator,
        },
 	  
     }
@@ -259,17 +281,26 @@ awful.screen.connect_for_each_screen(function(s)
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
+	    myseparator,
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
             s.mytaglist,
+	    myseparator,
             s.mypromptbox,
         },
 	s.mytasklist, -- Middle widget
         { -- Right widgets
 	   layout = wibox.layout.fixed.horizontal,
+	   email_icon,
+	   myseparator,
+           email_widget,
+	   myseparator,
+	   fs_widget({ mounts = { '/', '/mnt/sd' } }), -- multiple mounts
+	   myseparator,
 	   mpdarc_widget,
 	   myseparator,
 	   battery_widget(),
+	   myseparator,
 	   mykeyboardlayout,
            wibox.widget.systray(),
            mytextclock,
@@ -309,7 +340,7 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
+    awful.key({ modkey, "Shift"     }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
@@ -332,7 +363,7 @@ globalkeys = gears.table.join(
         end,
         {description = "go back", group = "client"}),
 
-    -- Standard program
+    -- Standard program0
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
@@ -369,11 +400,21 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
 
+    -- Multimediakeys
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -c 0 set Master 1dB+") end),
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -c 0 set Master 1dB-") end),
+    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("amixer -c 0 set Master toggle") end),
+
+
+    -- Volume control
+    awful.key({ modkey }, ")", function() volume_widget:inc(5) end),
+    awful.key({ modkey }, "(", function() volume_widget:dec(5) end),
+    awful.key({ modkey }, "<<", function() volume_widget:toggle() end),
     -- Prompt
     awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
               {description = "run prompt", group = "launcher"}),
 
-    awful.key({ modkey },            "d",     function () awful.spawn("dmenu_run -b") end,
+    awful.key({ modkey },            "d",     function () awful.spawn("rofi -show combi -mode combi -combi-modes 'window,drun,run'") end,
               {description = "run programlauncher", group = "launcher"}),
 
   awful.key({ modkey },            "w",     function () awful.spawn("firefox") end,
