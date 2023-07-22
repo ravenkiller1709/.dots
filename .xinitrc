@@ -4,11 +4,9 @@ xset fp rehash &
 xrdb -load ~/.Xresources &
 dunst &
 setxkbmap dk &
-pulseaudio &
+dropbox &
 dbus-run-session &
 clipmenud &
-dropbox &
-emacs --daemon &
 transmission-daemon &
 nitrogen --restore &
 mpDris2 &
@@ -21,6 +19,7 @@ redshift -l 55.49:12.6 &
 ssh-agent &
 xbacklight -set 90 &
 xset r rate 200 50 &
+picom -f &
 #picom --config ~/.config/picom/config &
 #mpd ~/.config/mpd/mpd.conf &
 #~/.config/scripts/bar.sh &

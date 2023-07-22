@@ -13,8 +13,8 @@ local theme = {}
 
 theme.font          = "MesloLGS Nerd Font 12"
 
-theme.bg_normal     = "#002b36"
-theme.bg_focus      = "#0E3642"
+theme.bg_normal     = "#000000bb"
+theme.bg_focus      = "#0b282a2e"
 theme.bg_urgent     = "#0E3642"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
@@ -97,7 +97,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/home/kim/.baggrunde/pxfuel.jpg"
+theme.wallpaper = "/home/kim/.baggrunde/0059.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"

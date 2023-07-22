@@ -118,7 +118,8 @@ local mpdarc_widget = require("awesome-wm-widgets.mpdarc-widget.mpdarc")
 local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
 local weather_curl_widget = require("awesome-wm-widgets.weather-widget.weather")
 local fs_widget = require("awesome-wm-widgets.fs-widget.fs-widget")
-local email_widget, email_icon = require("email")
+local email_widget = require("email")
+-- local email_icon = require("email.mail")
 mytextclock = wibox.widget.textclock()
 -- default
 local cw = calendar_widget()
@@ -289,7 +290,7 @@ awful.screen.connect_for_each_screen(function(s)
             s.mypromptbox,
         },
 	s.mytasklist, -- Middle widget
-        { -- Right widgets
+        { -- Right wid gets
 	   layout = wibox.layout.fixed.horizontal,
 	   email_icon,
 	   myseparator,
@@ -302,8 +303,11 @@ awful.screen.connect_for_each_screen(function(s)
 	   battery_widget(),
 	   myseparator,
 	   mykeyboardlayout,
-           wibox.widget.systray(),
            mytextclock,
+	   myseparator,
+	   myseparator,
+	   wibox.widget.systray(),
+           myseparator,
         },
     }
 end)
