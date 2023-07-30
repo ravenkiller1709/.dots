@@ -1,10 +1,10 @@
-;; -*- emacs-lisp -*- <23/07/27 17:51:15 /home/kim/.emacs.d/var/tramp/persistency.el>
+;; -*- emacs-lisp -*- <23/07/30 15:26:13 /home/kim/.emacs.d/var/tramp/persistency.el>
 ;; Tramp connection history.  Don't change this file.
 ;; Run `M-x tramp-cleanup-all-connections' instead.
 
 (((tramp-file-name "sudo" "root" nil "Arch" nil nil nil)
   ("null-device" "/dev/null")
-  ("uname" "Linux 6.4.6-arch1-1")
+  ("uname" "Linux 6.4.7-arch1-1")
   ("locale" "LC_ALL=C.UTF-8")
   ("test" "test")
   ("remote-path"
@@ -12,21 +12,4 @@
   ("pipe-buf" 4096)
   ("remote-shell" "/bin/sh")
   ("file-exists" "test -e")
-  ("case-insensitive" nil)
-  ("perl-file-spec" t)
-  ("perl-cwd-realpath" t)
-  ("perl" "\\perl")
-  ("stat" "env QUOTING_STYLE=locale \\stat")
-  ("id" "/bin/id")
-  ("gid-integer" 0)
-  ("readlink" "\\readlink")
-  ("gid-string" "root")
-  ("uid-string" "root")
-  ("uid-integer" 0)
-  ("ln" "\\ln")
-  ("bzr" nil)
-  ("git" "\\git")
-  ("hg" nil)
-  ("tmpdir" "/sudo:root@Arch:/tmp")
-  ("touch-t" t)
-  ("touch" "\\touch")))
+  ("case-insensitive" nil)))

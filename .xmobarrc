@@ -45,7 +45,7 @@
 			, "<bar>"
 			] 60
 		     
-		     , Run Mpris2 "spotify"
+		     , Run Mpris2 "Mocp"
 		        [ "-t"
 		        , "<fc=#95c7ae></fc> <artist> - [<album>] <title>"
 		        ] 10
@@ -60,7 +60,9 @@
 			, "--", "-P", ">>", "-Z", "|", "-S", "><"
 			] 10
                      , Run Swap [] 10
-		     , Run Wireless "wlp4s0"
+		     , Run Com "/home/kim/.local/bin/music.sh" [] "music" 20
+                     , Run Com "/home/kim/.scripts/packages.sh" [] "upd" 360
+                     , Run Wireless "wlp4s0"
 		        [ "-t"
 			, " <ssid> <quality>%"
 			] 10
@@ -69,4 +71,4 @@
                      ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-linux-icon_24.xpm/>%XMonadLog% }{<fc=#8abeb7><icon=battery14.xpm/>%battery%</fc> . <fc=#b294bb><icon=memory14.xpm/>%memory%</fc> . <fc=#f0c674><icon=fa6-envelope-14.xpm/> %mail%</fc> . <fc=#81a2be><icon=wifi-14.xpm/>%wlp4s0wi%</fc> . <fc=#cc6666><icon=sun-rain14.xpm/>%EKCH%</fc> . <fc=#b5bd68><icon=calendar14.xpm/>%date%</fc>"}
+       , template = "<icon=arch-linux-icon_24.xpm/>%XMonadLog% }{<fc=#8abeb7><icon=battery14.xpm/>%battery%</fc> . <fc=#c5c8c6><icon=speaker14.xpm/> %music%</fc> .  <fc=#b294bb><icon=download14.xpm/>%upd%</fc> . <fc=#f0c674><icon=fa6-envelope-14.xpm/> %mail%</fc> . <fc=#81a2be><icon=wifi-14.xpm/>%wlp4s0wi%</fc> . <fc=#cc6666><icon=sun-rain14.xpm/> %EKCH%</fc> . <fc=#b5bd68><icon=calendar14.xpm/>%date%</fc>"}

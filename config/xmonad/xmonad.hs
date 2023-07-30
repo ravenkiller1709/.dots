@@ -103,6 +103,7 @@ myKeys c =
   subKeys "Xmonad Essentials"
   [ ("M-C-r",                  addName "Recompile XMonad"        $ spawn "xmonad --recompile")
   , ("M-S-r",                  addName "Restart XMonad"          $ spawn "xmonad --restart")
+  , ("M-<Space>",              addName "Next layout"             $ sendMessage NextLayout)
   --, ("M-S-q",                addName "Quit XMonad"             $ sequence_ [spawn (mySoundPlayer ++ shutdownSound), io exitSuccess])
   --, ("M-S-q",                addName "Quit XMonad"             $ spawn "dm-logout")
   , ("M-S-c",                  addName "Kill focused window"     $ kill1)
@@ -196,18 +197,18 @@ startupSound  = soundDir ++ "startup-01.mp3"
 shutdownSound = soundDir ++ "shutdown-01.mp3"
 dmenuSound    = soundDir ++ "menu-01.mp3"
 
-myConfig = def
-    { modMask = mod4Mask -- Rebind Mod to Super key
-    , terminal = myTerminal
-    , workspaces = myWorkspaces
-    , layoutHook = showWName' myShowWNameTheme $ myLayout
-    , manageHook = myManageHook
-    , borderWidth = myborderWidth
-    , normalBorderColor = mynormalBorderColor
+myConfig                 = def
+    { modMask            = mod4Mask -- Rebind Mod to Super key
+    , terminal           = myTerminal
+    , workspaces         = myWorkspaces
+    , layoutHook         = showWName' myShowWNameTheme $ myLayout
+    , manageHook         = myManageHook
+    , borderWidth        = myborderWidth
+    , normalBorderColor  = mynormalBorderColor
     , focusedBorderColor = myfocusedBorderColor
     }
 
-myWorkspaces = ["cod", "www", "term", "mus", "vbox", "chat", "vid", "div", "gfx"]
+myWorkspaces = ["dev", "www", "term", "mus", "virt", "chat", "vid", "div", "gfx"]
 
 
 -- Theme for showWName which prints current workspace when you change workspaces.

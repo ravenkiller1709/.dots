@@ -1,4 +1,4 @@
 #!/bin/bash
 # icons depend on nerdfonts being installed
-$pkgs="checkupdates | wc -l"
+pkgs=/usr/bin/checkupdates | wc -l
 echo " $pkgs"

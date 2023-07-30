@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pack=checkupdates | wc -1
+
+echo $pack
