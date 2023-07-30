@@ -106,6 +106,7 @@ myKeys c =
   , ("M-<Space>",              addName "Next layout"             $ sendMessage NextLayout)
   --, ("M-S-q",                addName "Quit XMonad"             $ sequence_ [spawn (mySoundPlayer ++ shutdownSound), io exitSuccess])
   --, ("M-S-q",                addName "Quit XMonad"             $ spawn "dm-logout")
+  , ("M-S-q",                  addName "Shutdown system"         $ spawn "/home/kim/.local/bin/sysact") 
   , ("M-S-c",                  addName "Kill focused window"     $ kill1)
   , ("M-S-a",                  addName "Kill all windows on WS"  $ killAll)
   --, ("M-S-<Return>",         addName "Run prompt"              $ sequence_ [spawn (mySoundPlayer ++ dmenuSound), spawn "~/.local/bin/dm-run"])
@@ -175,7 +176,7 @@ myManageHook = composeAll
     [ className =? "Gimp"      --> doFloat
     , className =? "XTerm"     --> doFloat
     , isDialog                 --> doFloat
-    , className =? "Emacs"     --> doShift "cod"
+    , className =? "Emacs"     --> doShift "dev"
     , className =? "Alacritty" --> doShift "term"
     , className =? "firefox"   --> doShift "www"
     , className =? "kitty"     --> doShift "mus"
