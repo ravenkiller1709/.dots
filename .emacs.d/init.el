@@ -130,7 +130,7 @@
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  (load-theme 'doom-opera t)
+  (load-theme 'doom-material t)
 
   (use-package doom-modeline
   :ensure t
@@ -628,6 +628,14 @@
 (use-package lsp-ivy
   :after lsp)
 
+;; lsp haskell
+(use-package lsp-haskell
+  :after lsp)
+  (add-hook 'haskell-mode-hook #'lsp)
+  (add-hook 'haskell-literate-mode-hook #'lsp)
+  (add-hook 'haskell-mode-hook #'lsp)
+  (add-hook 'haskell-literate-mode-hook #'lsp)
+
 ;; rainbow delimiters
 
 (use-package rainbow-delimiters
@@ -661,7 +669,7 @@
  '(org-agenda-files
    '("~/.dots/opgaver.org" "/home/kim/org/org.org" "/home/kim/org/gtd/gtd.org" "/home/kim/org/gtd/inbox.org" "/home/kim/org/gtd/tickler.org"))
  '(package-selected-packages
-   '(lsp-treemacs lsp-ui lsp-mode lsp-ivy lua-mode elfeed-webkit sqlite3 forge magit vterm mu4e-alert nerd-icons-ivy-rich treemacs visual-fill-column which-key use-package org-bullets no-littering ivy-rich ivy-prescient doom-themes doom-modeline counsel all-the-icons)))
+   '(haskell-snippets haskell-emacs consult-lsp flymake-haskell-multi lsp-haskell multi-vterm lsp-treemacs lsp-ui lsp-mode lsp-ivy lua-mode elfeed-webkit sqlite3 forge magit vterm mu4e-alert nerd-icons-ivy-rich treemacs visual-fill-column which-key use-package org-bullets no-littering ivy-rich ivy-prescient doom-themes doom-modeline counsel all-the-icons)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

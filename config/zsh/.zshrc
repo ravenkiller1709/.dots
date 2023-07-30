@@ -7,7 +7,7 @@
 source ~/.config/zsh/.zprofile
 export EDITOR='emacs'
 export TERMINAL='gnome-terminal'
-export BROWSER='firefox'
+export BROWSER='qutebrowser'
 #export MANPAGER='emacs +Man!'
 export PATH=$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.scripts:$PATH
 export SVDIR=~/.service

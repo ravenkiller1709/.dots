@@ -8,12 +8,13 @@ dropbox &
 dbus-run-session &
 clipmenud &
 transmission-daemon &
-nitrogen --restore &
 mpDris2 &
-#xwallpaper --zoom ~/.local/share/bg &
+#xwallpaper --zoom ~/.baggrunde/Imgur.png &
+nitrogen --restore &
+emacs --daemon &
 #setbg ~/.dots/.baggrunde &
 xsetroot -cursor_name left_ptr &
-/usr/lib/polkit-1/polkit-agent-helper-1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 xfce4-power-manager &
 redshift -l 55.49:12.6 &
 ssh-agent &
@@ -24,4 +25,4 @@ picom -f &
 #mpd ~/.config/mpd/mpd.conf &
 #~/.config/scripts/bar.sh &
 #while type dwm >/dev/null; do dwm && continue || break; done
-exec awesome
+ssh-agent xmonad

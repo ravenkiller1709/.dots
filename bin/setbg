@@ -7,7 +7,7 @@
 #	If wal is installed, also generates a colorscheme.
 
 # Location of link to wallpaper link.
-bgloc="${XDG_DATA_HOME:-$HOME/.dots}/.baggrunde"
+bgloc="${XDG_DATA_HOME:-$HOME/.baggrunde"
 
 # Configuration files of applications that have their themes changed by pywal.
 dunstconf="${XDG_CONFIG_HOME:-$HOME/.config}/dunst/dunstrc"
@@ -29,6 +29,6 @@ else
 	[ -f "$zathuraconf.bak" ] && unlink "$zathuraconf" && mv "$zathuraconf.bak" "$zathuraconf"
 fi
 
-xwallpaper --zoom "$bgloc"
+xwallpaper --zoom "/home/kim/.baggrunde"
 # If running, dwm hit the key to refresh the color scheme.
-pidof herbstluftwm >/dev/null && xdotool key super+F5
+pidof xmonad >/dev/null && xdotool key super+F5
