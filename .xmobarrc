@@ -2,7 +2,7 @@
        , font            = "xft:Inconsolata Nerd Font-12"
        , additionalFonts = ["xft:fontawesome-12"]
        , fgColor  = "#c5c8c6"
-       , bgColor  = "#282a2e"
+       , bgColor  = "#1d1f21"
        , position = TopH 34
        , iconRoot     = ".config/xmonad/xpm/"  -- default: "."
        , commands = [ Run Weather "EKCH"

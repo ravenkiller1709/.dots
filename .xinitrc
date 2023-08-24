@@ -10,7 +10,8 @@ clipmenud &
 transmission-daemon &
 mpDris2 &
 #xwallpaper --zoom ~/.baggrunde/Imgur.png &
-nitrogen --restore &
+feh --bg-scale ~/.baggrunde/0147.jpg &
+#nitrogen --restore &
 emacs --daemon &
 #setbg ~/.dots/.baggrunde &
 xsetroot -cursor_name left_ptr &

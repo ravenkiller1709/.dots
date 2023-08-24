@@ -23,6 +23,7 @@ import System.IO (hClose, hPutStr, hPutStrLn)
 import XMonad.Layout.Magnifier
 import XMonad.Layout.ShowWName
 import XMonad.Layout.ThreeColumns
+import XMonad.Layout.Spacing
 
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.DynamicLog
@@ -51,7 +52,7 @@ myScratchPads = [ NS "terminal" spawnTerm findTerm manageTerm
                 , NS "calculator" spawnCalc findCalc manageCalc
                 ]
   where
-    spawnTerm  = myTerminal ++ " -t scratchpad"
+    spawnTerm  = myTerminal3 ++ " -t scratchpad"
     findTerm   = title =? "scratchpad"
     manageTerm = customFloating $ W.RationalRect l t w h
                where
@@ -79,6 +80,7 @@ myScratchPads = [ NS "terminal" spawnTerm findTerm manageTerm
 
 myTerminal = "alacritty"
 myTerminal2 = "kitty"
+myTerminal3 = "st"
 mySoundPlayer :: String
 mySoundPlayer = "ffplay -nodisp -autoexit " -- The program that will play system sounds
 
@@ -147,7 +149,7 @@ myKeys c =
   , ("<XF86AudioMute>",        addName "mute sound"       $ spawn "amixer -q sset Master toggle")
   , ("M-p",                    addName "launch eMail"     $ spawn "alacritty -e neomutt")
   , ("M-d",                    addName "App Launcher"     $ spawn "dmenu_run -b")
-  , ("M-m",                    addName "Music Player"     $ spawn "xterm -fs 14 -geometry 80x24+600+300 -e mocp")
+  , ("M-m",                    addName "Music Player"     $ spawn "st -fs 14 -geometry 80x24+600+300 -e mocp")
   ]
 
  -- Toggle
@@ -156,10 +158,10 @@ myKeys c =
   -- Toggle them to hide and it sends them back to hidden workspace (NSP).
   ^++^ subKeys "Scratchpads"
   [ ("M-a t",                  addName "Toggle scratchpad terminal            "       $ namedScratchpadAction myScratchPads "terminal")
-  , ("M-a m",                  addName "Toggle scratchpad mocp                "       $ namedScratchpadAction myScratchPads "mocp")
+  , ("M-a m",                  addName "Toggle scratchpad mocp                 "       $ namedScratchpadAction myScratchPads "mocp")
   , ("M-<Escape>",             addName "Toggle scratchpad calculator          "       $ namedScratchpadAction myScratchPads "calculator")]
 
-  -- Controls for mocp music player daemon (SUPER-u followed by a key)
+  -- Controls for mpd music player daemon (SUPER-u followed by a key)
   ^++^ subKeys "Mocp music player"
   [ ("M-u p",                  addName "mocp play"                    $ spawn "mocp --play")
   , ("M-u l",                  addName "mocp next"                    $ spawn "mocp --next")
@@ -183,7 +185,7 @@ myManageHook = composeAll
     ]<+> namedScratchpadManageHook myScratchPads
 
     
-myLayout = tiled ||| Mirror tiled ||| Full ||| threeCol
+myLayout = spacingWithEdge 5 $ Tall 1 (3/100) (1/2) ||| tiled ||| Mirror tiled ||| Full ||| threeCol
   where
     threeCol = magnifiercz' 1.3 $ ThreeColMid nmaster delta ratio
     tiled    = Tall nmaster delta ratio

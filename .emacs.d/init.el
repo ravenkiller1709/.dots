@@ -273,9 +273,9 @@
 (setq doom-modeline-modal-icon t)
 
 ;; Whether display the mu4e notifications. It requires `mu4e-alert' package.
-(setq doom-modeline-mu4e nil)
+;;(setq doom-modeline-mu4e nil)
 ;; also enable the start of mu4e-alert
-(mu4e-alert-enable-mode-line-display)
+;;(mu4e-alert-enable-mode-line-display)
 
 ;; Whether display the gnus notifications.
 (setq doom-modeline-gnus t)
@@ -325,7 +325,7 @@
 
 ;; By default, almost all segments are displayed only in the active window. To
 ;; display such segments in all windows, specify e.g.
-(setq doom-modeline-always-visible-segments '(mu4e irc))
+;;(setq doom-modeline-always-visible-segments '(mu4e irc))
 
 ;; Hooks that run before/after the modeline version string is updated
 (setq doom-modeline-before-update-env-hook nil)
@@ -534,8 +534,8 @@
       nil)))
 
 
-  (load "~/.emacs.d/mail.el")
-(require 'mu4e)
+;;  (load "~/.emacs.d/mail.el")
+;;(require 'mu4e)
 
 (use-package elfeed-webkit
   :ensure
@@ -669,7 +669,7 @@
  '(org-agenda-files
    '("~/.dots/opgaver.org" "/home/kim/org/org.org" "/home/kim/org/gtd/gtd.org" "/home/kim/org/gtd/inbox.org" "/home/kim/org/gtd/tickler.org"))
  '(package-selected-packages
-   '(haskell-snippets haskell-emacs consult-lsp flymake-haskell-multi lsp-haskell multi-vterm lsp-treemacs lsp-ui lsp-mode lsp-ivy lua-mode elfeed-webkit sqlite3 forge magit vterm mu4e-alert nerd-icons-ivy-rich treemacs visual-fill-column which-key use-package org-bullets no-littering ivy-rich ivy-prescient doom-themes doom-modeline counsel all-the-icons)))
+   '(haskell-tab-indent haskell-mode haskell-snippets haskell-emacs consult-lsp flymake-haskell-multi lsp-haskell multi-vterm lsp-treemacs lsp-ui lsp-mode lsp-ivy lua-mode elfeed-webkit sqlite3 forge magit vterm mu4e-alert nerd-icons-ivy-rich treemacs visual-fill-column which-key use-package org-bullets no-littering ivy-rich ivy-prescient doom-themes doom-modeline counsel all-the-icons)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
