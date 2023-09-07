@@ -5,7 +5,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
+    "modules-left": ["hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": ["clock"],
     "modules-right": ["mpris", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "tray"],
     // Modules configuration
@@ -18,7 +18,7 @@
     "on-scroll-down": "hyprctl dispatch workspace e-1",
   },
 
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
          "disable-scroll": false,
          "all-outputs": true,
          "on-click": "activate",
@@ -60,16 +60,16 @@
         "tooltip-format": "{app}: {title}"
     },
 		"mpris": {
-				"format": "DEFAULT: {player_icon} {dynamic}",
-				"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
+				"format": "Playing: {player_icon} {dynamic}",
+				"format-paused": "Playing: {status_icon} <i>{dynamic}</i>",
 				"player-icons": {
-				"default": "▶",
+				"MPD": "▶",
 				"mpv": "🎵"
 				},
 				"status-icons": {
 				"paused": "⏸"
 				},
-				// "ignored-players": ["firefox"]
+				"ignored-players": ["firefox"]
 		},
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
