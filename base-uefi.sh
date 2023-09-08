@@ -40,7 +40,7 @@ systemctl enable libvirtd
 systemctl enable firewalld
 systemctl enable acpid
 
-useradd -m kim
+useradd -mG wheel kim
 echo kim:password | chpasswd
 usermod -aG libvirt kim
 
