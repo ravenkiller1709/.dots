@@ -6,6 +6,8 @@ sed -i '123s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=da_DK.UTF-8" >> /etc/locale.conf
 echo "KEYMAP=dk-latin1" >> /etc/vconsole.conf
+echo "FONT=ter-i28b" >> /etc/vconsole.conf
+echo "FONT_MAP=8859-2" >> /etc/vconsole.conf
 echo "Arch" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
@@ -15,7 +17,7 @@ echo root:password | chpasswd
 # You can add xorg to the installation packages, I usually add it at the DE or WM install script
 # You can remove the tlp package if you are installing on a desktop or vm
 
-pacman -S grub grub-btrfs efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector base-devel linux-headers avahi xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups hplip alsa-utils pulseaudio pulseaudio-alsa pulseaudio-bluetooth bluez bluez-utils bash-completion openssh rsync reflector acpi acpi_call tlp virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat ipset ebtables iptables firewalld flatpak sof-firmware nss-mdns acpid os-prober ntfs-3g terminus-font xf86-video-intel xorg xorg-apps xorg-xinit xorg-server feh dunst calibre zsh zsh-autosuggestions zsh-syntax-highlighting fish alacritty
+pacman -S grub grub-btrfs efibootmgr networkmanager network-manager-applet dialog wpa_supplicant terminus-font mtools dosfstools reflector base-devel linux-headers avahi xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups hplip alsa-utils pipewire pipewire-alsa pipewire-pulse bluez bluez-utils bash-completion openssh rsync reflector acpi acpi_call tlp virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat ipset ebtables iptables firewalld flatpak sof-firmware nss-mdns acpid os-prober ntfs-3g terminus-font xf86-video-intel xorg xorg-apps xorg-xinit xorg-server feh dunst calibre zsh zsh-autosuggestions zsh-syntax-highlighting alacritty kitty xmonad xmonad-contrib xmobar
 
 #Intel graphics
 pacman -S --noconfirm intel-media-driver intel-gpu-tools
