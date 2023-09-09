@@ -143,7 +143,7 @@ myKeys c =
   , ("M-S-s",                  addName "screenshot"       $ spawn "scrot -s")
   , ("M-f",                    addName "Launch Browser"   $ spawn "firefox")
   , ("M-<Return>",             addName "launch Terminal"  $ spawn "alacritty")
-  , ("M-S-<Return>",           addName "launch emacs"     $ spawn "emacsclient -c -a 'emacs'")
+  , ("M-S-<Return>",           addName "launch config"    $ spawn "st -e nvim ~/.config/xmonad/xmonad.hs")
   , ("<XF86AudioRaiseVolume>", addName "Volume up"        $ spawn "amixer -q sset Master 5%+")
   , ("<XF86AudioLowerVolume>", addName "Volume down"      $ spawn "amixer -q sset Master 5%-")
   , ("<XF86AudioMute>",        addName "mute sound"       $ spawn "amixer -q sset Master toggle")

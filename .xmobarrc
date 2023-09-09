@@ -1,6 +1,6 @@
 	Config { overrideRedirect = False
-       , font            = "xft:Inconsolata Nerd Font-12"
-       , additionalFonts = ["xft:fontawesome-12"]
+       , font            = "xft:Inconsolata Nerd Font-18"
+       , additionalFonts = ["xft:fontawesome-18"]
        , fgColor  = "#c5c8c6"
        , bgColor  = "#1d1f21"
        , position = TopH 34
@@ -62,7 +62,7 @@
                      , Run Swap [] 10
 		     , Run Com "/home/kim/.local/bin/music.sh" [] "music" 20
                      , Run Com "/home/kim/.scripts/packages.sh" [] "upd" 360
-                     , Run Wireless "wlp4s0"
+                     , Run Wireless "wlp2s0"
 		        [ "-t"
 			, " <ssid> <quality>%"
 			] 10
@@ -71,4 +71,4 @@
                      ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-linux-icon_24.xpm/>%XMonadLog% }{<fc=#8abeb7><icon=battery14.xpm/>%battery%</fc> . <fc=#c5c8c6><icon=speaker14.xpm/> %music%</fc> .  <fc=#b294bb><icon=download14.xpm/>%upd%</fc> . <fc=#f0c674><icon=fa6-envelope-14.xpm/> %mail%</fc> . <fc=#81a2be><icon=wifi-14.xpm/>%wlp4s0wi%</fc> . <fc=#cc6666><icon=sun-rain14.xpm/> %EKCH%</fc> . <fc=#b5bd68><icon=calendar14.xpm/>%date%</fc>"}
+       , template = "<icon=arch-linux-icon_24.xpm/>%XMonadLog% }{<fc=#8abeb7><icon=battery14.xpm/>%battery%</fc> . <fc=#c5c8c6><icon=speaker14.xpm/> %music%</fc> .  <fc=#b294bb><icon=download14.xpm/>%upd%</fc> . <fc=#f0c674><icon=fa6-envelope-14.xpm/> %mail%</fc> . <fc=#81a2be><icon=wifi-14.xpm/>%wlp2s0wi%</fc> . <fc=#cc6666><icon=sun-rain14.xpm/> %EKCH%</fc> . <fc=#b5bd68><icon=calendar14.xpm/>%date%</fc>"}
