@@ -1,7 +1,7 @@
 #!/bin/sh
 xset +fp /home/kim/.local/share/fonts &
 xset fp rehash &
-xrdb -load ~/.Xresources &
+xrdb -merge ~/.Xresources &
 dunst &
 setxkbmap dk &
 dropbox &
@@ -12,7 +12,7 @@ mpDris2 &
 #xwallpaper --zoom ~/.baggrunde/Imgur.png &
 feh --bg-scale ~/.baggrunde/0147.jpg &
 #nitrogen --restore &
-#emacs --daemon &
+emacs --daemon &
 #setbg ~/.dots/.baggrunde &
 xsetroot -cursor_name left_ptr &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -26,4 +26,4 @@ picom -f &
 #mpd ~/.config/mpd/mpd.conf &
 #~/.config/scripts/bar.sh &
 #while type dwm >/dev/null; do dwm && continue || break; done
-exec xmonad
+qtile start

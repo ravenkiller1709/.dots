@@ -1,16 +1,30 @@
-from libqtile.config import Group, ScratchPad, DropDown, Key, KeyChord
-from libqtile.command import lazy
+import os
+import re
+import socket
+import subprocess
+import psutil
+import json
+
+from libqtile import qtile
+from typing import List  
 from libqtile import bar, layout, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
-from typing import List
+from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown, KeyChord
+from libqtile.lazy import lazy
+from libqtile.utils import guess_terminal
+from libqtile.widget import Spacer, Backlight
+from libqtile.widget.image import Image
+from libqtile.dgroups import simple_key_binder
+from pathlib import Path
+
 # import layout objects
 from libqtile.layout.columns import Columns
 from libqtile.layout.xmonad import MonadTall
 from libqtile.layout.stack import Stack
 from libqtile.layout.floating import Floating
 
-from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
+from qtile_extras import widget
+from qtile_extras.widget.decorations import RectDecoration
+
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -52,14 +66,15 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod], "w", lazy.spawn('firefox'), desc="Launch browser"),
-    Key([mod], "d", lazy.spawn('dmenu_run -b'), desc="Launcher"),
+    Key([mod], "w", lazy.spawn('brave-nightly'), desc="Launch browser"),
+    Key([mod], "d", lazy.spawn('rofi -modes combi,window -show combi -combi-modes run,drun -show-icons'), desc="Launcher"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([mod], "x", lazy.spawn('wlogout'), desc="Launch exit menu"),
     # toggle visibiliy of above defined DropDown named "term"
 
     KeyChord([mod], "e", [
@@ -70,18 +85,24 @@ keys = [
         Key([], "t", lazy.spawn('emacsclient -c -a "emacs" --eval "(vterm/here nil)"')),
         Key([], "s", lazy.spawn('emacsclient -c -a "emacs" --eval "(eshell)"')),
         Key([], "b", lazy.spawn('emacsclient -c -a "emacs" --eval "(ibuffer)"')),
+        ]),
+
+    KeyChord([mod], "a", [
+        Key([], "s", lazy.spawn('wallpaper.sh')),
+        Key([], "d", lazy.spawn('updatewal.sh')),
+        Key([], "m", lazy.spawn('kitty -e ncmpcpp')),
+        Key([], "p", lazy.spawn('kitty -e neomutt'))
         ])
 ]
-
 
 groups = [
     Group('1', label='一', matches=[Match(wm_class='firefox')], layout='max'),
     Group('2', label='二', matches=[Match(wm_class='Alacritty')], layout='tile'),
     Group('3', label='三', matches=[Match(wm_class='Emacs')], layout='max'),
-    Group('4', label='四', layout='monadtall'),
+    Group('4', label='四', layout='monadWide'),
     Group('5', label='五', layout='monadtall'),
     Group('6', label='六', layout='monadtall'),
-    Group('7', label='七', layout='monadtall'),
+    Group('7', label='七', layout='RatioTile'),
     Group('8', label='八', layout='monadtall'),
     Group('9', label='九', layout='monadtall'),
 ]
@@ -111,7 +132,7 @@ for i in groups:
     )
 # Append scratchpad with dropdowns to groups
 groups.append(ScratchPad('scratchpad', [
-    DropDown('term', 'st', width=0.4, height=0.5, x=0.3, y=0.1
+    DropDown('term', 'kitty', width=0.4, height=0.5, x=0.3, y=0.1
 , opacity=1),
     DropDown('mixer', 'pavucontrol', width=0.4,
              height=0.6, x=0.3, y=0.1, opacity=1),
@@ -127,28 +148,69 @@ keys.extend([
     Key(["control"], "4", lazy.group['scratchpad'].dropdown_toggle('bitwarden')),
 ])
 
+# --------------------------------------------------------
+# Pywal Colors
+# --------------------------------------------------------
+
+colors = os.path.expanduser('~/.cache/wal/colors.json')
+colordict = json.load(open(colors))
+ColorZ=(colordict['colors']['color0'])
+ColorA=(colordict['colors']['color1'])
+ColorB=(colordict['colors']['color2'])
+ColorC=(colordict['colors']['color3'])
+ColorD=(colordict['colors']['color4'])
+ColorE=(colordict['colors']['color5'])
+ColorF=(colordict['colors']['color6'])
+ColorG=(colordict['colors']['color7'])
+ColorH=(colordict['colors']['color8'])
+ColorI=(colordict['colors']['color9'])
+
+
+# --------------------------------------------------------
+# Setup Layout Theme
+# --------------------------------------------------------
+
+layout_theme = { 
+    "border_width": 3,
+    "margin": 15,
+    "border_focus": "FFFFFF",
+    "border_normal": "1d1f21",
+    "single_border_width": 3
+}
+
+#---------------------------------------------------------
+# Layouts
+#---------------------------------------------------------
+
 layouts = [
-    layout.Columns(border_focus_stack=["#c5c8c6", "#1d1f21"], border_width=4),
-    layout.Max(),
+    #layout.Columns(border_focus_stack=["#c5c8c6", "#1d1f21"], border_width=4),
+    layout.Max(**layout_theme),
     # Try more layouts by unleashing below layouts.
-    # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
-    # layout.Matrix(),
-    layout.MonadTall(),
-    # layout.MonadWide(),
-    # layout.RatioTile(),
-    layout.Tile(),
-    # layout.TreeTab(),
-    # layout.VerticalTile(),
-    # layout.Zoomy(),
+    #layout.Stack(num_stacks=2),
+    layout.Bsp(**layout_theme),
+    layout.Matrix(**layout_theme),
+    layout.MonadTall(**layout_theme),
+    layout.MonadWide(**layout_theme),
+    layout.RatioTile(**layout_theme),
+    layout.Tile(**layout_theme),
+    layout.TreeTab(**layout_theme),
+    layout.VerticalTile(**layout_theme),
+    layout.Zoomy(**layout_theme),
 ]
 
 widget_defaults = dict(
-    font="RobotoMono NerdFont",
-    fontsize=16,
+    font="TerminessTTF NerdFont",
+    fontsize=26,
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
+
+decoration_group = {
+    "decorations": [
+        RectDecoration(colour="3C4F62", radius=20, filled=True, padding_y=5, group=True),
+    ],
+    "padding": 15,
+}
 
 screens = [
     Screen(
@@ -157,15 +219,26 @@ screens = [
                 widget.Image(
                     filename='/home/kim/.baggrunde/arch.png',
                 ),
+                widget.Spacer(
+                    length=50
+                ),
                 widget.GroupBox(
-                    active='c5c8c6',
-                    inactive='c5c8c6',
-                    background='232c31',
+                    active='#cccccc',
+                    inactive='#dddddd',
+                    background="2D3D4C",
                     highlight_method='line',
-                    block_highlight_text_color='b5d8f6',
-                    highlight_color='b02f30',
-                    padding=6,
+                    block_highlight_text_color="#c5c8c6",
+                    highlight_color="2D3D4C",
+                    padding=10,
                     margin_x=6,
+                    decorations=[
+                        RectDecoration(
+                            colour="#3C4F62",
+                            radius=20,
+                            filled=True,
+                            padding_y=5,
+                            group=True),
+                        ],
                 ),
                 widget.Spacer(
                     length=50
@@ -174,92 +247,75 @@ screens = [
                 widget.WindowName(),
                 widget.Chord(
                     chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
+                        "launch": (ColorZ, ColorI),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.CheckUpdates(
-                    custom_command='checkupdates',
-                    execute='st -e ~/.local/bin/statusbar/popupgrade',
-                ),
                 widget.Mpd2(
-                    foreground='95aec7',
-                    background='232c31',
-                    idle_message='\uF001 ',
+                    foreground='#c5c8c6',
+                    background="2D3D4C",
+                    idle_message='\uF001',
+                    **decoration_group
                 ),
-                widget.Sep(
-                    linewidth=5,
-                    foreground='373b41',
-                    background='232c31',
+                widget.Spacer(
+                    length=25
                 ),
+                
                 widget.Battery(
-                    battery=1,
+                    battery=0,
                     discharge_char='\uf241',
                     charge_char='\uf1E6',
                     format='{char} {percent: 2.0%}',
-                    foreground='b5d8f6',
-                    background='232c31',
-                    low_foreground='cc6666',
+                    foreground='#c5c8c6',
+                    background="2D3D4C",
                     update_interval=30,
+                    **decoration_group
                 ),
-                widget.Battery(
-                    battery=0,
-                    format='{percent: 2.0%}',
-                    foreground='484d79',
-                    background='232c31',
-                    low_foreground='cc6666',
-                    #notify_below='Low Battery - Charge Now!',
-                    update_interval=30,
-                ),
-                widget.Sep(
-                    linewidth=5,
-                    foreground='232c31',
-                    background='232c31',
-                ),
-                widget.NetGraph(
-                    graph_color='a03b1e',
-                    border_color='c5c8c6',
-                    fill_color='a03b1e',
-                ),
-                widget.CPUGraph(
-                    graph_color='237986',
-                    border_color='c5c8c6',
-                    fill_color='237986',
+                widget.Net(
+                    interface='wlp2s0',
+                    foreground='#c5c8c6',
+                    background="2D3D4C",
+                    **decoration_group
                 ),
                 widget.Spacer(
-                    length=3
+                    length=25
                 ),
-                widget.Systray(),
                 widget.Clock(
                     format=" \uF073  %a %H:%M %p",
-                    foreground='c59820',
+                    foreground='#c5c8c6',
+                    **decoration_group
                 ),
                 widget.OpenWeather(
                     location='Vordingborg,Denmark',
-                    format='{icon} {main_temp}°{units_temperature} ',
+                    format=' {main_temp}°{units_temperature} ',
                     font="weather icons",
-                    foreground='95aec7',
+                    foreground='#c5c8c6',
+                    **decoration_group
+                ),
+                widget.Spacer(
+                    length=25
                 ),
                 widget.QuickExit(
                     default_text='\uF706',
-                    foreground='b5bd68',
+                    foreground=ColorE,
                 ),
                 widget.Spacer(
-                    length=10
+                    length=25
                 ),
                 widget.PulseVolume(
                     emoji=True,
-                    foreground='f0c674',
+                    foreground=ColorE,
                 ),
             ],
-            background="#232c31",
+            background="2D3D4C",
             foreground="#ffffff",
             foreground_inactive="#ffffff",
             margin=0,
+            padding=10,
             border_width=5,
-            border_color='#232c31',
+            border_color="#2D3D4C",
             opacity=1,
-            size=24,
+            size=45,
             # border_width=[2, 0, 2, 0],  # Draw top and bott#m borders
             # border_color=["2e3440", "2e3440", "2e3440", "2e#440"]  # Borders are magenta
         ),
