@@ -61,4 +61,4 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # enabling vim mode
 bindkey -e
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-neofetch
+

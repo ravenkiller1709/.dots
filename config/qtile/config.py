@@ -25,7 +25,6 @@ from libqtile.layout.floating import Floating
 from qtile_extras import widget
 from qtile_extras.widget.decorations import RectDecoration
 
-
 mod = "mod4"
 terminal = guess_terminal()
 keys = [
@@ -66,7 +65,7 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod], "w", lazy.spawn('brave-nightly'), desc="Launch browser"),
+    Key([mod], "w", lazy.spawn('firefox'), desc="Launch browser"),
     Key([mod], "d", lazy.spawn('rofi -modes combi,window -show combi -combi-modes run,drun -show-icons'), desc="Launcher"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
@@ -74,7 +73,7 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    Key([mod], "x", lazy.spawn('wlogout'), desc="Launch exit menu"),
+    Key([mod], "x", lazy.spawn('oblogout'), desc="Launch exit menu"),
     # toggle visibiliy of above defined DropDown named "term"
 
     KeyChord([mod], "e", [
@@ -88,12 +87,14 @@ keys = [
         ]),
 
     KeyChord([mod], "a", [
-        Key([], "s", lazy.spawn('wallpaper.sh')),
-        Key([], "d", lazy.spawn('updatewal.sh')),
+        Key([], "s", lazy.spawn('baggrund.sh')),
+        Key([], "d", lazy.spawn('baggrund.sh')),
         Key([], "m", lazy.spawn('kitty -e ncmpcpp')),
-        Key([], "p", lazy.spawn('kitty -e neomutt'))
+        Key([], "p", lazy.spawn('kitty -e neomutt')),
+        Key([], "k", lazy.spawn('kitty'))
         ])
 ]
+
 
 groups = [
     Group('1', label='一', matches=[Match(wm_class='firefox')], layout='max'),
@@ -147,7 +148,7 @@ keys.extend([
     Key(["control"], "3", lazy.group['scratchpad'].dropdown_toggle('pomo')),
     Key(["control"], "4", lazy.group['scratchpad'].dropdown_toggle('bitwarden')),
 ])
-
+ 
 # --------------------------------------------------------
 # Pywal Colors
 # --------------------------------------------------------
@@ -200,14 +201,14 @@ layouts = [
 
 widget_defaults = dict(
     font="TerminessTTF NerdFont",
-    fontsize=26,
-    padding=3,
+    fontsize=15,
+    padding=8,
 )
 extension_defaults = widget_defaults.copy()
 
 decoration_group = {
     "decorations": [
-        RectDecoration(colour="3C4F62", radius=20, filled=True, padding_y=5, group=True),
+        RectDecoration(colour="#373B41", radius=12, filled=True, padding_y=1, group=True),
     ],
     "padding": 15,
 }
@@ -220,23 +221,23 @@ screens = [
                     filename='/home/kim/.baggrunde/arch.png',
                 ),
                 widget.Spacer(
-                    length=50
+                    length=30
                 ),
                 widget.GroupBox(
                     active='#cccccc',
                     inactive='#dddddd',
-                    background="2D3D4C",
+                    background="#282A2E",
                     highlight_method='line',
                     block_highlight_text_color="#c5c8c6",
                     highlight_color="2D3D4C",
-                    padding=10,
-                    margin_x=6,
+                    padding=6,
+                    margin_x=10,
                     decorations=[
                         RectDecoration(
-                            colour="#3C4F62",
-                            radius=20,
+                            colour="#373B41",
+                            radius=12,
                             filled=True,
-                            padding_y=5,
+                            padding_y=1,
                             group=True),
                         ],
                 ),
@@ -253,7 +254,7 @@ screens = [
                 ),
                 widget.Mpd2(
                     foreground='#c5c8c6',
-                    background="2D3D4C",
+                    background="282A2E",
                     idle_message='\uF001',
                     **decoration_group
                 ),
@@ -267,7 +268,7 @@ screens = [
                     charge_char='\uf1E6',
                     format='{char} {percent: 2.0%}',
                     foreground='#c5c8c6',
-                    background="2D3D4C",
+                    background="#282A2E",
                     update_interval=30,
                     **decoration_group
                 ),
@@ -302,20 +303,20 @@ screens = [
                 widget.Spacer(
                     length=25
                 ),
-                widget.PulseVolume(
+                widget.Volume(
                     emoji=True,
                     foreground=ColorE,
                 ),
             ],
-            background="2D3D4C",
+            background="#282A2E",
             foreground="#ffffff",
             foreground_inactive="#ffffff",
             margin=0,
             padding=10,
-            border_width=5,
-            border_color="#2D3D4C",
+            border_width=4,
+            border_color="#282A2E",
             opacity=1,
-            size=45,
+            size=28,
             # border_width=[2, 0, 2, 0],  # Draw top and bott#m borders
             # border_color=["2e3440", "2e3440", "2e3440", "2e#440"]  # Borders are magenta
         ),
@@ -334,6 +335,7 @@ dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
 follow_mouse_focus = True
 bring_front_click = False
+floats_kept_above = True
 cursor_warp = False
 floating_layout = layout.Floating(
     float_rules=[

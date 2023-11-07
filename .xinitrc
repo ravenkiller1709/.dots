@@ -10,7 +10,7 @@ clipmenud &
 transmission-daemon &
 mpDris2 &
 #xwallpaper --zoom ~/.baggrunde/Imgur.png &
-feh --bg-scale ~/.baggrunde/0147.jpg &
+feh --bg-scale --randomize ~/.baggrunde &
 #nitrogen --restore &
 emacs --daemon &
 #setbg ~/.dots/.baggrunde &

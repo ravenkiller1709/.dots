@@ -147,7 +147,7 @@ keys.extend([
     Key(["control"], "3", lazy.group['scratchpad'].dropdown_toggle('pomo')),
     Key(["control"], "4", lazy.group['scratchpad'].dropdown_toggle('bitwarden')),
 ])
-
+ 
 # --------------------------------------------------------
 # Pywal Colors
 # --------------------------------------------------------
@@ -174,7 +174,7 @@ layout_theme = {
     "border_width": 3,
     "margin": 15,
     "border_focus": "FFFFFF",
-    "border_normal": ColorC,
+    "border_normal": "1d1f21",
     "single_border_width": 3
 }
 
@@ -207,7 +207,7 @@ extension_defaults = widget_defaults.copy()
 
 decoration_group = {
     "decorations": [
-        RectDecoration(colour=ColorE, radius=20, filled=True, padding_y=5, group=True),
+        RectDecoration(colour="3C4F62", radius=20, filled=True, padding_y=5, group=True),
     ],
     "padding": 15,
 }
@@ -223,17 +223,17 @@ screens = [
                     length=50
                 ),
                 widget.GroupBox(
-                    active='000000',
-                    inactive='#1d1f21',
-                    background=ColorZ,
+                    active='#cccccc',
+                    inactive='#dddddd',
+                    background="2D3D4C",
                     highlight_method='line',
-                    block_highlight_text_color=ColorE,
-                    highlight_color=ColorZ,
+                    block_highlight_text_color="#c5c8c6",
+                    highlight_color="2D3D4C",
                     padding=10,
                     margin_x=6,
                     decorations=[
                         RectDecoration(
-                            colour=ColorE,
+                            colour="#3C4F62",
                             radius=20,
                             filled=True,
                             padding_y=5,
@@ -252,8 +252,8 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Mpd2(
-                    foreground='#1d1f21',
-                    background=ColorZ,
+                    foreground='#c5c8c6',
+                    background="2D3D4C",
                     idle_message='\uF001',
                     **decoration_group
                 ),
@@ -266,15 +266,15 @@ screens = [
                     discharge_char='\uf241',
                     charge_char='\uf1E6',
                     format='{char} {percent: 2.0%}',
-                    foreground='#1d1f21',
-                    background=ColorZ,
+                    foreground='#c5c8c6',
+                    background="2D3D4C",
                     update_interval=30,
                     **decoration_group
                 ),
                 widget.Net(
                     interface='wlp2s0',
-                    foreground='#1d1f21',
-                    background=ColorZ,
+                    foreground='#c5c8c6',
+                    background="2D3D4C",
                     **decoration_group
                 ),
                 widget.Spacer(
@@ -282,14 +282,14 @@ screens = [
                 ),
                 widget.Clock(
                     format=" \uF073  %a %H:%M %p",
-                    foreground='#1d1f21',
+                    foreground='#c5c8c6',
                     **decoration_group
                 ),
                 widget.OpenWeather(
                     location='Vordingborg,Denmark',
                     format=' {main_temp}°{units_temperature} ',
                     font="weather icons",
-                    foreground='#1d1f21',
+                    foreground='#c5c8c6',
                     **decoration_group
                 ),
                 widget.Spacer(
@@ -307,13 +307,13 @@ screens = [
                     foreground=ColorE,
                 ),
             ],
-            background=ColorZ,
+            background="2D3D4C",
             foreground="#ffffff",
             foreground_inactive="#ffffff",
             margin=0,
             padding=10,
             border_width=5,
-            border_color=ColorZ,
+            border_color="#2D3D4C",
             opacity=1,
             size=45,
             # border_width=[2, 0, 2, 0],  # Draw top and bott#m borders
