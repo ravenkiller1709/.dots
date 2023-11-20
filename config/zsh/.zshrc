@@ -6,8 +6,8 @@
 
 source ~/.config/zsh/.zprofile
 export EDITOR='emacs'
-export TERMINAL='gnome-terminal'
-export BROWSER='qutebrowser'
+export TERMINAL='kitty'
+export BROWSER='firefox'
 #export MANPAGER='emacs +Man!'
 export PATH=$HOME/.local/bin:$HOME/.local/bin/statusbar:$HOME/.scripts:$PATH
 export SVDIR=~/.service
@@ -54,9 +54,7 @@ bindkey '^[\' ncmpcppShow
 
 source /home/kim/.config/shell/aliasrc
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
 
 # enabling vim mode
 bindkey -e
