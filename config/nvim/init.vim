@@ -79,7 +79,7 @@ set nolist            " list disables linebreak
 set autoindent
 set linebreak
 set nocompatible
-
+set clipboard=unnamed
 
 " NERDTree key bindings
 nnoremap <leader>n :NERDTreeFocus<CR>

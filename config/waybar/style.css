@@ -1,12 +1,12 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: fontawesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 10px;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.3);
-    border-bottom: 3px transparent;
+    background-color: rgba(51, 55, 65, 0.4);
+    border-bottom: 3px solid rgba(31, 33, 35, 0);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -26,7 +26,7 @@ window#waybar.solo {
 */
 
 window#waybar.termite {
-    background-color: transparent;
+    background-color: #3F3F3F;
 }
 
 window#waybar.chromium {
@@ -36,10 +36,12 @@ window#waybar.chromium {
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
+    box-shadow: inset -1px 1px #c5c8c6;
     /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 0;
+    color: rgba(51, 55, 65, 0.8);
+    margin: 5px 5px;
+    padding: 2px 2px;
+    border-radius: 20px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -68,8 +70,8 @@ button:hover {
 }
 
 #mode {
-    background-color: transparent;
-    border-bottom: 3px solid transparent;
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
 }
 
 #clock,
@@ -108,17 +110,30 @@ button:hover {
 }
 
 #clock {
-    background-color: transparent;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #battery {
-    background-color: transparent;
-    color: #c5c8c6;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #battery.charging, #battery.plugged {
-    color: #5e8d87;
-    background-color: transparent;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 @keyframes blink {
@@ -129,8 +144,12 @@ button:hover {
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -143,42 +162,79 @@ label:focus {
 }
 
 #cpu {
-    background-color: transparent;
-    color: #c5c8c6;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #memory {
-    background-color: transparent;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #disk {
-    background-color: #964B00;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #backlight {
-    background-color: transparent;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #network {
-    background-color: #2980b9;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #pulseaudio {
-    background-color: transparent;
-    color: #c5c8c6;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #pulseaudio.muted {
-    background-color: transparent;
-    color: #2a5c45;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #wireplumber {
-    background-color: transparent;
+    background-color: #fff0f5;
     color: #000000;
 }
 
@@ -187,29 +243,39 @@ label:focus {
 }
 
 #custom-media {
-    background-color: transparent;
+    background-color: #66cc99;
     color: #2a5c45;
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: transparent;
+    background-color: #66cc99;
 }
 
 #custom-media.custom-vlc {
-    background-color: transparent;
+    background-color: #ffa000;
 }
 
 #temperature {
-    background-color: transparent;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #temperature.critical {
-    background-color: transparent;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #tray {
-    background-color: transparent;
+    background-color: #2980b9;
 }
 
 #tray > .passive {
@@ -218,53 +284,90 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: transparent;
+    background-color: #eb4d4b;
 }
 
 #idle_inhibitor {
-    background-color: transparent;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #idle_inhibitor.activated {
-    background-color: transparent;
-    color: #c5c8c6;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #mpd {
-    background-color: transparent;
-    color: #c5c8c6;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #language {
-    background: transparent;
-    color: #c5c8c6;
-    padding: 0 5px;
-    margin: 0 5px;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
     min-width: 16px;
 }
 
 #keyboard-state {
-    background: transparent;
-    color: #c5c8c6;
-    padding: 0 0px;
-    margin: 0 5px;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
     min-width: 16px;
 }
 
 #keyboard-state > label {
-    padding: 0 5px;
+    box-shadow: inset -1px 1px;
+    background-color: rgba(51, 55, 65, 0.8);
+    color: #c5C8C6;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 5px 5px;
 }
 
 #keyboard-state > label.locked {
