@@ -1,74 +1,50 @@
-	Config { overrideRedirect = False
-       , font            = "xft:Inconsolata Nerd Font-18"
-       , additionalFonts = ["xft:fontawesome-18"]
+Config { overrideRedirect = False
+       , font     = "xft:iosevka-12"
+       , bgColor  = "#282a2e"
        , fgColor  = "#c5c8c6"
-       , bgColor  = "#1d1f21"
-       , position = TopH 34
-       , iconRoot     = ".config/xmonad/xpm/"  -- default: "."
+       , position = TopW L 100
        , commands = [ Run Weather "EKCH"
                         [ "--template", "<weather> <tempC>°C"
                         , "-L", "0"
                         , "-H", "25"
                         , "--low"   , "lightblue"
-                        , "--normal", "#cc6666"
-                        , "--high"  , "cc6666"
+                        , "--normal", "#f8f8f2"
+                        , "--high"  , "red"
                         ] 36000
 		    , Run Battery
-                        [ "--template" , "<acstatus>"
-                        , "--Low"      , "20"        -- units: %
-                        , "--High"     , "90"        -- units: %
-                        , "--low"      , "#cc6666"
-                        , "-a", "notify-send -u critical 'Battery running out!!'"
-                        , "--normal"   , "#b5bd68"
-                        , "--high"     , "#5e8d87"
+		        [ "--template" , "Batt: <acstatus>"
+                             , "--Low"      , "10"        -- units: %
+                             , "--High"     , "80"        -- units: %
+                             , "--low"      , "#a54242"
+                             , "--normal"   , "#8abeb7"
+                             , "--high"     , "#5e8d87"
 
-                        , "--" -- battery specific options
-                               -- discharging status
-                        , "-o"	, "<left>% <fc=#c5c8c6>(<timeleft>)</fc>"
-                               -- AC "on" status
-                        , "-O"	, "<fc=#dAA520> </fc> <fc=#8abeb7>Charging</fc> <left>%"
-                               -- charged status
-                        , "-i"	, "<fc=#5e8d87> Charged</fc> <left>%"
-                        ] 50
-                    , Run CpuFreq
-		        [ "-t", "Freq:<cpu0>|<cpu1>GHz", "-L", "0", "-H", "2"
-			, "-l", "lightblue", "-n","white", "-h", "red"
-			] 50
+                             , "--" -- battery specific options
+                                       -- discharging status
+                                       , "-o"	, "<left>% (<timeleft>)"
+                                       -- AC "on" status
+                                       , "-O"	, "<fc=#de935f>Charging</fc>"
+                                       -- charged status
+                                       , "-i"	, "<fc=#5e8d87>Charged</fc>"
+                             ] 50
+                    , Run Cpu
+                        [ "-L", "3"
+                        , "-H", "50"
+                        , "--high"  , "red"
+                        , "--normal", "green"
+                        ] 10
                     , Run Alsa "default" "Master"
                         [ "--template", "<volumestatus>"
                         , "--suffix"  , "True"
                         , "--"
                         , "--on", ""
                         ]
-		     , Run Brightness
-		        [ "-t"
-			, "<bar>"
-			] 60
-		     
-		     , Run Mpris2 "Mocp"
-		        [ "-t"
-		        , "<fc=#95c7ae></fc> <artist> - [<album>] <title>"
-		        ] 10
-	             , Run Mail
-                        [ ("kimkruse", "~/.local/share/mail/kim@kimkruse.xyz/INBOX")
-			, ("Hotmail", "~/.local/share/mail/kimkruse@hotmail.com/INBOX")
-                        ] "mail"
-                     , Run Memory ["--template", "<fc=#f0c674> </fc>Mem: <usedratio>%"] 10
-		     , Run MPD
-		        [ "-t"
-			, "<composer> <title> (<album>) <track>/<plength> <statei> [<flags>]"
-			, "--", "-P", ">>", "-Z", "|", "-S", "><"
-			] 10
-                     , Run Swap [] 10
-		     , Run Com "/home/kim/.local/bin/music.sh" [] "music" 20
-                     , Run Com "/home/kim/.scripts/packages.sh" [] "upd" 360
-                     , Run Wireless "wlp2s0"
-		        [ "-t"
-			, " <ssid> <quality>%"
-			] 10
-                     , Run Date " %a %Y-%m-%d <fc=#b5bd68>%H:%M</fc>" "date" 10
-                     , Run XMonadLog
-                     ]
+                    , Run Memory ["--template", "Mem: <usedratio>%"] 10
+                    , Run Swap [] 10
+                    , Run Date "%a %Y-%m-%d <fc=#8be9fd>%H:%M</fc>" "date" 10
+                    , Run XMonadLog
+                    ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-linux-icon_24.xpm/>%XMonadLog% }{<fc=#8abeb7><icon=battery14.xpm/>%battery%</fc> . <fc=#c5c8c6><icon=speaker14.xpm/> %music%</fc> .  <fc=#b294bb><icon=download14.xpm/>%upd%</fc> . <fc=#f0c674><icon=fa6-envelope-14.xpm/> %mail%</fc> . <fc=#81a2be><icon=wifi-14.xpm/>%wlp2s0wi%</fc> . <fc=#cc6666><icon=sun-rain14.xpm/> %EKCH%</fc> . <fc=#b5bd68><icon=calendar14.xpm/>%date%</fc>"}
+       , template = "%XMonadLog% }{ %alsa:default:Master% | %battery% | %memory% * %swap% | %EKCH% | %date% "
+       }
